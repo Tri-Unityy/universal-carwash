@@ -1,7 +1,11 @@
-import "./App.css";
+import HomeLayout from "./layout/home_layout";
 
 function App() {
-  return <div>Hi</div>;
+  return (
+    <>
+      <HomeLayout />
+    </>
+  );
 }
 
 export default App;

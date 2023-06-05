@@ -1,4 +1,4 @@
-import HomeLayout from "./layout/home_layout";
+import HomeLayout from "./layout/HomeLayout";
 
 function App() {
   return (

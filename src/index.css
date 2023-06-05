@@ -2,8 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   min-width: 100% !important;
-  margin: 0;
-  padding: 0;
+
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #0F1314;
@@ -11,14 +10,10 @@
   flex-direction: column;
   min-height:100%;
   align-items: center;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-
 }
 
-
+*{
+  margin: 0;
+  padding: 0;
+}
 

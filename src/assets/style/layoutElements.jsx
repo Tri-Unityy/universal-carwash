@@ -10,7 +10,9 @@ export const Container = styled.div`
           flex-direction: column;
           min-width: 90vw;
           height: 100%;
-          background-color: #fff;
+          margin: 0;
+          padding: 0;
+          background-color: ${primaryColor};
         `;
     }
   }}

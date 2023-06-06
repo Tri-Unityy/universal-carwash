@@ -3,6 +3,7 @@ import {
   secondaryTextColor,
   bodyText1,
   primaryHeadingColor,
+  bodyText1Mobile,
 } from "../resources/colors";
 import { Link as LinkR } from "react-dom";
 import { Link as LinkS } from "react-scroll";
@@ -147,7 +148,7 @@ export const SidebarLink = styled(LinkS)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: ${bodyText1};
+  font-size: ${bodyText1Mobile};
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;

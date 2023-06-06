@@ -15,33 +15,57 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 const NavBar = ({ toggle }) => {
-  const [menu, setMenu] = useState(false);
-
-  const showMenu = () => {
-    setMenu(!menu);
-  };
-
   return (
     <Container $mode="nav">
       <LogoContainer>
         <Logo src={logo} />
       </LogoContainer>
       <NavLinks>
-        <Links href="#">About Us</Links>
-        <Links href="#">Services</Links>
-        <Links href="#">Our Works</Links>
-        <Links href="#">Contact Us</Links>
+        <Links
+          to=""
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact="true"
+          offset={-80}
+        >
+          About Us
+        </Links>
+        <Links
+          to=""
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact="true"
+          offset={-80}
+        >
+          Services
+        </Links>
+        <Links
+          to=""
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact="true"
+          offset={-80}
+        >
+          Our Works
+        </Links>
+        <Links
+          to=""
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact="true"
+          offset={-80}
+        >
+          Contact Us
+        </Links>
       </NavLinks>
 
-      {menu ? (
-        <MenuIconContainer onClick={showMenu}>
-          <CloseIcon sx={{ fontSize: 35 }} />
-        </MenuIconContainer>
-      ) : (
-        <MenuIconContainer onClick={showMenu}>
-          <MenuIcon sx={{ fontSize: 35 }} />
-        </MenuIconContainer>
-      )}
+      <MenuIconContainer $mode="nav" onClick={toggle}>
+        <MenuIcon sx={{ fontSize: 35 }} />
+      </MenuIconContainer>
     </Container>
   );
 };

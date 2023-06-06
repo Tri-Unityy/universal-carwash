@@ -1,5 +1,11 @@
 import { styled, css } from "styled-components";
-import { secondaryTextColor, bodyText1 } from "../resources/colors";
+import {
+  secondaryTextColor,
+  bodyText1,
+  primaryHeadingColor,
+} from "../resources/colors";
+import { Link as LinkR } from "react-dom";
+import { Link as LinkS } from "react-scroll";
 /////////Containers and Classifications////////
 export const Container = styled.div`
   ${(props) => {
@@ -66,7 +72,7 @@ export const NavLinks = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 400px;
+  width: auto;
   height: 100%;
 
   @media screen and (max-width: 768px) {
@@ -77,52 +83,90 @@ export const NavLinks = styled.div`
 export const MenuIconContainer = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 100%;
+    ${(props) => {
+      switch (props.$mode) {
+        case "nav":
+          return css`
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 100%;
 
-    &:hover {
-      cursor: pointer;
-    }
+            &:hover {
+              cursor: pointer;
+            }
+          `;
+        case "side":
+          return css`
+            display: flex;
+            position: absolute;
+            top: 1.2rem;
+            right: 0.8rem;
+            background: transparent;
+            font-size: 2rem;
+            cursor: pointer;
+            outline: none;
+          `;
+      }
+    }}
   }
 `;
 
-// export const Icon = styled.div`
-//   ${(props) => {
-//     switch (props.$mode) {
-//       case "menu":
-//         return css`
-//           display: none;
-//           :hover {
-//             cursor: pointer;
-//             display: flex;
-//           }
-//         `;
-//       case "segment":
-//         return css`
-//           display: flex;
-//           :hover {
-//             display: none;
-//           }
-//         `;
-//     }
-//   }}
-// `;
-
-export const Links = styled.a`
+export const Links = styled(LinkS)`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 150px;
   height: 100%;
   color: ${secondaryTextColor};
   text-decoration: none;
   font-size: ${bodyText1};
+  cursor: pointer;
+  &.active {
+    border-bottom: 3px solid ${primaryHeadingColor};
+  }
+  &:hover {
+    color: ${primaryHeadingColor};
+    transition: 0.2s ease-in-out;
+  }
 `;
 
 /* End */
 ///////////////////////////////////////
+
+////////////// Side Bar ////////////////
+/* Start */
+export const SidebarWrapper = styled.div`
+  color: #fff;
+`;
+
+export const SidebarLink = styled(LinkS)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: ${bodyText1};
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s ease-in-out;
+  color: ${secondaryTextColor};
+  cursor: pointer;
+
+  &:hover {
+    color: ${primaryHeadingColor};
+    transition: 0.2s ease-in-out;
+  }
+`;
+
+export const SidebarMenu = styled.ul`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 80px);
+  text-align: center;
+
+  @media screen and (max-width: 480px) {
+    grid-template-rows: repeat(6, 60px);
+  }
+`;

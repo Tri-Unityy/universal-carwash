@@ -13,6 +13,10 @@ export const Container = styled.div`
           margin: 0;
           padding: 0;
           background-color: ${primaryColor};
+
+          @media screen and (max-width: 768px) {
+            min-width: 95vw;
+          }
         `;
     }
   }}

@@ -20,6 +20,7 @@ export const Container = styled.div`
           width: 100%;
           height: 50px;
           padding-top: 8px;
+          border: 1px solid white;
         `;
 
       case "side":
@@ -36,6 +37,14 @@ export const Container = styled.div`
           transition: 0.3s ease-in-out;
           opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
           top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+        `;
+
+      case "splash":
+        return css`
+          width: 100%;
+          display: grid;
+          grid-template-columns: 30% 70%;
+          height: 90vh;
         `;
     }
   }}
@@ -170,4 +179,32 @@ export const SidebarMenu = styled.ul`
   @media screen and (max-width: 480px) {
     grid-template-rows: repeat(6, 60px);
   }
+`;
+
+/////////////////Splash//////////////////////
+/* Start */
+
+export const ContentContainer = styled.div`
+  display: flex;
+
+  ${(props) => {
+    switch (props.$mode) {
+      case "outer":
+        return css`
+          flex-direction: column-reverse;
+          justify-content: baseline;
+          align-items: flex-start;
+          border: 1px solid red;
+        `;
+      case "inner":
+        return css`
+          width: 50%;
+          height: 70%;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: start;
+          border: 1px solid green;
+        `;
+    }
+  }}
 `;

@@ -8,7 +8,9 @@ export const Container = styled.div`
         return css`
           display: flex;
           flex-direction: column;
-          min-width: 90vw;
+          justify-content: center;
+          align-items: center;
+          width: 95vw;
           height: 100%;
           margin: 0;
           padding: 0;
@@ -17,6 +19,14 @@ export const Container = styled.div`
           @media screen and (max-width: 768px) {
             min-width: 95vw;
           }
+        `;
+      case "home":
+        return css`
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         `;
     }
   }}

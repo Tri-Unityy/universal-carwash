@@ -2,18 +2,18 @@ import styled, { css } from "styled-components";
 import { primaryColor } from "../resources/colors";
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+
   ${(props) => {
     switch (props.$mode) {
       case "main":
         return css`
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+          overflow-x: hidden;
+          justify-items: center;
           align-items: center;
-          width: 95vw;
+          width: 100vw;
           height: 100%;
-          margin: 0;
-          padding: 0;
           background-color: ${primaryColor};
 
           @media screen and (max-width: 768px) {
@@ -25,8 +25,7 @@ export const Container = styled.div`
           display: flex;
           width: 100%;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          border: 1px solid blue;
         `;
     }
   }}

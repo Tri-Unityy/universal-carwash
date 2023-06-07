@@ -10,9 +10,7 @@ import {
 
 ///assets import///
 import logo from "./../assets/images/logo.png";
-import SegmentIcon from "@mui/icons-material/Segment";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 
 const NavBar = ({ toggle }) => {
   return (

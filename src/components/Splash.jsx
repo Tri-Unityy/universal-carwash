@@ -1,5 +1,16 @@
 import React from "react";
-import { Container, ContentContainer } from "../assets/style/homeElements";
+import {
+  Container,
+  ContentContainer,
+  ImageContainer,
+  Image,
+  SubHeading,
+  Heading,
+  ButtonContainer,
+  Button,
+} from "../assets/style/homeElements";
+
+import splash from "./../assets/images/splash.jpg";
 
 const Splash = () => {
   return (
@@ -7,20 +18,17 @@ const Splash = () => {
       <Container $mode="splash">
         <ContentContainer $mode="outer">
           <ContentContainer $mode="inner">
-            <h1>
-              Hi, I'm <span>Shawn</span>
-            </h1>
-            <h1>Hi, I'm</h1>
+            <Container $mode="div">
+              <SubHeading>Reveal the</SubHeading>
+              <Heading>Hidden</Heading>
+              <SubHeading>Beauty</SubHeading>
+            </Container>
+            <ButtonContainer>
+              <Button>Get Started</Button>
+            </ButtonContainer>
           </ContentContainer>
         </ContentContainer>
-        <ContentContainer $mode="outer">
-          <ContentContainer $mode="inner">
-            <h1>
-              Hi, I'm <span>Shawn</span>
-            </h1>
-            <h1>Hi, I'm</h1>
-          </ContentContainer>
-        </ContentContainer>
+        <ImageContainer>{/* <Image src={splash} /> */}</ImageContainer>
       </Container>
     </>
   );

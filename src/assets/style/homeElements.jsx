@@ -1,5 +1,6 @@
 import { styled, css } from "styled-components";
 import {
+  primaryTextColor,
   secondaryTextColor,
   bodyText1,
   primaryHeadingColor,
@@ -7,6 +8,9 @@ import {
 } from "../resources/colors";
 import { Link as LinkR } from "react-dom";
 import { Link as LinkS } from "react-scroll";
+
+import splashbg from "./../images/splash.jpg";
+
 /////////Containers and Classifications////////
 export const Container = styled.div`
   ${(props) => {
@@ -20,7 +24,6 @@ export const Container = styled.div`
           width: 100%;
           height: 50px;
           padding-top: 8px;
-          border: 1px solid white;
         `;
 
       case "side":
@@ -43,8 +46,21 @@ export const Container = styled.div`
         return css`
           width: 100%;
           display: grid;
-          grid-template-columns: 30% 70%;
+          grid-template-columns: 40% 60%;
           height: 90vh;
+          @media screen and (max-width: 501px) {
+            display: flex;
+            flex-direction: column;
+          }
+        `;
+
+      case "div":
+        return css`
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          width: 100%;
+          height: 100%;
         `;
     }
   }}
@@ -58,7 +74,7 @@ export const Container = styled.div`
 export const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   width: 200px;
   height: 100%;
@@ -127,7 +143,7 @@ export const MenuIconContainer = styled.div`
 export const Links = styled(LinkS)`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   width: 150px;
   height: 100%;
@@ -194,17 +210,99 @@ export const ContentContainer = styled.div`
           flex-direction: column-reverse;
           justify-content: baseline;
           align-items: flex-start;
-          border: 1px solid red;
+          @media screen and (max-width: 501px) {
+            height: 100%;
+            background-image: url(${splashbg});
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+          }
         `;
       case "inner":
         return css`
-          width: 50%;
+          width: 100%;
           height: 70%;
           flex-direction: column;
           justify-content: space-between;
           align-items: start;
-          border: 1px solid green;
+          @media screen and (max-width: 501px) {
+            height: 70%;
+          }
         `;
     }
   }}
+`;
+
+export const Heading = styled.h1`
+  font-size: 3rem;
+  color: ${primaryHeadingColor};
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+`;
+
+export const SubHeading = styled.h2`
+  font-size: 2.5rem;
+  color: ${secondaryTextColor};
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+`;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  overflow: hidden;
+  background-image: url(${splashbg});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  opacity: 60%;
+  @media screen and (max-width: 501px) {
+    display: none;
+  }
+`;
+
+export const Image = styled.img`
+  width: 80%;
+  height: 100%;
+  opacity: 0.6;
+  object-fit: cover;
+  /* @media screen and (max-width: 1024px) {
+    width: 80%;
+    height: auto;
+  }
+  @media screen and (max-width: 768px) {
+    width: auto;
+    height: auto;
+  } */
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+export const Button = styled(LinkS)`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background: ${primaryHeadingColor};
+  color: ${primaryTextColor};
+  border-radius: 5px;
+  font-size: ${bodyText1};
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 1rem;
+  &:hover {
+    background: ${secondaryTextColor};
+    color: ${primaryHeadingColor};
+    transition: 0.2s ease-in-out;
+  }
 `;

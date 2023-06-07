@@ -23,9 +23,8 @@ export const Container = styled.div`
       case "home":
         return css`
           display: flex;
-          width: 100%;
+          width: 90vw;
           flex-direction: column;
-          border: 1px solid blue;
         `;
     }
   }}

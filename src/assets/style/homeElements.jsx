@@ -235,16 +235,19 @@ export const ContentContainer = styled.div`
 `;
 
 export const Heading = styled.h1`
-  font-size: 3rem;
+  z-index: 1;
+  font-size: 4rem;
   color: ${primaryHeadingColor};
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-weight: 800;
 `;
 
 export const SubHeading = styled.h2`
-  font-size: 2.5rem;
+  z-index: 1;
+
+  font-size: 3rem;
   color: ${secondaryTextColor};
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-weight: 400;
 `;
 

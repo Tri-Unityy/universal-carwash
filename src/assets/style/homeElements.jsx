@@ -48,6 +48,7 @@ export const Container = styled.section`
           display: grid;
           grid-template-columns: 40% 60%;
           height: 90vh;
+          margin-bottom: 2rem;
           @media screen and (max-width: 501px) {
             display: flex;
             flex-direction: column;
@@ -67,9 +68,11 @@ export const Container = styled.section`
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
+          justify-content: center;
+          align-items: flex-end;
           width: 100%;
-          height: 100%;
-          overflow-block: hidden;
+          height: 90vh;
+          margin-bottom: 2rem;
         `;
     }
   }}
@@ -307,10 +310,74 @@ export const Button = styled(LinkS)`
 ////////////////////////About///////////////////////////
 /* Start */
 
-export const Image = styled.img`
+export const ImageBackground = styled.img`
   position: absolute;
-  width: 50%;
+  top: 0;
+  left: 0;
+  width: 70%;
   height: 100%;
-  opacity: 0.2;
-  object-fit: cover;
+  background-image: url(${aboutbg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  border: none;
+  opacity: 0.2; /* Adjust the opacity value as needed */
+
+  @media screen and (max-width: 769px) {
+    left: -50px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 426px) {
+    left: -100px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 376px) {
+    width: 100%;
+  }
+`;
+
+export const AboutContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 70%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-right: 1rem;
+`;
+
+export const AboutHeading = styled.h1`
+  font-size: 3rem;
+  color: ${primaryHeadingColor};
+  margin-bottom: 1rem;
+  font-weight: 800;
+`;
+
+export const AboutParagraphContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  width: 70%;
+  height: 70%;
+  background-color: transparent;
+`;
+
+export const AboutParagraph = styled.p`
+  font-size: ${bodyText1};
+  color: ${secondaryTextColor};
+  margin-bottom: 1rem;
+  font-weight: 400;
+  text-align: right;
+
+  @media screen and (max-width: 769px) {
+    text-align: justify;
+  }
+
+  @media screen and (max-width: 376px) {
+    text-align: start;
+  }
 `;

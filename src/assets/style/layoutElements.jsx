@@ -23,8 +23,10 @@ export const Container = styled.div`
       case "home":
         return css`
           display: flex;
+
           width: 90vw;
           flex-direction: column;
+          overflow: hidden;
         `;
     }
   }}

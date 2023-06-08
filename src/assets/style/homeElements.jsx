@@ -10,9 +10,9 @@ import { Link as LinkR } from "react-dom";
 import { Link as LinkS } from "react-scroll";
 
 import splashbg from "./../images/splash.jpg";
-
+import aboutbg from "./../images/about.jpg";
 /////////Containers and Classifications////////
-export const Container = styled.div`
+export const Container = styled.section`
   ${(props) => {
     switch (props.$mode) {
       case "nav":
@@ -53,8 +53,15 @@ export const Container = styled.div`
             flex-direction: column;
           }
         `;
-
       case "div":
+        return css`
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          width: 100%;
+          height: 100%;
+        `;
+      case "about":
         return css`
           display: flex;
           flex-direction: column;
@@ -267,21 +274,6 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const Image = styled.img`
-  width: 80%;
-  height: 100%;
-  opacity: 0.6;
-  object-fit: cover;
-  /* @media screen and (max-width: 1024px) {
-    width: 80%;
-    height: auto;
-  }
-  @media screen and (max-width: 768px) {
-    width: auto;
-    height: auto;
-  } */
-`;
-
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -308,4 +300,14 @@ export const Button = styled(LinkS)`
     color: ${primaryHeadingColor};
     transition: 0.2s ease-in-out;
   }
+`;
+
+////////////////////////About///////////////////////////
+/* Start */
+
+export const Image = styled.img`
+  width: 50%;
+  height: 100%;
+  opacity: 0.2;
+  object-fit: cover;
 `;

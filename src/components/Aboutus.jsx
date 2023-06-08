@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Image } from "../assets/style/homeElements";
 import about from "./../assets/images/about.jpg";
 
-const Aboutus = () => {
+const AboutUs = () => {
   return (
     <>
       <Container $mode="about">
@@ -12,4 +12,4 @@ const Aboutus = () => {
   );
 };
 
-export default Aboutus;
+export default AboutUs;

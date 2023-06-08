@@ -12,7 +12,7 @@ export const Container = styled.div`
           overflow-x: hidden;
           justify-items: center;
           align-items: center;
-          width: 100vw;
+          width: 100%;
           height: 100%;
           background-color: ${primaryColor};
 

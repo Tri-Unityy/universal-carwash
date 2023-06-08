@@ -63,11 +63,13 @@ export const Container = styled.section`
         `;
       case "about":
         return css`
+          position: relative;
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
           width: 100%;
           height: 100%;
+          overflow-block: hidden;
         `;
     }
   }}
@@ -306,6 +308,7 @@ export const Button = styled(LinkS)`
 /* Start */
 
 export const Image = styled.img`
+  position: absolute;
   width: 50%;
   height: 100%;
   opacity: 0.2;

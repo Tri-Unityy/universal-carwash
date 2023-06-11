@@ -1,8 +1,8 @@
 import React from "react";
 import {
   AboutContainer,
-  AboutHeading,
-  AboutParagraph,
+  SectionHeading,
+  SectionParagraph,
   AboutParagraphContainer,
   Container,
   ImageBackground,
@@ -15,12 +15,12 @@ const AboutUs = () => {
       <Container $mode="about">
         <ImageBackground></ImageBackground>
         <AboutContainer>
-          <AboutHeading>About Us</AboutHeading>
+          <SectionHeading>About Us</SectionHeading>
           <AboutParagraphContainer>
-            <AboutParagraph>
+            <SectionParagraph>
               Lorem ipsum dolor sit amet, enna kodumai sir ithuhuiuh consectetur
               adipiscing elit. Cras congue, erat a aliquam dapibus.
-            </AboutParagraph>
+            </SectionParagraph>
           </AboutParagraphContainer>
         </AboutContainer>
       </Container>

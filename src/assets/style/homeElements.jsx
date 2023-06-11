@@ -5,6 +5,7 @@ import {
   bodyText1,
   primaryHeadingColor,
   bodyText1Mobile,
+  sectionText1,
 } from "../resources/colors";
 import { Link as LinkR } from "react-dom";
 import { Link as LinkS } from "react-scroll";
@@ -79,11 +80,39 @@ export const Container = styled.section`
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
+          width: 100%;
+          height: 90vh;
+          background-color: rgba(255, 255, 255, 0.2);
+          justify-content: space-evenly;
+          align-items: flex-start;
+          padding-left: 1rem;
         `;
     }
   }}
 `;
 
+export const SectionHeading = styled.h1`
+  font-size: 3rem;
+  color: ${primaryHeadingColor};
+  margin-bottom: 1rem;
+  font-weight: 800;
+`;
+
+export const SectionParagraph = styled.p`
+  font-size: ${sectionText1};
+  color: ${secondaryTextColor};
+  margin-bottom: 1rem;
+  font-weight: 400;
+  text-align: right;
+
+  @media screen and (max-width: 769px) {
+    text-align: justify;
+  }
+
+  @media screen and (max-width: 376px) {
+    text-align: start;
+  }
+`;
 ////////////////////////////////////////
 
 ////////////// Nav Bar ////////////////
@@ -355,13 +384,6 @@ export const AboutContainer = styled.div`
   padding-right: 1rem;
 `;
 
-export const AboutHeading = styled.h1`
-  font-size: 3rem;
-  color: ${primaryHeadingColor};
-  margin-bottom: 1rem;
-  font-weight: 800;
-`;
-
 export const AboutParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -372,18 +394,15 @@ export const AboutParagraphContainer = styled.div`
   background-color: transparent;
 `;
 
-export const AboutParagraph = styled.p`
-  font-size: ${bodyText1};
-  color: ${secondaryTextColor};
-  margin-bottom: 1rem;
-  font-weight: 400;
-  text-align: right;
+////////////////////////Services///////////////////////////////
+/* Start */
 
-  @media screen and (max-width: 769px) {
-    text-align: justify;
-  }
-
-  @media screen and (max-width: 376px) {
-    text-align: start;
-  }
+export const ServicesParagraphContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  width: 40%;
+  height: 70%;
+  background-color: transparent;
 `;

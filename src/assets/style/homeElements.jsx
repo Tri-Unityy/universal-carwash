@@ -74,6 +74,12 @@ export const Container = styled.section`
           height: 90vh;
           margin-bottom: 2rem;
         `;
+      case "services":
+        return css`
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+        `;
     }
   }}
 `;

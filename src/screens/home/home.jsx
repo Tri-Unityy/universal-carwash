@@ -4,6 +4,7 @@ import SideBar from "../../components/SideBar";
 import Splash from "../../components/Splash";
 import { Container } from "../../assets/style/layoutElements";
 import AboutUs from "../../components/Aboutus";
+import Services from "../../components/Services";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ const Home = () => {
         <SideBar isOpen={isOpen} toggle={toggle} />
         <Splash />
         <AboutUs />
+        <Services />
       </Container>
     </>
   );

@@ -3,7 +3,6 @@ import {
   Container,
   ContentContainer,
   ImageContainer,
-  Image,
   SubHeading,
   Heading,
   ButtonContainer,

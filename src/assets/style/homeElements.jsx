@@ -79,13 +79,13 @@ export const Container = styled.section`
         return css`
           display: flex;
           flex-direction: column;
-          flex-wrap: wrap;
           width: 100%;
           height: 90vh;
           background-color: rgba(255, 255, 255, 0.2);
-          justify-content: space-evenly;
+          justify-content: space-around;
           align-items: flex-start;
           padding-left: 1rem;
+          padding-right: 1rem;
         `;
     }
   }}
@@ -104,6 +104,15 @@ export const SectionParagraph = styled.p`
   margin-bottom: 1rem;
   font-weight: 400;
   text-align: right;
+
+  ${(props) => {
+    switch (props.$mode) {
+      case "services":
+        return css`
+          text-align: left;
+        `;
+    }
+  }}
 
   @media screen and (max-width: 769px) {
     text-align: justify;
@@ -405,4 +414,19 @@ export const ServicesParagraphContainer = styled.div`
   width: 40%;
   height: 70%;
   background-color: transparent;
+`;
+
+export const ServicesImageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 50%;
+`;
+
+export const ServicesImage = styled.img`
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
 `;

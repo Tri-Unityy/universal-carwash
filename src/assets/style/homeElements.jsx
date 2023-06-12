@@ -80,12 +80,31 @@ export const Container = styled.section`
           display: flex;
           flex-direction: column;
           width: 100%;
-          height: 90vh;
+          height: 80vh;
           background-color: rgba(255, 255, 255, 0.2);
-          justify-content: space-around;
-          align-items: flex-start;
-          padding-left: 1rem;
-          padding-right: 1rem;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 2rem;
+        `;
+
+      case "packages":
+        return css`
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 80vh;
+          background-color: transparent;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 2rem;
+        `;
+
+      case "slider":
+        return css`
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          height: 100%;
         `;
     }
   }}
@@ -406,6 +425,17 @@ export const AboutParagraphContainer = styled.div`
 ////////////////////////Services///////////////////////////////
 /* Start */
 
+export const ServicesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 95%;
+  height: 80%;
+  background-color: transparent;
+  overflow: hidden;
+`;
+
 export const ServicesParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -421,7 +451,7 @@ export const ServicesImageContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 50%;
 `;
 

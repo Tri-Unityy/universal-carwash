@@ -5,6 +5,7 @@ import Splash from "../../components/Splash";
 import { Container } from "../../assets/style/layoutElements";
 import AboutUs from "../../components/Aboutus";
 import Services from "../../components/Services";
+import Packages from "../../components/Packages";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +20,7 @@ const Home = () => {
         <Splash />
         <AboutUs />
         <Services />
+        <Packages />
       </Container>
     </>
   );

@@ -3,9 +3,17 @@ import {
   Container,
   SliderImageContainer,
   SliderContentContainer,
+  SliderImage,
+  SliderContentInnerContainer,
+  SliderHeading,
+  SliderText,
 } from "../assets/style/homeElements";
 
 import packages from "../constants";
+
+import exterior from "../assets/images/exterior.jpg";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { primaryHeadingColor } from "../assets/resources/colors";
 
 const Slider = () => {
   const [packageData] = useState(packages);
@@ -32,8 +40,17 @@ const Slider = () => {
 
   return (
     <Container $mode="slider">
-      <SliderImageContainer>Image</SliderImageContainer>
-      <SliderContentContainer>Content</SliderContentContainer>
+      <SliderImageContainer>
+        <SliderImage src={exterior} />
+      </SliderImageContainer>
+      <SliderContentContainer>
+        <SliderContentInnerContainer>
+          <SliderHeading> Exterior Cleaning </SliderHeading>
+          <SliderText $mode="dark">
+            <AccessTimeIcon sx={{ color: primaryHeadingColor }} /> 30 min{" "}
+          </SliderText>
+        </SliderContentInnerContainer>
+      </SliderContentContainer>
     </Container>
   );
 };

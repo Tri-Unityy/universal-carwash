@@ -12,6 +12,7 @@ import { Link as LinkS } from "react-scroll";
 
 import splashbg from "./../images/splash.jpg";
 import aboutbg from "./../images/about.jpg";
+
 /////////Containers and Classifications////////
 export const Container = styled.section`
   ${(props) => {
@@ -101,8 +102,8 @@ export const Container = styled.section`
 
       case "slider":
         return css`
-          display: flex;
-          flex-direction: row;
+          display: grid;
+          grid-template-columns: 70% 30%;
           width: 100%;
           height: 100%;
         `;
@@ -459,4 +460,27 @@ export const ServicesImage = styled.img`
   width: 300px;
   height: 250px;
   object-fit: cover;
+`;
+
+//////////////////////// SLider ///////////////////////////////
+/* Start */
+
+export const SliderImageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  overflow: hidden;
+`;
+
+export const SliderContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 70%;
+  height: 80%;
+  background-color: transparent;
+  overflow: hidden;
 `;

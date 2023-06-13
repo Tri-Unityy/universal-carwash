@@ -142,6 +142,13 @@ export const SectionParagraph = styled.p`
     text-align: start;
   }
 `;
+
+export const CommonDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`;
 ////////////////////////////////////////
 
 ////////////// Nav Bar ////////////////
@@ -489,19 +496,17 @@ export const SliderContentContainer = styled.div`
   height: 100%;
   background-color: transparent;
   overflow: hidden;
-  border: 1px solid red;
 `;
 
 export const SliderContentInnerContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 80%;
   height: 80%;
   background-color: transparent;
   overflow: hidden;
-  border: 1px solid red;
 `;
 
 export const SliderHeading = styled.h1`
@@ -512,7 +517,7 @@ export const SliderHeading = styled.h1`
 `;
 
 export const SliderText = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: ${secondaryTextColor};
   margin-bottom: 1rem;
   font-weight: 400;
@@ -523,7 +528,16 @@ export const SliderText = styled.p`
         return css`
           display: flex;
           align-items: center;
+          column-gap: 0.5rem;
+
           font-weight: bold;
+        `;
+      case "list":
+        return css`
+          display: flex;
+          align-items: center;
+          font-size: 1rem;
+          column-gap: 0.5rem;
         `;
     }
   }};

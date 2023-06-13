@@ -7,3 +7,5 @@ export const heading1 = "2.5rem";
 export const bodyText1 = "1.2rem";
 export const bodyText1Mobile = "1.5rem";
 export const sectionText1 = "1.5rem";
+
+export const successColor = "#4BB543";

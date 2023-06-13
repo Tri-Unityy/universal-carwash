@@ -7,13 +7,17 @@ import {
   SliderContentInnerContainer,
   SliderHeading,
   SliderText,
+  CommonDiv,
+  ButtonContainer,
+  Button,
 } from "../assets/style/homeElements";
 
 import packages from "../constants";
 
 import exterior from "../assets/images/exterior.jpg";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import { primaryHeadingColor } from "../assets/resources/colors";
+import DoneIcon from "@mui/icons-material/Done";
+import { primaryHeadingColor, successColor } from "../assets/resources/colors";
 
 const Slider = () => {
   const [packageData] = useState(packages);
@@ -49,6 +53,26 @@ const Slider = () => {
           <SliderText $mode="dark">
             <AccessTimeIcon sx={{ color: primaryHeadingColor }} /> 30 min{" "}
           </SliderText>
+          <SliderText>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          </SliderText>
+          <CommonDiv>
+            <SliderText $mode="list">
+              <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
+            </SliderText>
+            <SliderText $mode="list">
+              <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
+            </SliderText>
+            <SliderText $mode="list">
+              <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
+            </SliderText>
+            <SliderText $mode="list">
+              <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
+            </SliderText>
+          </CommonDiv>
+          <ButtonContainer>
+            <Button>Get Plan</Button>
+          </ButtonContainer>
         </SliderContentInnerContainer>
       </SliderContentContainer>
     </Container>

@@ -10,6 +10,7 @@ import {
   CommonDiv,
   ButtonContainer,
   Button,
+  SliderContainer,
 } from "../assets/style/homeElements";
 
 import packages from "../constants";
@@ -36,46 +37,77 @@ const Slider = () => {
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(index + 1);
-    }, 3000);
+    }, 5000);
     return () => {
       clearInterval(slider);
     };
   }, [index]);
 
   return (
-    <Container $mode="slider">
-      <SliderImageContainer>
-        <SliderImage src={exterior} />
-      </SliderImageContainer>
-      <SliderContentContainer>
-        <SliderContentInnerContainer>
-          <SliderHeading> Exterior Cleaning </SliderHeading>
-          <SliderText $mode="dark">
-            <AccessTimeIcon sx={{ color: primaryHeadingColor }} /> 30 min{" "}
-          </SliderText>
-          <SliderText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          </SliderText>
-          <CommonDiv>
-            <SliderText $mode="list">
-              <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
-            </SliderText>
-            <SliderText $mode="list">
-              <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
-            </SliderText>
-            <SliderText $mode="list">
-              <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
-            </SliderText>
-            <SliderText $mode="list">
-              <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
-            </SliderText>
-          </CommonDiv>
-          <ButtonContainer>
-            <Button>Get Plan</Button>
-          </ButtonContainer>
-        </SliderContentInnerContainer>
-      </SliderContentContainer>
-    </Container>
+    <>
+      {packageData.map((item, indexPackage) => {
+        const {
+          packageId,
+          packageType,
+          packagePrice,
+          packageDuration,
+          packageItems,
+        } = item;
+
+        let position = "nextSlide";
+        if (indexPackage === index) {
+          position = "activeSlide";
+        }
+        if (
+          indexPackage === index - 1 ||
+          (index === 0 && indexPackage === packageData.length - 1)
+        ) {
+          position = "lastSlide";
+        }
+
+        return (
+          <>
+            <SliderContainer key={packageId} $mode={position}>
+              <Container $mode="slider">
+                <SliderImageContainer>
+                  <SliderImage src={exterior} />
+                </SliderImageContainer>
+                <SliderContentContainer>
+                  <SliderContentInnerContainer>
+                    <SliderHeading> Exterior Cleaning </SliderHeading>
+                    <SliderText $mode="dark">
+                      <AccessTimeIcon sx={{ color: primaryHeadingColor }} /> 30
+                      min{" "}
+                    </SliderText>
+                    <SliderText>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam
+                    </SliderText>
+                    <CommonDiv>
+                      <SliderText $mode="list">
+                        <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
+                      </SliderText>
+                      <SliderText $mode="list">
+                        <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
+                      </SliderText>
+                      <SliderText $mode="list">
+                        <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
+                      </SliderText>
+                      <SliderText $mode="list">
+                        <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
+                      </SliderText>
+                    </CommonDiv>
+                    <ButtonContainer>
+                      <Button>Get Plan</Button>
+                    </ButtonContainer>
+                  </SliderContentInnerContainer>
+                </SliderContentContainer>
+              </Container>
+            </SliderContainer>
+          </>
+        );
+      })}
+    </>
   );
 };
 

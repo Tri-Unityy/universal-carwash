@@ -90,6 +90,7 @@ export const Container = styled.section`
 
       case "packages":
         return css`
+          position: relative;
           display: flex;
           flex-direction: column;
           width: 100%;
@@ -471,6 +472,34 @@ export const ServicesImage = styled.img`
 
 //////////////////////// SLider ///////////////////////////////
 /* Start */
+
+export const SliderContainer = styled.article`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s linear;
+
+  ${(props) => {
+    switch (props.$mode) {
+      case "activeSlide":
+        return css`
+          opacity: 1;
+          transform: translateX(0);
+        `;
+      case "lastSlide":
+        return css`
+          transform: translateX(-100%);
+        `;
+      case "nextSlide":
+        return css`
+          transform: translateX(100%);
+        `;
+    }
+  }};
+`;
 
 export const SliderImageContainer = styled.div`
   display: flex;

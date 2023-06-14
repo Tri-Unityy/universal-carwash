@@ -393,7 +393,8 @@ export const ImageBackground = styled.img`
   background-repeat: no-repeat;
   background-position: left;
   border: none;
-  opacity: 0.2; /* Adjust the opacity value as needed */
+  opacity: 0.2;
+  /* Adjust the opacity value as needed */
 
   @media screen and (max-width: 769px) {
     left: -50px;
@@ -480,7 +481,7 @@ export const SliderContainer = styled.article`
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: all 0.3s linear;
+  transition: all 0.5s linear;
 
   ${(props) => {
     switch (props.$mode) {

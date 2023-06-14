@@ -74,10 +74,10 @@ const Slider = () => {
                 </SliderImageContainer>
                 <SliderContentContainer>
                   <SliderContentInnerContainer>
-                    <SliderHeading> Exterior Cleaning </SliderHeading>
+                    <SliderHeading> {packageType} </SliderHeading>
                     <SliderText $mode="dark">
-                      <AccessTimeIcon sx={{ color: primaryHeadingColor }} /> 30
-                      min{" "}
+                      <AccessTimeIcon sx={{ color: primaryHeadingColor }} />{" "}
+                      {packageDuration}{" "}
                     </SliderText>
                     <SliderText>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.

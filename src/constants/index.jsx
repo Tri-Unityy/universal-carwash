@@ -6,7 +6,7 @@ const packages = [
 
     packagePrice: "100",
 
-    packageDuration: "30mins",
+    packageDuration: "30 mins",
 
     packageItems: {
       item1: "Lorem ipsum lorem ipsum",
@@ -22,7 +22,7 @@ const packages = [
 
     packagePrice: "200",
 
-    packageDuration: "45mins",
+    packageDuration: "45 mins",
 
     packageItems: {
       item1: "Lorem ipsum lorem ipsum",
@@ -38,7 +38,7 @@ const packages = [
 
     packagePrice: "300",
 
-    packageDuration: "1hr",
+    packageDuration: "1 hr",
 
     packageItems: {
       item1: "Lorem ipsum lorem ipsum",

@@ -524,7 +524,7 @@ export const SliderContentContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
   overflow: hidden;
 `;
 

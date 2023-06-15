@@ -13,7 +13,7 @@ const AboutUs = () => {
   return (
     <>
       <Container $mode="about">
-        <ImageBackground></ImageBackground>
+        <ImageBackground />
         <AboutContainer>
           <SectionHeading>About Us</SectionHeading>
           <AboutParagraphContainer>

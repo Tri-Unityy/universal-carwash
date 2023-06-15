@@ -107,6 +107,11 @@ export const Container = styled.section`
           grid-template-columns: 70% 30%;
           width: 100%;
           height: 100%;
+
+          @media screen and (max-width: 769px) {
+            display: flex;
+            flex-direction: column;
+          }
         `;
     }
   }}
@@ -125,6 +130,10 @@ export const SectionParagraph = styled.p`
   margin-bottom: 1rem;
   font-weight: 400;
   text-align: right;
+
+  @media screen and (max-width: 376px) {
+    text-align: justify;
+  }
 
   ${(props) => {
     switch (props.$mode) {
@@ -403,11 +412,11 @@ export const ImageBackground = styled.img`
 
   @media screen and (max-width: 426px) {
     left: -100px;
-    width: 100%;
+    width: 500px;
   }
 
   @media screen and (max-width: 376px) {
-    width: 100%;
+    width: 475px;
   }
 `;
 
@@ -420,6 +429,11 @@ export const AboutContainer = styled.div`
   height: 80%;
   background-color: rgba(255, 255, 255, 0.2);
   padding-right: 1rem;
+  @media screen and (max-width: 376px) {
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 1rem;
+  }
 `;
 
 export const AboutParagraphContainer = styled.div`
@@ -444,6 +458,9 @@ export const ServicesContainer = styled.div`
   height: 80%;
   background-color: transparent;
   overflow: hidden;
+  @media screen and (max-width: 376px) {
+    padding-left: 1rem;
+  }
 `;
 
 export const ServicesParagraphContainer = styled.div`
@@ -454,6 +471,12 @@ export const ServicesParagraphContainer = styled.div`
   width: 40%;
   height: 70%;
   background-color: transparent;
+  @media screen and (max-width: 376px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 426px) {
+    width: 100%;
+  }
 `;
 
 export const ServicesImageContainer = styled.div`
@@ -509,6 +532,10 @@ export const SliderImageContainer = styled.div`
   height: 100%;
   background-color: transparent;
   overflow: hidden;
+
+  @media screen and (max-width: 769px) {
+    display: none;
+  }
 `;
 
 export const SliderImage = styled.img`

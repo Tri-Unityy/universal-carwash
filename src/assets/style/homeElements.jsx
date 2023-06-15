@@ -113,6 +113,18 @@ export const Container = styled.section`
             flex-direction: column;
           }
         `;
+
+      case "gallery":
+        return css`
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 80vh;
+          background-color: transparent;
+          justify-content: right;
+          align-items: flex-end;
+          margin-bottom: 2rem;
+        `;
     }
   }}
 `;
@@ -598,4 +610,22 @@ export const SliderText = styled.p`
         `;
     }
   }};
+`;
+
+///////////////////////// Gallery /////////////////////////
+/* Start */
+
+export const GalleryContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 95%;
+  height: 100%;
+  background-color: ${primaryBackgroundColor};
+  overflow: hidden;
+
+  @media screen and (max-width: 376px) {
+    padding-left: 1rem;
+  }
 `;

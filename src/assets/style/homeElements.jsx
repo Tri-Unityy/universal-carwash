@@ -134,6 +134,14 @@ export const SectionHeading = styled.h1`
   color: ${primaryHeadingColor};
   margin-bottom: 1rem;
   font-weight: 800;
+  ${(props) => {
+    switch (props.$mode) {
+      case "gallery":
+        return css`
+          margin-right: 1rem;
+        `;
+    }
+  }}
 `;
 
 export const SectionParagraph = styled.p`
@@ -618,14 +626,21 @@ export const SliderText = styled.p`
 export const GalleryContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 95%;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
   height: 100%;
-  background-color: ${primaryBackgroundColor};
+  background-color: rgba(255, 255, 255, 0.2);
   overflow: hidden;
 
   @media screen and (max-width: 376px) {
     padding-left: 1rem;
   }
+`;
+
+export const GalleryImageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50%;
 `;

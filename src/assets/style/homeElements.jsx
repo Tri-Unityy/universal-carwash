@@ -119,7 +119,7 @@ export const Container = styled.section`
           display: flex;
           flex-direction: column;
           width: 100%;
-          height: 80vh;
+          height: 90vh;
           background-color: transparent;
           justify-content: right;
           align-items: flex-end;
@@ -623,11 +623,25 @@ export const SliderText = styled.p`
 ///////////////////////// Gallery /////////////////////////
 /* Start */
 
+export const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 20%;
+  background-color: transparent;
+  overflow: hidden;
+  @media screen and (max-width: 376px) {
+    padding-left: 1rem;
+  }
+`;
+
 export const GalleryContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.2);
@@ -639,8 +653,13 @@ export const GalleryContainer = styled.div`
 `;
 
 export const GalleryImageContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  /* overflow: hidden; */
 `;

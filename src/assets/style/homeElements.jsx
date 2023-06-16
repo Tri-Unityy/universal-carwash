@@ -661,5 +661,4 @@ export const GalleryImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
-  /* overflow: hidden; */
 `;

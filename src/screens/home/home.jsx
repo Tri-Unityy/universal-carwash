@@ -7,6 +7,7 @@ import AboutUs from "../../components/Aboutus";
 import Services from "../../components/Services";
 import Packages from "../../components/Packages";
 import Gallery from "../../components/Gallery";
+import ContactUs from "../../components/ContactUs";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,7 @@ const Home = () => {
         <Services />
         <Packages />
         <Gallery />
+        <ContactUs />
       </Container>
     </>
   );

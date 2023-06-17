@@ -125,6 +125,15 @@ export const Container = styled.section`
           align-items: flex-end;
           margin-bottom: 2rem;
         `;
+
+      case "contact":
+        return css`
+          display: grid;
+          grid-template-columns: 50% 50%;
+          width: 100%;
+          height: 60vh;
+          background-color: rgba(255, 255, 255, 0.2);
+        `;
     }
   }}
 `;
@@ -656,9 +665,10 @@ export const GalleryImageContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  overflow: hidden;
 `;

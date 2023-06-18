@@ -5,7 +5,6 @@ const ContactUs = () => {
   return (
     <Container $mode="contact">
       <h1>Contact Us</h1>
-      <h1>Contact Us</h1>
     </Container>
   );
 };

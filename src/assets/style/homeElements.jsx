@@ -128,8 +128,8 @@ export const Container = styled.section`
 
       case "contact":
         return css`
-          display: grid;
-          grid-template-columns: 50% 50%;
+          display: flex;
+          flex-direction: row;
           width: 100%;
           height: 60vh;
           background-color: rgba(255, 255, 255, 0.2);
@@ -672,3 +672,8 @@ export const GalleryImageContainer = styled.div`
   margin-bottom: 2rem;
   overflow: hidden;
 `;
+
+///////////////////////// Contact /////////////////////////
+/* Start */
+
+export const ContactMapContainer = styled.div``;

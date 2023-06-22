@@ -47,8 +47,8 @@ export const Container = styled.section`
       case "splash":
         return css`
           width: 90%;
-          display: grid;
-          grid-template-columns: 40% 60%;
+          display: flex;
+          z-index: 10000;
           height: 90vh;
           margin-bottom: 2rem;
           @media screen and (max-width: 501px) {
@@ -132,6 +132,17 @@ export const Container = styled.section`
           width: 90%;
           height: 60vh;
           background-color: rgba(255, 255, 255, 0.2);
+        `;
+      case "splash-div":
+        return css`
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 2rem;
         `;
     }
   }}
@@ -372,21 +383,21 @@ export const SubHeading = styled.h2`
   font-weight: 400;
 `;
 
-export const ImageContainer = styled.div`
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  overflow: hidden;
-  background-image: url(${splashbg});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  opacity: 60%;
-  @media screen and (max-width: 501px) {
-    display: none;
-  }
-`;
+// export const ImageContainer = styled.div`
+//   display: flex;
+//   justify-content: right;
+//   align-items: center;
+//   overflow: hidden;
+//   background-image: url(${splashbg});
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   width: 100%;
+//   opacity: 60%;
+//   @media screen and (max-width: 501px) {
+//     display: none;
+//   }
+// `;
 
 export const ButtonContainer = styled.div`
   display: flex;
@@ -526,6 +537,7 @@ export const SliderContainer = styled.article`
 `;
 
 export const SliderImageContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -554,6 +566,9 @@ export const SliderContentContainer = styled.div`
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   overflow: hidden;
+  @media screen and (max-width: 769px) {
+    border-radius: 10px;
+  }
 `;
 
 export const SliderContentInnerContainer = styled.div`

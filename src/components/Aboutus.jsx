@@ -7,10 +7,7 @@ import {
   SectionHeading,
   SectionParagraph,
   AboutParagraphContainer,
-  Container,
-  ImageBackground,
 } from "../assets/style/homeElements";
-import about from "./../assets/images/about.jpg";
 
 const AboutUs = () => {
   return (
@@ -22,7 +19,11 @@ const AboutUs = () => {
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
       >
-        <ImageBackground />
+        <motion.img
+          className="about-image"
+          variants={slideIn("left", "tween", 0.2, 1)}
+        />
+
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
           className="about-container"

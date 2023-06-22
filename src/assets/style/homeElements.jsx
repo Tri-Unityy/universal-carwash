@@ -420,35 +420,6 @@ export const Button = styled(LinkS)`
 ////////////////////////About///////////////////////////
 /* Start */
 
-export const ImageBackground = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 70%;
-  height: 100%;
-  background-image: url(${aboutbg});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left;
-  border: none;
-  opacity: 0.2;
-  /* Adjust the opacity value as needed */
-
-  @media screen and (max-width: 769px) {
-    left: -50px;
-    width: 100%;
-  }
-
-  @media screen and (max-width: 426px) {
-    left: -100px;
-    width: 500px;
-  }
-
-  @media screen and (max-width: 376px) {
-    width: 475px;
-  }
-`;
-
 export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;

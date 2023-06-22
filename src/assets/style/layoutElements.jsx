@@ -24,8 +24,10 @@ export const Container = styled.div`
         return css`
           display: flex;
 
-          width: 90vw;
+          width: 100%;
           flex-direction: column;
+          justify-content: center;
+          align-items: center;
           overflow: hidden;
         `;
     }

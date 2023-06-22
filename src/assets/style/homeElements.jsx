@@ -23,7 +23,7 @@ export const Container = styled.section`
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          width: 100%;
+          width: 90%;
           height: 50px;
           padding-top: 8px;
         `;
@@ -46,7 +46,7 @@ export const Container = styled.section`
 
       case "splash":
         return css`
-          width: 100%;
+          width: 90%;
           display: grid;
           grid-template-columns: 40% 60%;
           height: 90vh;
@@ -72,7 +72,7 @@ export const Container = styled.section`
           flex-wrap: wrap;
           justify-content: center;
           align-items: flex-end;
-          width: 100%;
+          width: 90%;
           height: 90vh;
           margin-bottom: 2rem;
         `;
@@ -80,7 +80,7 @@ export const Container = styled.section`
         return css`
           display: flex;
           flex-direction: column;
-          width: 100%;
+          width: 90%;
           height: 80vh;
           background-color: rgba(255, 255, 255, 0.2);
           justify-content: center;
@@ -93,11 +93,10 @@ export const Container = styled.section`
           position: relative;
           display: flex;
           flex-direction: column;
-          width: 100%;
+          width: 80%;
           height: 80vh;
           background-color: transparent;
-          justify-content: center;
-          align-items: center;
+          border-radius: 5px;
           margin-bottom: 2rem;
         `;
 
@@ -118,7 +117,7 @@ export const Container = styled.section`
         return css`
           display: flex;
           flex-direction: column;
-          width: 100%;
+          width: 90%;
           height: 90vh;
           background-color: transparent;
           justify-content: right;
@@ -130,7 +129,7 @@ export const Container = styled.section`
         return css`
           display: flex;
           flex-direction: row;
-          width: 100%;
+          width: 90%;
           height: 60vh;
           background-color: rgba(255, 255, 255, 0.2);
         `;
@@ -505,6 +504,7 @@ export const SliderContainer = styled.article`
   height: 100%;
   opacity: 0;
   transition: all 0.5s linear;
+  border-radius: 10px;
 
   ${(props) => {
     switch (props.$mode) {
@@ -515,11 +515,11 @@ export const SliderContainer = styled.article`
         `;
       case "lastSlide":
         return css`
-          transform: translateX(-100%);
+          transform: translateX(-50%);
         `;
       case "nextSlide":
         return css`
-          transform: translateX(100%);
+          transform: translateX(50%);
         `;
     }
   }};
@@ -532,7 +532,7 @@ export const SliderImageContainer = styled.div`
   height: 100%;
   background-color: transparent;
   overflow: hidden;
-
+  border-radius: 10px 0 0 10px;
   @media screen and (max-width: 769px) {
     display: none;
   }
@@ -545,13 +545,14 @@ export const SliderImage = styled.img`
 `;
 
 export const SliderContentContainer = styled.div`
+  border-radius: 0 10px 10px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
   overflow: hidden;
 `;
 
@@ -575,7 +576,7 @@ export const SliderHeading = styled.h1`
 
 export const SliderText = styled.p`
   font-size: 1.2rem;
-  color: ${secondaryTextColor};
+  color: #000;
   margin-bottom: 1rem;
   font-weight: 400;
 

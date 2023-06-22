@@ -1,4 +1,12 @@
 import React from "react";
+import { motion } from "framer-motion";
+import "./../assets/style/css/services.css";
+import {
+  slideIn,
+  staggerContainer,
+  textVariant,
+  fadeIn,
+} from "../utils/motion";
 import {
   Container,
   SectionHeading,
@@ -15,12 +23,22 @@ import service3 from "../assets/images/service3.png";
 
 const Services = () => {
   return (
-    <Container $mode="services">
+    <motion.section
+      className="services"
+      variants={staggerContainer()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
       <ServicesContainer>
-        <SectionHeading>Services</SectionHeading>
+        <motion.div variants={textVariant()}>
+          <SectionHeading>Services</SectionHeading>
+        </motion.div>
         <ServicesParagraphContainer>
           <SectionParagraph $mode="services">
-            Unmatched Excellence: Discover Our Supreme Services.
+            <motion.p variants={fadeIn("", "", 0.1, 1)}>
+              Unmatched Excellence: Discover Our Supreme Services.
+            </motion.p>
           </SectionParagraph>
         </ServicesParagraphContainer>
         <ServicesImageContainer>
@@ -29,7 +47,7 @@ const Services = () => {
           <ServicesImage src={service3} />
         </ServicesImageContainer>
       </ServicesContainer>
-    </Container>
+    </motion.section>
   );
 };
 

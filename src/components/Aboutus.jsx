@@ -15,7 +15,7 @@ import about from "./../assets/images/about.jpg";
 const AboutUs = () => {
   return (
     <>
-      <motion.Container
+      <motion.section
         className="about"
         variants={staggerContainer()}
         initial="hidden"
@@ -38,7 +38,7 @@ const AboutUs = () => {
             </AboutParagraphContainer>
           </AboutContainer>
         </motion.div>
-      </motion.Container>
+      </motion.section>
     </>
   );
 };

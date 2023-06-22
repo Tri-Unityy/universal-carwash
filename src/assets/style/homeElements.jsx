@@ -19,6 +19,9 @@ export const Container = styled.section`
     switch (props.$mode) {
       case "nav":
         return css`
+          top: 0;
+          left: 5%;
+          position: absolute;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
@@ -26,6 +29,12 @@ export const Container = styled.section`
           width: 90%;
           height: 50px;
           padding-top: 8px;
+          z-index: 11111111;
+
+          @media screen and (max-width: 768px) {
+            left: 0;
+            width: 100%;
+          }
         `;
 
       case "side":
@@ -344,11 +353,6 @@ export const ContentContainer = styled.div`
           align-items: flex-start;
           @media screen and (max-width: 501px) {
             height: 100%;
-            background-image: url(${splashbg});
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
           }
         `;
       case "inner":

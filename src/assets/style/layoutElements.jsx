@@ -23,7 +23,7 @@ export const Container = styled.div`
       case "home":
         return css`
           display: flex;
-
+          position: relative;
           width: 100%;
           flex-direction: column;
           justify-content: center;

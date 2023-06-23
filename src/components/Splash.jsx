@@ -22,6 +22,7 @@ import i3 from "./../assets/images/cubeicons/3.png";
 import i4 from "./../assets/images/cubeicons/4.png";
 import i5 from "./../assets/images/cubeicons/5.png";
 import i6 from "./../assets/images/cubeicons/6.png";
+import SplashImageSlider from "./SplashImageSlider";
 
 const Splash = () => {
   let { scrollYProgress } = useScroll();
@@ -29,7 +30,7 @@ const Splash = () => {
   return (
     <>
       <SectionDiv>
-        <motion.div style={{ yRange }} className="splashbg">
+        {/* <motion.div style={{ yRange }} className="splashbg">
           <video
             autoPlay
             loop
@@ -40,7 +41,7 @@ const Splash = () => {
           >
             <source src={vidBg} type="video/mp4" />
           </video>
-        </motion.div>
+        </motion.div> */}
         <div className="cube">
           <div className="stage-cube-cont">
             <div className="cubespinner">
@@ -90,6 +91,7 @@ const Splash = () => {
               </ButtonContainer>
             </ContentContainer>
           </ContentContainer>
+          <SplashImageSlider />
         </Container>
       </SectionDiv>
     </>

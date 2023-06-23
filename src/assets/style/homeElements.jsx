@@ -55,8 +55,10 @@ export const Container = styled.section`
 
       case "splash":
         return css`
+          margin-top: 70px;
+          display: grid;
+          grid-template-columns: 40% 60%;
           width: 90%;
-          display: flex;
           z-index: 10000;
           height: 90vh;
           margin-bottom: 2rem;

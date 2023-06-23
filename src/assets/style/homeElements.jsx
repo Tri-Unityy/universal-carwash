@@ -64,7 +64,7 @@ export const Container = styled.section`
           margin-bottom: 2rem;
           @media screen and (max-width: 501px) {
             display: flex;
-            flex-direction: column;
+            flex-direction: column-reverse;
           }
         `;
       case "div":
@@ -74,6 +74,12 @@ export const Container = styled.section`
           flex-wrap: wrap;
           width: 100%;
           height: 100%;
+
+          @media screen and (max-width: 501px) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+          }
         `;
       case "about":
         return css`
@@ -93,7 +99,6 @@ export const Container = styled.section`
           flex-direction: column;
           width: 90%;
           height: 80vh;
-          background-color: rgba(255, 255, 255, 0.2);
           justify-content: center;
           align-items: center;
           margin-bottom: 2rem;
@@ -104,8 +109,10 @@ export const Container = styled.section`
           position: relative;
           display: flex;
           flex-direction: column;
-          width: 80%;
+          width: 100%;
           height: 80vh;
+          justify-content: center;
+          align-items: center;
           background-color: transparent;
           border-radius: 5px;
           margin-bottom: 2rem;
@@ -373,7 +380,7 @@ export const ContentContainer = styled.div`
           justify-content: space-between;
           align-items: start;
           @media screen and (max-width: 501px) {
-            height: 70%;
+            height: 100%;
           }
         `;
     }
@@ -418,6 +425,9 @@ export const ButtonContainer = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  /* @media screen and (max-width: 501px) {
+    margin-top: 2rem;
+  } */
 `;
 
 export const Button = styled(LinkS)`
@@ -451,7 +461,7 @@ export const AboutContainer = styled.div`
   align-items: flex-end;
   width: 70%;
   height: 80%;
-  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(255, 255, 255, 0.2); */
   padding-right: 1rem;
   @media screen and (max-width: 376px) {
     width: 100%;
@@ -479,7 +489,7 @@ export const ServicesContainer = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 95%;
-  height: 80%;
+  height: 60%;
   background-color: transparent;
   overflow: hidden;
   @media screen and (max-width: 376px) {
@@ -509,13 +519,20 @@ export const ServicesImageContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 50%;
+  height: 40%;
 `;
 
 export const ServicesImage = styled.img`
-  width: 300px;
-  height: 250px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+
+  :hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 //////////////////////// SLider ///////////////////////////////
@@ -524,8 +541,7 @@ export const ServicesImage = styled.img`
 export const SliderContainer = styled.article`
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  width: 80%;
   height: 100%;
   opacity: 0;
   transition: all 0.5s linear;
@@ -654,7 +670,7 @@ export const GalleryContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(255, 255, 255, 0.2); */
   overflow: hidden;
 
   @media screen and (max-width: 376px) {

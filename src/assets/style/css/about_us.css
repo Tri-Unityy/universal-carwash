@@ -30,6 +30,7 @@
     background-position: left;
     border: none;
     opacity: 0.6;
+    
     /* Adjust the opacity value as needed */
   
     @media screen and (max-width: 769px) {

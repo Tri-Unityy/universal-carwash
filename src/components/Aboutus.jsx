@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { slideIn, staggerContainer } from "../utils/motion";
+import { slideIn, staggerContainer, textVariant } from "../utils/motion";
 import "./../assets/style/css/about_us.css";
 import {
   SectionDiv,
@@ -27,10 +27,7 @@ const AboutUs = () => {
             variants={slideIn("left", "tween", 0.2, 1)}
           />
 
-          <motion.div
-            variants={slideIn("right", "tween", 0.2, 1)}
-            className="about-container"
-          >
+          <motion.div variants={textVariant()} className="about-container">
             <AboutContainer>
               <SectionHeading>About Us</SectionHeading>
               <AboutParagraphContainer>

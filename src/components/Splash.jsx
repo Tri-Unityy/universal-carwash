@@ -14,6 +14,7 @@ import "./../assets/style/css/splash.css";
 import { motion, useTransform, useScroll } from "framer-motion";
 import splash from "./../assets/images/splash.jpg";
 import vidBg from "./../assets/video/bgVid.mp4";
+import "./../assets/style/css/cube.scss";
 
 const Splash = () => {
   let { scrollYProgress } = useScroll();
@@ -33,6 +34,30 @@ const Splash = () => {
             <source src={vidBg} type="video/mp4" />
           </video>
         </motion.div>
+        <div className="cube">
+          <div className="stage-cube-cont">
+            <div className="cubespinner">
+              <div className="face1">
+                <div>Hi</div>
+              </div>
+              <div className="face2">
+                <div>Hi</div>
+              </div>
+              <div className="face3">
+                <div>Hi</div>
+              </div>
+              <div className="face4">
+                <div>Hi</div>
+              </div>
+              <div className="face5">
+                <div>Hi</div>
+              </div>
+              <div className="face6">
+                <div>Hi</div>
+              </div>
+            </div>
+          </div>
+        </div>
         <Container $mode="splash">
           <ContentContainer $mode="outer">
             <ContentContainer $mode="inner">

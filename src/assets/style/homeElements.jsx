@@ -142,16 +142,24 @@ export const Container = styled.section`
           height: 60vh;
           background-color: rgba(255, 255, 255, 0.2);
         `;
-      case "splash-div":
+    }
+  }}
+`;
+
+export const SectionDiv = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  ${(props) => {
+    switch (props.$mode) {
+      case "about":
         return css`
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          height: 100%;
-          justify-content: center;
-          align-items: center;
-          margin-bottom: 2rem;
+          /* background-color: rgba(255, 255, 255, 0.2); */
         `;
     }
   }}

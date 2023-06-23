@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  SectionDiv,
   Container,
   ContentContainer,
   // ImageContainer,
@@ -19,7 +20,7 @@ const Splash = () => {
   let yRange = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   return (
     <>
-      <Container $mode="splash-div">
+      <SectionDiv>
         <motion.div style={{ yRange }} className="splashbg">
           <video
             autoPlay
@@ -46,7 +47,7 @@ const Splash = () => {
             </ContentContainer>
           </ContentContainer>
         </Container>
-      </Container>
+      </SectionDiv>
     </>
   );
 };

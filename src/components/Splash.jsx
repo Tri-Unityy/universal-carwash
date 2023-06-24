@@ -16,6 +16,8 @@ import splash from "./../assets/images/splash.jpg";
 import vidBg from "./../assets/video/bgVid.mp4";
 import "./../assets/style/css/cube.scss";
 
+import { useNavigate } from "react-router-dom";
+
 import i1 from "./../assets/images/cubeicons/1.png";
 import i2 from "./../assets/images/cubeicons/2.png";
 import i3 from "./../assets/images/cubeicons/3.png";
@@ -25,6 +27,7 @@ import i6 from "./../assets/images/cubeicons/6.png";
 import SplashImageSlider from "./SplashImageSlider";
 
 const Splash = () => {
+  const navigate = useNavigate();
   let { scrollYProgress } = useScroll();
   let yRange = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   return (
@@ -87,7 +90,9 @@ const Splash = () => {
                 <SubHeading>Beauty</SubHeading>
               </Container>
               <ButtonContainer>
-                <Button>Get Started</Button>
+                <Button onClick={() => navigate("/booking")}>
+                  Get Started
+                </Button>
               </ButtonContainer>
             </ContentContainer>
           </ContentContainer>

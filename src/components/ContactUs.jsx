@@ -1,10 +1,10 @@
 import React from "react";
-import { Container } from "../assets/style/homeElements";
+import { ContactMapContainer, Container } from "../assets/style/homeElements";
 
 const ContactUs = () => {
   return (
     <Container $mode="contact">
-      <h1>Contact Us</h1>
+      <ContactMapContainer></ContactMapContainer>
     </Container>
   );
 };

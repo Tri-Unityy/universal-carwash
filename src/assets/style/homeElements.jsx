@@ -147,9 +147,8 @@ export const Container = styled.section`
         return css`
           display: flex;
           flex-direction: row;
-          width: 90%;
+          width: 100%;
           height: 60vh;
-          background-color: rgba(255, 255, 255, 0.2);
         `;
     }
   }}
@@ -693,4 +692,12 @@ export const GalleryImageContainer = styled.div`
 ///////////////////////// Contact /////////////////////////
 /* Start */
 
-export const ContactMapContainer = styled.div``;
+export const ContactMapContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+`;

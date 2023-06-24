@@ -15,10 +15,12 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.4",
     "framer-motion": "^10.12.16",
+    "leaflet": "^1.9.4",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-compare-slider": "^2.2.0",
     "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
     "react-scroll": "^1.8.9",
     "styled-components": "^6.0.0-rc.3",
     "swiper": "^9.4.1"

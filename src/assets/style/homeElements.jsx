@@ -145,6 +145,7 @@ export const Container = styled.section`
 
       case "contact":
         return css`
+          position: relative;
           display: flex;
           flex-direction: row;
           width: 100%;
@@ -700,4 +701,9 @@ export const ContactMapContainer = styled.div`
   overflow: hidden;
   top: 0;
   left: 0;
+`;
+
+export const ContactDetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;

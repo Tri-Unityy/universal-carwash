@@ -82,21 +82,11 @@ const Splash = () => {
           </div>
         </div>
         <Container $mode="splash">
-          <ContentContainer $mode="outer">
-            <ContentContainer $mode="inner">
-              <Container $mode="div">
-                <SubHeading>Reveal the</SubHeading>
-                <Heading>Hidden</Heading>
-                <SubHeading>Beauty</SubHeading>
-              </Container>
-              {/* <ButtonContainer>
-                <Button onClick={() => navigate("/booking")}>
-                  Get Started
-                </Button>
-              </ButtonContainer> */}
-            </ContentContainer>
-          </ContentContainer>
-          {/* <SplashImageSlider /> */}
+          <Container $mode="div">
+            <SubHeading>Reveal the</SubHeading>
+            <Heading>Hidden</Heading>
+            <SubHeading>Beauty</SubHeading>
+          </Container>
         </Container>
       </SectionDiv>
     </>

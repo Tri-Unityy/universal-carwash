@@ -72,7 +72,7 @@ export const Container = styled.section`
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          width: 100%;
+          width: 50%;
           height: 100%;
           justify-content: space-around;
           align-items: center;

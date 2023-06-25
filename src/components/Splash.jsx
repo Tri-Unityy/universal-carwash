@@ -89,11 +89,11 @@ const Splash = () => {
                 <Heading>Hidden</Heading>
                 <SubHeading>Beauty</SubHeading>
               </Container>
-              <ButtonContainer>
+              {/* <ButtonContainer>
                 <Button onClick={() => navigate("/booking")}>
                   Get Started
                 </Button>
-              </ButtonContainer>
+              </ButtonContainer> */}
             </ContentContainer>
           </ContentContainer>
           {/* <SplashImageSlider /> */}

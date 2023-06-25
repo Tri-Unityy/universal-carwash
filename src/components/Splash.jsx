@@ -33,7 +33,7 @@ const Splash = () => {
   return (
     <>
       <SectionDiv>
-        {/* <motion.div style={{ yRange }} className="splashbg">
+        <motion.div style={{ yRange }} className="splashbg">
           <video
             autoPlay
             loop
@@ -44,7 +44,7 @@ const Splash = () => {
           >
             <source src={vidBg} type="video/mp4" />
           </video>
-        </motion.div> */}
+        </motion.div>
         <div className="cube">
           <div className="stage-cube-cont">
             <div className="cubespinner">
@@ -96,7 +96,7 @@ const Splash = () => {
               </ButtonContainer>
             </ContentContainer>
           </ContentContainer>
-          <SplashImageSlider />
+          {/* <SplashImageSlider /> */}
         </Container>
       </SectionDiv>
     </>

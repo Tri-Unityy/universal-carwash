@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "../assets/style/layoutElements";
-import Booking from "../screens/booking/booking";
+import Booking from "../screens/Booking/Booking";
 
 const BookingLayout = () => {
   return (

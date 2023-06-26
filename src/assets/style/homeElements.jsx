@@ -654,7 +654,7 @@ export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   height: 20%;
   background-color: transparent;

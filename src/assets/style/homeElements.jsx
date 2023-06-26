@@ -142,6 +142,7 @@ export const Container = styled.section`
           justify-content: right;
           align-items: flex-end;
           margin-bottom: 2rem;
+          margin-top: 2rem;
         `;
 
       case "contact":
@@ -171,6 +172,10 @@ export const SectionDiv = styled.div`
         return css`
           /* background-color: rgba(255, 255, 255, 0.2); */
         `;
+      case "gallery":
+        return css`
+          background-color: rgba(255, 255, 255, 0.2);
+        `;
     }
   }}
 `;
@@ -195,7 +200,7 @@ export const SectionParagraph = styled.p`
   color: ${secondaryTextColor};
   margin-bottom: 1rem;
   font-weight: 400;
-  text-align: right;
+  text-align: justify;
 
   @media screen and (max-width: 376px) {
     text-align: justify;
@@ -458,25 +463,25 @@ export const Button = styled(LinkS)`
 export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  width: 70%;
-  height: 80%;
+  /* justify-content: center; */
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
   /* background-color: rgba(255, 255, 255, 0.2); */
-  padding-right: 1rem;
+  padding-left: 1rem;
   @media screen and (max-width: 376px) {
     width: 100%;
     align-items: flex-start;
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
   }
 `;
 
 export const AboutParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: right;
-  align-items: flex-end;
-  width: 70%;
+  justify-content: left;
+  align-items: flex-start;
+  width: 100%;
   height: 70%;
   background-color: transparent;
 `;
@@ -654,25 +659,25 @@ export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   height: 20%;
   background-color: transparent;
   overflow: hidden;
-  @media screen and (max-width: 376px) {
-    padding-left: 1rem;
+  @media screen and (max-width: 426px) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 40%;
   }
 `;
 
 export const GalleryContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   width: 100%;
   height: 100%;
   /* background-color: rgba(255, 255, 255, 0.2); */
-  overflow: hidden;
+  overflow-y: auto;
 
   @media screen and (max-width: 376px) {
     padding-left: 1rem;

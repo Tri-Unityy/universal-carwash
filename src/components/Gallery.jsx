@@ -1,48 +1,51 @@
 import React from "react";
-
+import Masonry from "react-masonry-css";
 import {
   Container,
   GalleryContainer,
-  GalleryImageContainer,
+  SectionDiv,
   SectionHeading,
+  SectionParagraph,
   TitleContainer,
 } from "../assets/style/homeElements";
 
-import {
-  ReactCompareSlider,
-  ReactCompareSliderImage,
-} from "react-compare-slider";
-
+import "./../assets/style/css/masonry.css";
 import about from "./../assets/images/about.jpg";
 import exterior from "./../assets/images/exterior.jpg";
-
 const Gallery = () => {
+  const breakpointColumnsObj = {
+    default: 4,
+    1100: 3,
+    700: 2,
+    500: 1,
+  };
+
   return (
-    <Container $mode="gallery">
-      <GalleryContainer>
+    <SectionDiv $mode="gallery">
+      <Container $mode="gallery">
         <TitleContainer>
           <SectionHeading $mode="gallery">Our Works</SectionHeading>
+          <SectionParagraph>
+            {" "}
+            Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum{" "}
+          </SectionParagraph>
         </TitleContainer>
-
-        <GalleryImageContainer>
-          <ReactCompareSlider
-            style={{ width: "80%", height: "100%" }}
-            itemOne={
-              <ReactCompareSliderImage
-                src={about}
-                style={{ width: "100%", height: "100%", objectFit: "fill" }}
-              />
-            }
-            itemTwo={
-              <ReactCompareSliderImage
-                src={exterior}
-                style={{ width: "100%", height: "100%", objectFit: "fill" }}
-              />
-            }
-          />
-        </GalleryImageContainer>
-      </GalleryContainer>
-    </Container>
+        <GalleryContainer>
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
+            <img className="masonry" src={about} />
+            <img className="masonry" src={exterior} />
+            <img className="masonry" src={about} />
+            <img className="masonry" src={exterior} />
+            <img className="masonry" src={about} />
+            <img className="masonry" src={exterior} />
+          </Masonry>
+        </GalleryContainer>
+      </Container>
+    </SectionDiv>
   );
 };
 

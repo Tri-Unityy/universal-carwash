@@ -142,6 +142,7 @@ export const Container = styled.section`
           justify-content: right;
           align-items: flex-end;
           margin-bottom: 2rem;
+          margin-top: 2rem;
         `;
 
       case "contact":
@@ -170,6 +171,10 @@ export const SectionDiv = styled.div`
       case "about":
         return css`
           /* background-color: rgba(255, 255, 255, 0.2); */
+        `;
+      case "gallery":
+        return css`
+          background-color: rgba(255, 255, 255, 0.2);
         `;
     }
   }}
@@ -659,20 +664,20 @@ export const TitleContainer = styled.div`
   height: 20%;
   background-color: transparent;
   overflow: hidden;
-  @media screen and (max-width: 376px) {
-    padding-left: 1rem;
+  @media screen and (max-width: 426px) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 40%;
   }
 `;
 
 export const GalleryContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   width: 100%;
   height: 100%;
   /* background-color: rgba(255, 255, 255, 0.2); */
-  overflow: hidden;
+  overflow-y: auto;
 
   @media screen and (max-width: 376px) {
     padding-left: 1rem;

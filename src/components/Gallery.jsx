@@ -2,6 +2,8 @@ import React from "react";
 import Masonry from "react-masonry-css";
 import {
   Container,
+  GalleryContainer,
+  SectionDiv,
   SectionHeading,
   SectionParagraph,
   TitleContainer,
@@ -19,28 +21,31 @@ const Gallery = () => {
   };
 
   return (
-    <Container $mode="gallery">
-      <TitleContainer>
-        <SectionHeading $mode="gallery">Our Works</SectionHeading>
-        <SectionParagraph>
-          {" "}
-          Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum{" "}
-        </SectionParagraph>
-      </TitleContainer>
-
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className={"my-masonry-grid"}
-        columnClassName={"my-masonry-grid_column"}
-      >
-        <img src={about} />
-        <img src={exterior} />
-        <img src={about} />
-        <img src={exterior} />
-        <img src={about} />
-        <img src={exterior} />
-      </Masonry>
-    </Container>
+    <SectionDiv $mode="gallery">
+      <Container $mode="gallery">
+        <TitleContainer>
+          <SectionHeading $mode="gallery">Our Works</SectionHeading>
+          <SectionParagraph>
+            {" "}
+            Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum{" "}
+          </SectionParagraph>
+        </TitleContainer>
+        <GalleryContainer>
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
+            <img className="masonry" src={about} />
+            <img className="masonry" src={exterior} />
+            <img className="masonry" src={about} />
+            <img className="masonry" src={exterior} />
+            <img className="masonry" src={about} />
+            <img className="masonry" src={exterior} />
+          </Masonry>
+        </GalleryContainer>
+      </Container>
+    </SectionDiv>
   );
 };
 

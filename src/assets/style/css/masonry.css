@@ -9,8 +9,9 @@
     padding-left: 30px;
 }
 
-img{
+.masonry{
     width: 100%;
     max-width: 400px;
     height: auto;
+    border-radius: 10px;
 }

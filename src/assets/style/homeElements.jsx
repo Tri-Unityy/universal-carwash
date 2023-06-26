@@ -56,12 +56,12 @@ export const Container = styled.section`
       case "splash":
         return css`
           margin-top: 70px;
-          display: grid;
-          grid-template-columns: 40% 60%;
+          display: flex;
           width: 90%;
           z-index: 10000;
           height: 90vh;
           margin-bottom: 2rem;
+          justify-content: center;
           @media screen and (max-width: 501px) {
             display: flex;
             flex-direction: column-reverse;
@@ -70,11 +70,12 @@ export const Container = styled.section`
       case "div":
         return css`
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           flex-wrap: wrap;
-          width: 100%;
+          width: 50%;
           height: 100%;
-
+          justify-content: space-around;
+          align-items: center;
           @media screen and (max-width: 501px) {
             display: flex;
             flex-direction: column;

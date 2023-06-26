@@ -10,6 +10,12 @@ import {
   SectionParagraph,
   AboutParagraphContainer,
 } from "../assets/style/homeElements";
+import about from "./../assets/images/about.jpg";
+import exterior from "./../assets/images/exterior.jpg";
+import {
+  ReactCompareSlider,
+  ReactCompareSliderImage,
+} from "react-compare-slider";
 
 const AboutUs = () => {
   return (
@@ -22,11 +28,23 @@ const AboutUs = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
         >
-          <motion.img
-            className="about-image"
-            variants={slideIn("left", "tween", 0.2, 1)}
-          />
-
+          <motion.div variants={slideIn("left", "tween", 0.0, 1)}>
+            <ReactCompareSlider
+              style={{ width: "100%", height: "70%" }}
+              itemOne={
+                <ReactCompareSliderImage
+                  src={about}
+                  style={{ width: "100%", height: "100%", objectFit: "fill" }}
+                />
+              }
+              itemTwo={
+                <ReactCompareSliderImage
+                  src={exterior}
+                  style={{ width: "100%", height: "100%", objectFit: "fill" }}
+                />
+              }
+            />
+          </motion.div>
           <motion.div variants={textVariant()} className="about-container">
             <AboutContainer>
               <SectionHeading>About Us</SectionHeading>

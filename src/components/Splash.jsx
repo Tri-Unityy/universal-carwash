@@ -25,6 +25,7 @@ import i4 from "./../assets/images/cubeicons/4.png";
 import i5 from "./../assets/images/cubeicons/5.png";
 import i6 from "./../assets/images/cubeicons/6.png";
 import SplashImageSlider from "./SplashImageSlider";
+import { primaryHeadingColor } from "../assets/resources/colors";
 
 const Splash = () => {
   const navigate = useNavigate();
@@ -83,9 +84,10 @@ const Splash = () => {
         </div>
         <Container $mode="splash">
           <Container $mode="div">
-            <SubHeading>Reveal the</SubHeading>
-            <Heading>Hidden</Heading>
-            <SubHeading>Beauty</SubHeading>
+            <SubHeading>
+              Reveal the{" "}
+              <span style={{ color: primaryHeadingColor }}>Hidden</span> Beauty
+            </SubHeading>
           </Container>
         </Container>
       </SectionDiv>

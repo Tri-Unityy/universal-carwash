@@ -152,7 +152,7 @@ export const Container = styled.section`
           width: 100%;
           height: 70vh;
           margin-bottom: 2rem;
-          border: 1px solid red;
+          padding-right: 2rem;
         `;
 
       case "contact":
@@ -715,7 +715,9 @@ export const ApplyContentContainer = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
+
   background-color: transparent;
+
   overflow: hidden;
 `;
 
@@ -725,7 +727,7 @@ export const ApplyFormContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 1.5rem;
-  background-color: transparent;
+  background-color: #fff;
   overflow: hidden;
 `;
 

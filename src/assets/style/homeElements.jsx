@@ -157,10 +157,13 @@ export const Container = styled.section`
       case "contact":
         return css`
           position: relative;
+          margin-top: 3rem;
           display: flex;
-          flex-direction: row;
-          width: 100%;
-          height: 60vh;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 90%;
+          height: 100%;
         `;
     }
   }}
@@ -751,5 +754,70 @@ export const ContactMapContainer = styled.div`
 
 export const ContactDetailsContainer = styled.div`
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 80%;
+  align-items: flex-end;
+`;
+
+export const ContactDetails = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+`;
+
+export const Details = styled.div`
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  height: 80%;
+  width: 20%;
+  color: ${primaryHeadingColor};
+`;
+
+export const TimeTable = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  align-items: flex-end;
+  width: 30%;
+  height: 100%;
+`;
+
+export const TimeTableContents = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 80%;
+  width: 100%;
+  color: ${primaryHeadingColor};
+  background-color: #fff;
+  border-radius: 8px;
+  padding-left: 1rem;
+`;
+
+export const ContactDetailsParagraph = styled.p`
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1rem;
+  ${(props) => {
+    switch (props.$mode) {
+      case "dark":
+        return css`
+          color: #000;
+        `;
+    }
+  }};
+`;
+
+export const ContactLogo = styled.img`
+  width: 25%;
+  height: auto;
 `;

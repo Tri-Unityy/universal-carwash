@@ -11,10 +11,20 @@ import {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./../assets/style/css/apply-form.css";
-
+import booking from "./../assets/video/booking.mp4";
 const Apply = () => {
   return (
     <SectionDiv>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{ opacity: 0.5 }}
+        className="bg-video"
+      >
+        <source src={booking} type="video/mp4" />
+      </video>
       <Container $mode="apply">
         <ApplyContentContainer>
           <TitleContainer>

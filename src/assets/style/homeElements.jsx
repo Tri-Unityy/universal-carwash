@@ -151,7 +151,6 @@ export const Container = styled.section`
           grid-template-columns: 70% 30%;
           width: 100%;
           height: 70vh;
-          margin-bottom: 2rem;
           padding-right: 2rem;
         `;
 
@@ -176,6 +175,8 @@ export const SectionDiv = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  overflow: hidden;
+
   ${(props) => {
     switch (props.$mode) {
       case "about":
@@ -184,7 +185,7 @@ export const SectionDiv = styled.div`
         `;
       case "gallery":
         return css`
-          background-color: rgba(255, 255, 255, 0.2);
+          /* background-color: rgba(255, 255, 255, 0.2); */
         `;
     }
   }}
@@ -717,6 +718,7 @@ export const ApplyContentContainer = styled.div`
   height: 100%;
 
   background-color: transparent;
+  z-index: 1000000;
 
   overflow: hidden;
 `;
@@ -724,11 +726,14 @@ export const ApplyContentContainer = styled.div`
 export const ApplyFormContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   padding: 1.5rem;
-  background-color: #fff;
   overflow: hidden;
+  border-radius: 8px;
+  z-index: 1000000;
 `;
 
 ///////////////////////// Contact /////////////////////////

@@ -145,6 +145,16 @@ export const Container = styled.section`
           margin-top: 2rem;
         `;
 
+      case "apply":
+        return css`
+          display: grid;
+          grid-template-columns: 70% 30%;
+          width: 100%;
+          height: 70vh;
+          margin-bottom: 2rem;
+          border: 1px solid red;
+        `;
+
       case "contact":
         return css`
           position: relative;
@@ -693,6 +703,29 @@ export const GalleryImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  overflow: hidden;
+`;
+
+///////////////////////// Apply ///////////////////////////
+/* Start */
+export const ApplyContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  overflow: hidden;
+`;
+
+export const ApplyFormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  background-color: transparent;
   overflow: hidden;
 `;
 

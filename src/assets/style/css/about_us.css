@@ -16,6 +16,13 @@
     /* align-items: center; */
     width: 90%;
     height: 70vh;
+
+    @media screen and (max-width: 769px) {
+      display: flex;
+      flex-direction: column-reverse;
+      height: 100%;
+      flex-wrap: nowrap;
+    }
   }
 
 .about-image{

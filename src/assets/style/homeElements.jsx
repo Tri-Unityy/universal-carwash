@@ -546,7 +546,7 @@ export const ServicesImage = styled.img`
   width: 120px;
   height: 120px;
   object-fit: cover;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
   border-radius: 5px;
 
   :hover {
@@ -757,7 +757,7 @@ export const ContactDetailsContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  height: 80%;
+  height: 100%;
   align-items: flex-end;
 `;
 
@@ -765,7 +765,7 @@ export const ContactDetails = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
 `;
@@ -774,7 +774,7 @@ export const Details = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80%;
+  height: 100%;
   width: 20%;
   color: ${primaryHeadingColor};
 `;
@@ -818,6 +818,6 @@ export const ContactDetailsParagraph = styled.p`
 `;
 
 export const ContactLogo = styled.img`
-  width: 25%;
+  width: 20%;
   height: auto;
 `;

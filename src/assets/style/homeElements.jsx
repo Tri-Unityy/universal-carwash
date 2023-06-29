@@ -503,6 +503,7 @@ export const AboutContainer = styled.div`
 
   @media screen and (max-width: 769px) {
     padding-left: 0rem;
+    margin: 0;
   }
 `;
 

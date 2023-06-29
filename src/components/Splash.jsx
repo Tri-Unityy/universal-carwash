@@ -86,7 +86,10 @@ const Splash = () => {
           <Container $mode="div">
             <SubHeading>
               Reveal the{" "}
-              <span style={{ color: primaryHeadingColor }}>Hidden</span> Beauty
+              <span style={{ color: primaryHeadingColor, fontWeight: "bold" }}>
+                Hidden
+              </span>{" "}
+              Beauty
             </SubHeading>
           </Container>
         </Container>

@@ -489,12 +489,12 @@ export const Button = styled(LinkS)`
 export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
   height: 100%;
   /* background-color: rgba(255, 255, 255, 0.2); */
-  padding-left: 1rem;
+  margin-left: 2rem;
   @media screen and (max-width: 376px) {
     width: 100%;
     align-items: flex-start;
@@ -739,7 +739,6 @@ export const ApplyContentContainer = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
-
   background-color: transparent;
   z-index: 1000000;
 
@@ -782,6 +781,7 @@ export const ContactDetailsContainer = styled.div`
   width: 100%;
   height: 100%;
   align-items: flex-end;
+  margin-top: 2rem;
 `;
 
 export const ContactDetails = styled.div`

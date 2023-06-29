@@ -137,7 +137,7 @@ export const Container = styled.section`
           display: flex;
           flex-direction: column;
           width: 90%;
-          height: 90vh;
+          height: 100%;
           background-color: transparent;
           justify-content: right;
           align-items: flex-end;
@@ -152,6 +152,15 @@ export const Container = styled.section`
           width: 100%;
           height: 70vh;
           padding-right: 2rem;
+
+          @media screen and (max-width: 769px) {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+          }
         `;
 
       case "contact":
@@ -225,6 +234,9 @@ export const SectionParagraph = styled.p`
       case "services":
         return css`
           text-align: left;
+          @media screen and (max-width: 769px) {
+            text-align: justify;
+          }
         `;
     }
   }}
@@ -477,16 +489,21 @@ export const Button = styled(LinkS)`
 export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
   height: 100%;
   /* background-color: rgba(255, 255, 255, 0.2); */
-  padding-left: 1rem;
+  margin-left: 2rem;
   @media screen and (max-width: 376px) {
     width: 100%;
     align-items: flex-start;
     /* padding-left: 1rem; */
+  }
+
+  @media screen and (max-width: 769px) {
+    padding-left: 0rem;
+    margin: 0;
   }
 `;
 
@@ -525,7 +542,7 @@ export const ServicesParagraphContainer = styled.div`
   width: 40%;
   height: 70%;
   background-color: transparent;
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: 769px) {
     width: 100%;
   }
   @media screen and (max-width: 426px) {
@@ -537,9 +554,13 @@ export const ServicesImageContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  height: 40%;
+  height: 100%;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 769px) {
+  }
 `;
 
 export const ServicesImage = styled.img`
@@ -548,7 +569,7 @@ export const ServicesImage = styled.img`
   object-fit: cover;
   /* background-color: rgba(255, 255, 255, 0.1); */
   border-radius: 5px;
-
+  margin-bottom: 1rem;
   :hover {
     transform: scale(1.1);
     transition: all 0.2s ease-in-out;
@@ -719,11 +740,13 @@ export const ApplyContentContainer = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
-
   background-color: transparent;
   z-index: 1000000;
 
   overflow: hidden;
+  @media screen and (max-width: 769px) {
+    width: 90%;
+  }
 `;
 
 export const ApplyFormContainer = styled.div`
@@ -759,6 +782,7 @@ export const ContactDetailsContainer = styled.div`
   width: 100%;
   height: 100%;
   align-items: flex-end;
+  margin-top: 2rem;
 `;
 
 export const ContactDetails = styled.div`
@@ -768,6 +792,11 @@ export const ContactDetails = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Details = styled.div`
@@ -777,6 +806,14 @@ export const Details = styled.div`
   height: 100%;
   width: 20%;
   color: ${primaryHeadingColor};
+
+  @media screen and (max-width: 769px) {
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+  }
 `;
 
 export const TimeTable = styled.div`
@@ -807,6 +844,12 @@ export const ContactDetailsParagraph = styled.p`
   text-align: center;
   font-weight: 600;
   margin-top: 1rem;
+
+  @media screen and (max-width: 769px) {
+    text-align: left;
+    width: 90%;
+  }
+
   ${(props) => {
     switch (props.$mode) {
       case "dark":

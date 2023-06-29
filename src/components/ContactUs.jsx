@@ -31,23 +31,23 @@ const ContactUs = () => {
         <ContactDetailsContainer>
           <ContactDetails>
             <Details>
-              <CallIcon />
+              <CallIcon sx={{ fontSize: "30px" }} />
               <ContactDetailsParagraph>+91 1234567890</ContactDetailsParagraph>
             </Details>
             <Details>
-              <EmailIcon />
+              <EmailIcon sx={{ fontSize: "30px" }} />
               <ContactDetailsParagraph>
                 ninthu1999@hotmail.com
               </ContactDetailsParagraph>
             </Details>
             <Details>
-              <MapIcon />
+              <MapIcon sx={{ fontSize: "30px" }} />
               <ContactDetailsParagraph>
                 123, 4th Cross, 5th Main, 6th Sector, 7th Street, 8th Block,
               </ContactDetailsParagraph>
             </Details>
             <Details>
-              <QueryBuilderIcon />
+              <QueryBuilderIcon sx={{ fontSize: "30px" }} />
               <ContactDetailsParagraph>
                 Monday - Sunday <br />{" "}
                 <span style={{ color: "#E80C0E" }}> 9:00 AM - 9:00 PM </span>

@@ -14,7 +14,7 @@ const SideBar = ({ isOpen, toggle }) => {
     <>
       <Container $mode="side" isOpen={isOpen} onClick={toggle}>
         <MenuIconContainer $mode="side">
-          <CloseIcon sx={{ fontSize: 35 }} />
+          <CloseIcon sx={{ fontSize: 35, color: "#FFF" }} />
         </MenuIconContainer>
         <SidebarWrapper>
           <SidebarMenu>

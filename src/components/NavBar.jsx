@@ -62,7 +62,7 @@ const NavBar = ({ toggle }) => {
       </NavLinks>
 
       <MenuIconContainer $mode="nav" onClick={toggle}>
-        <MenuIcon sx={{ fontSize: 35 }} />
+        <MenuIcon sx={{ fontSize: 35, color: "#FFF" }} />
       </MenuIconContainer>
     </Container>
   );

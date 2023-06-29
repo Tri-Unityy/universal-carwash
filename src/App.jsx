@@ -1,4 +1,4 @@
-import BookingLayout from "./layout/BookingLayout";
+// import BookingLayout from "./layout/BookingLayout";
 import HomeLayout from "./layout/HomeLayout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
@@ -7,7 +7,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomeLayout />} />
-          <Route path="/booking" element={<BookingLayout />} />
+          {/* <Route path="/booking" element={<BookingLayout />} /> */}
         </Routes>
       </Router>
     </>

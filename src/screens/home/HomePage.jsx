@@ -10,7 +10,7 @@ import Gallery from "../../components/Gallery";
 import ContactUs from "../../components/ContactUs";
 import Apply from "../../components/Apply";
 
-const Home = () => {
+const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -32,4 +32,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

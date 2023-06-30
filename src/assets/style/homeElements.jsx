@@ -848,6 +848,7 @@ export const ContactDetailsParagraph = styled.p`
   @media screen and (max-width: 769px) {
     text-align: left;
     width: 90%;
+    margin-left: 1.5rem;
   }
 
   ${(props) => {
@@ -863,4 +864,14 @@ export const ContactDetailsParagraph = styled.p`
 export const ContactLogo = styled.img`
   width: 20%;
   height: auto;
+
+  @media screen and (max-width: 769px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 426px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 376px) {
+    width: 60%;
+  }
 `;

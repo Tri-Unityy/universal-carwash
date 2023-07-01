@@ -82,18 +82,7 @@ export const Container = styled.section`
             flex-wrap: nowrap;
           }
         `;
-      case "about":
-        return css`
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: flex-end;
-          width: 90%;
-          height: 90vh;
-          margin-bottom: 2rem;
-        `;
+
       case "services":
         return css`
           display: flex;

@@ -97,9 +97,10 @@ export const Container = styled.section`
       case "packages":
         return css`
           position: relative;
-          display: flex;
-          flex-direction: column;
-          width: 100%;
+          display: grid;
+          grid-template-columns: 10% 80% 10%;
+          border: 1px solid #fff;
+          width: 80%;
           height: 80vh;
           justify-content: center;
           align-items: center;

@@ -97,12 +97,11 @@ export const Container = styled.section`
       case "packages":
         return css`
           position: relative;
-          display: grid;
-          grid-template-columns: 10% 80% 10%;
-          border: 1px solid #fff;
+          display: flex;
+          flex-direction: row;
           width: 80%;
           height: 80vh;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
           background-color: transparent;
           border-radius: 5px;
@@ -188,6 +187,11 @@ export const SectionDiv = styled.div`
       case "gallery":
         return css`
           /* background-color: rgba(255, 255, 255, 0.2); */
+        `;
+
+      case "slider":
+        return css`
+          margin: 0;
         `;
     }
   }}
@@ -566,13 +570,13 @@ export const ServicesImage = styled.img`
   }
 `;
 
-//////////////////////// SLider ///////////////////////////////
+//////////////////////// Slider ///////////////////////////////
 /* Start */
 
 export const SliderContainer = styled.article`
+  display: flex;
   position: absolute;
-  top: 0;
-  width: 80%;
+  width: 100%;
   height: 100%;
   opacity: 0;
   transition: all 0.5s linear;

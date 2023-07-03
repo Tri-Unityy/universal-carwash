@@ -19,7 +19,8 @@ export const Container = styled.section`
     switch (props.$mode) {
       case "nav":
         return css`
-          position: sticky;
+          top: 0;
+          position: absolute;
           display: flex;
           flex-direction: row;
           justify-content: space-between;

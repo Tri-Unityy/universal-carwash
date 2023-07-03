@@ -20,7 +20,7 @@ import {
 const AboutUs = () => {
   return (
     <>
-      <SectionDiv $mode="about">
+      <SectionDiv $mode="about" id="aboutus">
         <motion.section
           className="about"
           variants={staggerContainer()}

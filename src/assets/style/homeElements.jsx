@@ -19,9 +19,7 @@ export const Container = styled.section`
     switch (props.$mode) {
       case "nav":
         return css`
-          top: 0;
-          left: 5%;
-          position: absolute;
+          position: sticky;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
@@ -337,9 +335,11 @@ export const Links = styled(LinkS)`
   text-decoration: none;
   font-size: ${bodyText1};
   cursor: pointer;
+
   &.active {
     border-bottom: 3px solid ${primaryHeadingColor};
   }
+
   &:hover {
     color: ${primaryHeadingColor};
     transition: 0.2s ease-in-out;

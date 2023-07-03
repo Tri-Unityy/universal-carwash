@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Links,
@@ -11,8 +11,25 @@ import {
 ///assets import///
 import logo from "./../assets/images/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
-
+import { animateScroll as scroll } from "react-scroll";
 const NavBar = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
   return (
     <Container $mode="nav">
       <LogoContainer>
@@ -20,7 +37,7 @@ const NavBar = ({ toggle }) => {
       </LogoContainer>
       <NavLinks>
         <Links
-          to=""
+          to="aboutus"
           smooth={true}
           duration={500}
           spy={true}
@@ -30,7 +47,7 @@ const NavBar = ({ toggle }) => {
           About Us
         </Links>
         <Links
-          to=""
+          to="services"
           smooth={true}
           duration={500}
           spy={true}
@@ -40,7 +57,7 @@ const NavBar = ({ toggle }) => {
           Services
         </Links>
         <Links
-          to=""
+          to="ourworks"
           smooth={true}
           duration={500}
           spy={true}
@@ -50,7 +67,7 @@ const NavBar = ({ toggle }) => {
           Our Works
         </Links>
         <Links
-          to=""
+          to="contactus"
           smooth={true}
           duration={500}
           spy={true}

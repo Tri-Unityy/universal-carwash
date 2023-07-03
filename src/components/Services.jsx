@@ -31,6 +31,7 @@ import i6 from "../assets/images/cubeicons/6.png";
 const Services = () => {
   return (
     <motion.section
+      id="services"
       className="services"
       variants={staggerContainer()}
       initial="hidden"

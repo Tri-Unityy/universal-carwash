@@ -21,7 +21,7 @@ const Gallery = () => {
   };
 
   return (
-    <SectionDiv $mode="gallery">
+    <SectionDiv $mode="gallery" id="ourworks">
       <Container $mode="gallery">
         <TitleContainer>
           <SectionHeading $mode="gallery">Our Works</SectionHeading>

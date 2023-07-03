@@ -23,9 +23,8 @@ import logo from "./../assets/images/logo.png";
 // import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 const ContactUs = () => {
   return (
-    <SectionDiv>
+    <SectionDiv id="contactus">
       <SectionHeading>Get in Touch</SectionHeading>
-
       <Container $mode="contact">
         <ContactLogo src={logo} />
         <ContactDetailsContainer>

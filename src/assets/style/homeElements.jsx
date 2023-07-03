@@ -192,6 +192,8 @@ export const SectionDiv = styled.div`
       case "slider":
         return css`
           margin: 0;
+          justify-content: space-between;
+          align-items: center;
         `;
     }
   }}
@@ -575,8 +577,10 @@ export const ServicesImage = styled.img`
 
 export const SliderContainer = styled.article`
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
   opacity: 0;
   transition: all 0.5s linear;

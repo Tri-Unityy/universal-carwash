@@ -2,6 +2,10 @@
     z-index:1000000000000000000000000000;
 }
 
+.translator-container{
+    margin-left:1rem;
+}
+
 .translator-button{
     background-color: transparent;
     border: none;
@@ -10,8 +14,10 @@
     
 }
 
+
 .translator-button:hover{
     cursor: pointer;
+    color: #E80C0E;
     background-color: #00000091;
 }
 

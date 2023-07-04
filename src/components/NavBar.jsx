@@ -83,22 +83,22 @@ const NavBar = ({ toggle }) => {
         >
           Contact Us
         </Links>
+        <Dropdown className="translator-container">
+          <Dropdown.Toggle className="translator-button" id="dropdown-basic">
+            <TranslateIcon sx={{ fontSize: 20, color: "#FFF" }} />
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu className="custom-dropdown-menu">
+            <Dropdown.Item>
+              <TranslatorButtonIcon src={fr} /> French
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <TranslatorButtonIcon src={eng} /> English
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </NavLinks>
 
-      <Dropdown>
-        <Dropdown.Toggle className="translator-button" id="dropdown-basic">
-          <TranslateIcon sx={{ fontSize: 20, color: "#FFF" }} />
-        </Dropdown.Toggle>
-
-        <Dropdown.Menu className="custom-dropdown-menu">
-          <Dropdown.Item>
-            <TranslatorButtonIcon src={fr} /> French
-          </Dropdown.Item>
-          <Dropdown.Item>
-            <TranslatorButtonIcon src={eng} /> English
-          </Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
       <MenuIconContainer $mode="nav" onClick={toggle}>
         <MenuIcon sx={{ fontSize: 35, color: "#FFF" }} />
       </MenuIconContainer>

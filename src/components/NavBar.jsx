@@ -6,9 +6,16 @@ import {
   LogoContainer,
   MenuIconContainer,
   NavLinks,
+  TranslatorButtonIcon,
 } from "../assets/style/homeElements";
 
+import "./../assets/style/css/slider.css";
+
+import Dropdown from "react-bootstrap/Dropdown";
+import TranslateIcon from "@mui/icons-material/Translate";
 ///assets import///
+import eng from "./../assets/images/eng.png";
+import fr from "./../assets/images/french.png";
 import logo from "./../assets/images/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import { animateScroll as scroll } from "react-scroll";
@@ -78,6 +85,20 @@ const NavBar = ({ toggle }) => {
         </Links>
       </NavLinks>
 
+      <Dropdown>
+        <Dropdown.Toggle className="translator-button" id="dropdown-basic">
+          <TranslateIcon sx={{ fontSize: 20, color: "#FFF" }} />
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu className="custom-dropdown-menu">
+          <Dropdown.Item>
+            <TranslatorButtonIcon src={fr} /> French
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <TranslatorButtonIcon src={eng} /> English
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
       <MenuIconContainer $mode="nav" onClick={toggle}>
         <MenuIcon sx={{ fontSize: 35, color: "#FFF" }} />
       </MenuIconContainer>

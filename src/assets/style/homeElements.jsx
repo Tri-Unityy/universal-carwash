@@ -347,6 +347,12 @@ export const Links = styled(LinkS)`
   }
 `;
 
+export const TranslatorButtonIcon = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+`;
+
 /* End */
 ///////////////////////////////////////
 

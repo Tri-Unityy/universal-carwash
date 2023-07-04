@@ -108,9 +108,9 @@ const Slider = () => {
                           <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
                         </SliderText>
                       </CommonDiv>
-                      <ButtonContainer>
+                      {/* <ButtonContainer>
                         <Button>Get Plan</Button>
-                      </ButtonContainer>
+                      </ButtonContainer> */}
                     </SliderContentInnerContainer>
                   </SliderContentContainer>
                 </Container>

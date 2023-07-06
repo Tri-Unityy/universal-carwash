@@ -36,3 +36,11 @@
 .custom-dropdown-menu {
     width: 150px !important;
   }
+
+
+.select-container{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 70px;
+}

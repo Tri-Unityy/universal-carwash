@@ -10,7 +10,7 @@ import {
 } from "../assets/style/homeElements";
 
 import "./../assets/style/css/slider.css";
-
+import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
 import TranslateIcon from "@mui/icons-material/Translate";
 ///assets import///
@@ -21,7 +21,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { animateScroll as scroll } from "react-scroll";
 const NavBar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
-
+  const handleSelect = (e) => {
+    console.log(e);
+    setLang(e);
+  };
+  const [lang, setLang] = useState("french");
   const changeNav = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true);
@@ -83,20 +87,31 @@ const NavBar = ({ toggle }) => {
         >
           Contact Us
         </Links>
-        <Dropdown className="translator-container">
+        <Dropdown className="translator-container" onSelect={handleSelect}>
           <Dropdown.Toggle className="translator-button" id="dropdown-basic">
             <TranslateIcon sx={{ fontSize: 20, color: "#FFF" }} />
           </Dropdown.Toggle>
 
           <Dropdown.Menu className="custom-dropdown-menu">
-            <Dropdown.Item>
+            <Dropdown.Item eventKey="french">
               <TranslatorButtonIcon src={fr} /> French
             </Dropdown.Item>
-            <Dropdown.Item>
+            <Dropdown.Item eventKey="en">
               <TranslatorButtonIcon src={eng} /> English
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
+
+        {/* <Form.Select className="select-container">
+          <option value="french">
+            {" "}
+            <TranslatorButtonIcon src={fr} />
+          </option>
+          <option value="eng">
+            {" "}
+            <TranslatorButtonIcon src={eng} />
+          </option>
+        </Form.Select> */}
       </NavLinks>
 
       <MenuIconContainer $mode="nav" onClick={toggle}>

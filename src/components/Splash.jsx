@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   SectionDiv,
   Container,
@@ -10,7 +10,7 @@ import {
   Button,
 } from "../assets/style/homeElements";
 import "./../assets/style/css/splash.css";
-
+import { TranslatorContext } from "../screens/context/TranslatorContext";
 import { motion, useTransform, useScroll } from "framer-motion";
 import splash from "./../assets/images/splash.jpg";
 import vidBg from "./../assets/video/bgVid.mp4";
@@ -28,6 +28,8 @@ import SplashImageSlider from "./SplashImageSlider";
 import { primaryHeadingColor } from "../assets/resources/colors";
 
 const Splash = () => {
+  const { lang } = useContext(TranslatorContext);
+
   const navigate = useNavigate();
   let { scrollYProgress } = useScroll();
   let yRange = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
@@ -87,7 +89,7 @@ const Splash = () => {
             <SubHeading>
               Reveal the{" "}
               <span style={{ color: primaryHeadingColor, fontWeight: "bold" }}>
-                Hidden
+                {lang === "french" ? "Caché" : "Hidden"}
               </span>{" "}
               Beauty
             </SubHeading>

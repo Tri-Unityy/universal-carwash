@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   Container,
   Links,
@@ -8,9 +8,9 @@ import {
   NavLinks,
   TranslatorButtonIcon,
 } from "../assets/style/homeElements";
-
+import { TranslatorContext } from "../screens/context/TranslatorContext";
 import "./../assets/style/css/slider.css";
-import Form from "react-bootstrap/Form";
+// import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
 import TranslateIcon from "@mui/icons-material/Translate";
 ///assets import///
@@ -20,12 +20,12 @@ import logo from "./../assets/images/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import { animateScroll as scroll } from "react-scroll";
 const NavBar = ({ toggle }) => {
+  const { lang, setLang } = useContext(TranslatorContext);
+
   const [scrollNav, setScrollNav] = useState(false);
   const handleSelect = (e) => {
-    console.log(e);
     setLang(e);
   };
-  const [lang, setLang] = useState("french");
   const changeNav = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true);

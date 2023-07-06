@@ -9,25 +9,30 @@ import Packages from "../../components/Packages";
 import Gallery from "../../components/Gallery";
 import ContactUs from "../../components/ContactUs";
 import Apply from "../../components/Apply";
+import { TranslatorContext } from "../context/TranslatorContext";
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [lang, setLang] = useState("french");
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+  console.log(lang);
   return (
     <>
-      <Container $mode="home">
-        <NavBar toggle={toggle} />
-        <SideBar isOpen={isOpen} toggle={toggle} />
-        <Splash />
-        <AboutUs />
-        <Services />
-        <Packages />
-        <Gallery />
-        <Apply />
-        <ContactUs />
-      </Container>
+      <TranslatorContext.Provider value={{ lang, setLang }}>
+        <Container $mode="home">
+          <NavBar toggle={toggle} />
+          <SideBar isOpen={isOpen} toggle={toggle} />
+          <Splash />
+          <AboutUs />
+          <Services />
+          <Packages />
+          <Gallery />
+          <Apply />
+          <ContactUs />
+        </Container>
+      </TranslatorContext.Provider>
     </>
   );
 };

@@ -31,18 +31,18 @@ const ContactUs = () => {
           <ContactDetails>
             <Details>
               <CallIcon sx={{ fontSize: "30px" }} />
-              <ContactDetailsParagraph>+91 1234567890</ContactDetailsParagraph>
+              <ContactDetailsParagraph>0793270036</ContactDetailsParagraph>
             </Details>
             <Details>
               <EmailIcon sx={{ fontSize: "30px" }} />
               <ContactDetailsParagraph>
-                ninthu1999@hotmail.com
+                info@universalcarwash.ch
               </ContactDetailsParagraph>
             </Details>
             <Details>
               <MapIcon sx={{ fontSize: "30px" }} />
               <ContactDetailsParagraph>
-                123, 4th Cross, 5th Main, 6th Sector, 7th Street, 8th Block,
+                Route de Saint-Georges 77 -1213 Petit-Lancy
               </ContactDetailsParagraph>
             </Details>
             <Details>

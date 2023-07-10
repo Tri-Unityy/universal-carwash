@@ -10,6 +10,7 @@ import {
   SectionParagraph,
   AboutParagraphContainer,
 } from "../assets/style/homeElements";
+
 import about from "./../assets/images/about.jpg";
 import exterior from "./../assets/images/exterior.jpg";
 import {
@@ -34,13 +35,21 @@ const AboutUs = () => {
               itemOne={
                 <ReactCompareSliderImage
                   src={about}
-                  style={{ width: "100%", height: "100%", objectFit: "fill" }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "fill",
+                  }}
                 />
               }
               itemTwo={
                 <ReactCompareSliderImage
                   src={exterior}
-                  style={{ width: "100%", height: "100%", objectFit: "fill" }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "fill",
+                  }}
                 />
               }
             />

@@ -867,16 +867,16 @@ export const ContactDetailsParagraph = styled.p`
 `;
 
 export const ContactLogo = styled.img`
-  width: 20%;
+  width: 15%;
   height: auto;
 
   @media screen and (max-width: 769px) {
-    width: 40%;
+    width: 30%;
   }
   @media screen and (max-width: 426px) {
-    width: 50%;
+    width: 40%;
   }
   @media screen and (max-width: 376px) {
-    width: 60%;
+    width: 50%;
   }
 `;

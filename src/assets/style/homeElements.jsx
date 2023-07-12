@@ -138,7 +138,7 @@ export const Container = styled.section`
           display: grid;
           grid-template-columns: 70% 30%;
           width: 100%;
-          height: 70vh;
+          height: 80vh;
           padding-right: 2rem;
 
           @media screen and (max-width: 769px) {

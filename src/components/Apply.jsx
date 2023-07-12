@@ -20,6 +20,7 @@ const Apply = () => {
     name: "",
     number: "",
     message: "",
+    time: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -28,7 +29,7 @@ const Apply = () => {
     setForm({ ...form, [name]: value });
   };
   const handleSubmit = (e) => {
-    const reply_message = `Hi this is ${form.name},\n\nI wish to schedule a carwash on the following date ${form.message}. Here is my phone number ${form.number} contact me upon your acceptance. \n\nBest Regards,\n\nSandra`;
+    const reply_message = `Hi this is ${form.name},\n\nI wish to schedule a carwash on the following date ${form.message} within ${form.time}. Here is my phone number ${form.number} contact me upon your acceptance. \n\nBest Regards,\n\nSandra`;
     e.preventDefault();
     setLoading(true);
     emailjs
@@ -60,6 +61,7 @@ const Apply = () => {
             name: "",
             number: "",
             message: "",
+            time: "",
           });
         },
         (error) => {
@@ -120,7 +122,7 @@ const Apply = () => {
               <Form.Label>Phone Number</Form.Label>
               <Form.Control
                 required
-                type="number"
+                type="text"
                 onChange={handleChange}
                 name="number"
                 value={form.number}
@@ -138,6 +140,26 @@ const Apply = () => {
                 value={form.message}
                 placeholder="Schedule date"
               />
+            </Form.Group>
+            <Form.Group className=" form-group" controlId="setTime">
+              <Form.Label>Select Time</Form.Label>
+              <Form.Select
+                required
+                name="time"
+                value={form.time}
+                onChange={handleChange}
+              >
+                <option>Select yout time slot</option>
+                <option value="09 am - 10 am">09 am - 10 am</option>
+                <option value="10 am - 11 am">10 am - 11 am</option>
+                <option value="11 am - 12 pm">11 am - 12 pm</option>
+                <option value="12 pm - 13 pm">12 pm - 13 pm</option>
+                <option value="13 pm - 14 pm">13 pm - 14 pm</option>
+                <option value="14 pm - 15 pm">14 pm - 15 pm</option>
+                <option value="15 pm - 16 pm">15 pm - 16 pm</option>
+                <option value="16 pm - 17 pm">16 pm - 17 pm</option>
+                <option value="17 pm - 18 pm">17 pm - 18 pm</option>
+              </Form.Select>
             </Form.Group>
 
             <Button type="submit" className="button-container">

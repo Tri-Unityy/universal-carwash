@@ -25,7 +25,7 @@ const Gallery = () => {
       <Container $mode="gallery">
         <TitleContainer>
           <SectionHeading $mode="gallery">Our Works</SectionHeading>
-          <SectionParagraph>
+          <SectionParagraph $mode="gallery">
             {" "}
             Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum{" "}
           </SectionParagraph>

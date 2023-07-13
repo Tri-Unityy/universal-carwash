@@ -185,7 +185,7 @@ export const SectionDiv = styled.div`
         `;
       case "gallery":
         return css`
-          /* background-color: rgba(255, 255, 255, 0.2); */
+          background-color: #fff;
         `;
 
       case "slider":
@@ -232,6 +232,10 @@ export const SectionParagraph = styled.p`
           @media screen and (max-width: 769px) {
             text-align: justify;
           }
+        `;
+      case "gallery":
+        return css`
+          color: #000;
         `;
     }
   }}

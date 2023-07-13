@@ -202,7 +202,7 @@ export const SectionHeading = styled.h1`
   font-size: 3rem;
   color: ${primaryHeadingColor};
   margin-bottom: 1rem;
-  font-weight: 800;
+  font-weight: 700;
   ${(props) => {
     switch (props.$mode) {
       case "gallery":
@@ -749,7 +749,7 @@ export const ApplyContentContainer = styled.div`
   z-index: 1000000;
 
   overflow: hidden;
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 102px) {
     width: 90%;
   }
 `;

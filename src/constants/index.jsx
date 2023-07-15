@@ -77,4 +77,6 @@ const beforeAfter = [
   },
 ];
 
-export default { packages, beforeAfter };
+// export default { packages, beforeAfter };
+
+export default packages;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { slideIn, staggerContainer, textVariant } from "../utils/motion";
 import "./../assets/style/css/about_us.css";
@@ -11,6 +11,8 @@ import {
   AboutParagraphContainer,
 } from "../assets/style/homeElements";
 
+import beforeAfter from "../constants";
+
 import about from "./../assets/images/about.jpg";
 import exterior from "./../assets/images/exterior.jpg";
 import {
@@ -19,6 +21,28 @@ import {
 } from "react-compare-slider";
 
 const AboutUs = () => {
+  const [imageData] = useState(beforeAfter);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const lastIndex = imageData.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, imageData]);
+
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 8000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
+
   return (
     <>
       <SectionDiv $mode="about" id="aboutus">

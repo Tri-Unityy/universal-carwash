@@ -1,4 +1,6 @@
+
 import React, { useState, useEffect } from "react";
+
 import { motion } from "framer-motion";
 import { slideIn, staggerContainer, textVariant } from "../utils/motion";
 import "./../assets/style/css/about_us.css";

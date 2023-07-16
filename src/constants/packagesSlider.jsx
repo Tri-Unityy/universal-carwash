@@ -48,35 +48,4 @@ const packages = [
     },
   },
 ];
-
-const beforeAfter = [
-  {
-    id: "1",
-    before: "./../assets/images/beforeAfter/Before1.jpeg",
-    after: "./../assets/images/beforeAfter/After1.jpeg",
-  },
-  {
-    id: "2",
-    before: "./../assets/images/beforeAfter/Before6.jpeg",
-    after: "./../assets/images/beforeAfter/After6.jpeg",
-  },
-  {
-    id: "3",
-    before: "./../assets/images/beforeAfter/Before7.jpeg",
-    after: "./../assets/images/beforeAfter/After7.jpeg",
-  },
-  {
-    id: "4",
-    before: "./../assets/images/beforeAfter/Before13.jpeg",
-    after: "./../assets/images/beforeAfter/After13.jpeg",
-  },
-  {
-    id: "5",
-    before: "./../assets/images/beforeAfter/Before15.jpeg",
-    after: "./../assets/images/beforeAfter/After15.jpeg",
-  },
-];
-
-// export default { packages, beforeAfter };
-
 export default packages;

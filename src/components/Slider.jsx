@@ -24,6 +24,7 @@ import DoneIcon from "@mui/icons-material/Done";
 import { primaryHeadingColor, successColor } from "../assets/resources/colors";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import PaymentsIcon from "@mui/icons-material/Payments";
 
 const Slider = () => {
   const [packageData] = useState(packages);
@@ -86,27 +87,46 @@ const Slider = () => {
                   <SliderContentContainer>
                     <SliderContentInnerContainer>
                       <SliderHeading> {packageType} </SliderHeading>
-                      <SliderText $mode="dark">
-                        <AccessTimeIcon sx={{ color: primaryHeadingColor }} />{" "}
-                        {packageDuration}{" "}
-                      </SliderText>
+                      <CommonDiv $mode="row">
+                        <SliderText $mode="dark">
+                          <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}
+                          {packagePrice}{" "}
+                        </SliderText>
+                        <SliderText $mode="dark">
+                          <AccessTimeIcon sx={{ color: primaryHeadingColor }} />{" "}
+                          {packageDuration}{" "}
+                        </SliderText>
+                      </CommonDiv>
+
                       <SliderText>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Quisquam
                       </SliderText>
                       <CommonDiv>
-                        <SliderText $mode="list">
-                          <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
-                        </SliderText>
-                        <SliderText $mode="list">
-                          <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
-                        </SliderText>
-                        <SliderText $mode="list">
-                          <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
-                        </SliderText>
-                        <SliderText $mode="list">
-                          <DoneIcon sx={{ color: successColor }} /> Lorem Ipsum{" "}
-                        </SliderText>
+                        {packageItems.item1 ? (
+                          <SliderText $mode="list">
+                            <DoneIcon sx={{ color: successColor }} />{" "}
+                            {packageItems.item1}
+                          </SliderText>
+                        ) : null}
+                        {packageItems.item2 ? (
+                          <SliderText $mode="list">
+                            <DoneIcon sx={{ color: successColor }} />{" "}
+                            {packageItems.item2}
+                          </SliderText>
+                        ) : null}
+                        {packageItems.item3 ? (
+                          <SliderText $mode="list">
+                            <DoneIcon sx={{ color: successColor }} />{" "}
+                            {packageItems.item3}
+                          </SliderText>
+                        ) : null}
+                        {packageItems.item3 ? (
+                          <SliderText $mode="list">
+                            <DoneIcon sx={{ color: successColor }} />{" "}
+                            {packageItems.item4}
+                          </SliderText>
+                        ) : null}
                       </CommonDiv>
                       {/* <ButtonContainer>
                         <Button>Get Plan</Button>

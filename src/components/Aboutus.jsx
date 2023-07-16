@@ -5,7 +5,6 @@ import { slideIn, staggerContainer, textVariant } from "../utils/motion";
 import "./../assets/style/css/about_us.css";
 import {
   SectionDiv,
-  Container,
   AboutContainer,
   SectionHeading,
   SectionParagraph,
@@ -40,7 +39,6 @@ const AboutUs = () => {
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(index + 1);
-      // console.log(index);
     }, 8000);
     return () => {
       clearInterval(slider);

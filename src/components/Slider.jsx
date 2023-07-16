@@ -16,7 +16,7 @@ import {
 
 import "../assets/style/css/slider.css";
 
-import packages from "../constants";
+import packages from "../constants/packagesSlider";
 
 import exterior from "../assets/images/exterior.jpg";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";

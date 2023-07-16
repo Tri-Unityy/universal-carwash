@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
@@ -11,10 +10,12 @@ import {
   SectionHeading,
   SectionParagraph,
   AboutParagraphContainer,
+  SliderContainer,
 } from "../assets/style/homeElements";
 
-import beforeAfter from "../constants";
-
+import beforeAfter from "../constants/beforeAfterSlider";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import about from "./../assets/images/about.jpg";
 import exterior from "./../assets/images/exterior.jpg";
 import {
@@ -39,6 +40,7 @@ const AboutUs = () => {
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(index + 1);
+      // console.log(index);
     }, 8000);
     return () => {
       clearInterval(slider);
@@ -55,29 +57,65 @@ const AboutUs = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
         >
-          <motion.div variants={slideIn("left", "tween", 0.0, 1)}>
-            <ReactCompareSlider
-              style={{ width: "100%", height: "70%" }}
-              itemOne={
-                <ReactCompareSliderImage
-                  src={about}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "fill",
-                  }}
-                />
-              }
-              itemTwo={
-                <ReactCompareSliderImage
-                  src={exterior}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "fill",
-                  }}
-                />
-              }
+          <motion.div
+            className="slider-container-about"
+            variants={slideIn("left", "tween", 0.0, 1)}
+          >
+            <ArrowBackIosIcon
+              onClick={() => setIndex(index - 1)}
+              className="slider-icon"
+              sx={{ color: "#fff" }}
+            />
+            <SectionDiv $mode="slider">
+              {imageData.map((item, indexPackage) => {
+                const { id, before, after } = item;
+
+                let position = "nextSlide";
+                if (indexPackage === index) {
+                  position = "activeSlide";
+                }
+                if (
+                  indexPackage === index - 1 ||
+                  (index === 0 && indexPackage === imageData.length - 1)
+                ) {
+                  position = "lastSlide";
+                }
+
+                return (
+                  <>
+                    <SliderContainer key={id} $mode={position}>
+                      <ReactCompareSlider
+                        style={{ width: "100%", height: "95%" }}
+                        itemOne={
+                          <ReactCompareSliderImage
+                            src={before}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "fill",
+                            }}
+                          />
+                        }
+                        itemTwo={
+                          <ReactCompareSliderImage
+                            src={after}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "fill",
+                            }}
+                          />
+                        }
+                      />
+                    </SliderContainer>
+                  </>
+                );
+              })}
+            </SectionDiv>
+            <ArrowForwardIosIcon
+              onClick={() => setIndex(index + 1)}
+              className="slider-icon"
+              sx={{ color: "#fff" }}
             />
           </motion.div>
           <motion.div variants={textVariant()} className="about-container">

@@ -5,7 +5,6 @@ import { slideIn, staggerContainer, textVariant } from "../utils/motion";
 import "./../assets/style/css/about_us.css";
 import {
   SectionDiv,
-  Container,
   AboutContainer,
   SectionHeading,
   SectionParagraph,

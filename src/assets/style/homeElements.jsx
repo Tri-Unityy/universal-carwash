@@ -254,6 +254,17 @@ export const CommonDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  ${(props) => {
+    switch (props.$mode) {
+      case "row":
+        return css`
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+        `;
+    }
+  }}
 `;
 ////////////////////////////////////////
 

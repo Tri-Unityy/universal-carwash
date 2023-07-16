@@ -2,9 +2,9 @@ const packages = [
   {
     packageId: "1",
 
-    packageType: "Basic",
+    packageType: "Bike Normal",
 
-    packagePrice: "100",
+    packagePrice: "25 CHF",
 
     packageDuration: "30 mins",
 
@@ -18,9 +18,9 @@ const packages = [
   {
     packageId: "2",
 
-    packageType: "Popular",
+    packageType: "Bike Premium",
 
-    packagePrice: "200",
+    packagePrice: "100 CHF",
 
     packageDuration: "45 mins",
 
@@ -34,9 +34,9 @@ const packages = [
   {
     packageId: "3",
 
-    packageType: "Premium",
+    packageType: "4 x 4 Normal",
 
-    packagePrice: "300",
+    packagePrice: "60 CHF",
 
     packageDuration: "1 hr",
 
@@ -45,6 +45,35 @@ const packages = [
       item2: "Lorem ipsum lorem ipsum",
       item3: "Lorem ipsum lorem ipsum",
       item4: "Lorem ipsum lorem ipsum",
+    },
+  },
+  {
+    packageId: "4",
+
+    packageType: "4 x 4 Premium",
+
+    packagePrice: "150 CHF",
+
+    packageDuration: "1 hr",
+
+    packageItems: {
+      item1: "Lorem ipsum lorem ipsum",
+      item2: "Lorem ipsum lorem ipsum",
+      item3: "Lorem ipsum lorem ipsum",
+      item4: "Lorem ipsum lorem ipsum",
+    },
+  },
+  {
+    packageId: "5",
+
+    packageType: "Rim Cleaning",
+
+    packagePrice: "100 CHF",
+
+    packageDuration: "1 hr",
+
+    packageItems: {
+      item1: "Lorem ipsum lorem ipsum",
     },
   },
 ];

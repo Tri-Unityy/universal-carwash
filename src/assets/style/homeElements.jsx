@@ -606,11 +606,11 @@ export const SliderContainer = styled.article`
         `;
       case "lastSlide":
         return css`
-          transform: translateX(-100%);
+          transform: translateX(-50%);
         `;
       case "nextSlide":
         return css`
-          transform: translateX(100%);
+          transform: translateX(50%);
         `;
     }
   }};

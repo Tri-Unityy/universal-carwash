@@ -87,7 +87,7 @@ const Slider = () => {
                   <SliderContentContainer>
                     <SliderContentInnerContainer>
                       <SliderHeading> {packageType} </SliderHeading>
-                      <CommonDiv $mode="row">
+                      <CommonDiv >
                         <SliderText $mode="dark">
                           <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}
                           {packagePrice}{" "}
@@ -99,8 +99,7 @@ const Slider = () => {
                       </CommonDiv>
 
                       <SliderText>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quisquam
+                        Content
                       </SliderText>
                       <CommonDiv>
                         {packageItems.item1 ? (

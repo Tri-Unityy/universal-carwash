@@ -45,7 +45,14 @@ const Services = () => {
         <ServicesParagraphContainer>
           <SectionParagraph $mode="services">
             <motion.p variants={fadeIn("", "", 0.1, 1)}>
-              Unmatched Excellence: Discover Our Supreme Services.
+              At Universal Car Wash, we believe in personalised service requests.
+              <ul>
+                <li>Complete washing and cleaning services (interior + exterior)</li>
+                <li>Expert scratch repairs</li>
+                <li>Personalised treatments based on your specific requests</li>
+              </ul>
+              We carry out other treatments on your request such as: cleaning of stains on seats, leather treatment, dog hair, etc. In the event of damage noted during cleaning, we decline all responsibility.
+              <br/><br/>Schedule a call now for more details!
             </motion.p>
           </SectionParagraph>
         </ServicesParagraphContainer>

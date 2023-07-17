@@ -121,9 +121,8 @@ const AboutUs = () => {
               <SectionHeading>About Us</SectionHeading>
               <AboutParagraphContainer>
                 <SectionParagraph>
-                  Lorem ipsum dolor sit amet, enna kodumai sir ithuhuiuh
-                  consectetur adipiscing elit. Cras congue, erat a aliquam
-                  dapibus.
+                  Universal Car Wash, your one-stop destination for comprehensive vehicle care. We offer comprehensive washing and cleaning services that cater to your every need.
+                  <br/><br/>Book your time slot now online to unveil the true beauty of your vehicle.
                 </SectionParagraph>
               </AboutParagraphContainer>
             </AboutContainer>

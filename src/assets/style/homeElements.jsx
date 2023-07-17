@@ -105,6 +105,9 @@ export const Container = styled.section`
           background-color: transparent;
           border-radius: 5px;
           margin-bottom: 2rem;
+          @media screen and (max-width: 376px) {
+            width: 95%;
+          }
         `;
 
       case "slider":
@@ -140,6 +143,11 @@ export const Container = styled.section`
           width: 100%;
           height: 80vh;
           padding-right: 2rem;
+
+          @media screen and (max-width: 1025px) {
+            height: 90vh;
+            grid-template-columns: 60% 40%;
+          }
 
           @media screen and (max-width: 769px) {
             display: flex;
@@ -665,12 +673,15 @@ export const SliderContentContainer = styled.div`
 export const SliderContentInnerContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   width: 80%;
   height: 80%;
   background-color: transparent;
   overflow: hidden;
+  @media screen and (max-width: 376px) {
+    width: 90%;
+  }
 `;
 
 export const SliderHeading = styled.h1`
@@ -678,6 +689,10 @@ export const SliderHeading = styled.h1`
   color: ${primaryHeadingColor};
   margin-bottom: 1rem;
   font-weight: 800;
+
+  @media screen and (max-width: 321px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const SliderText = styled.p`
@@ -685,6 +700,10 @@ export const SliderText = styled.p`
   color: #000;
   margin-bottom: 1rem;
   font-weight: 400;
+
+  @media screen and (max-width: 321px) {
+    font-size: 1rem;
+  }
 
   ${(props) => {
     switch (props.$mode) {
@@ -764,7 +783,7 @@ export const ApplyContentContainer = styled.div`
   z-index: 1000000;
 
   overflow: hidden;
-  @media screen and (max-width: 102px) {
+  @media screen and (max-width: 1025px) {
     width: 90%;
   }
 `;

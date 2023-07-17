@@ -98,13 +98,14 @@ export const Container = styled.section`
           position: relative;
           display: flex;
           flex-direction: row;
-          width: 80%;
-          height: 80vh;
-          justify-content: space-between;
+          width: 90%;
+          height: 100%;
+          justify-content: space-evenly;
           align-items: center;
           background-color: transparent;
           border-radius: 5px;
           margin-bottom: 2rem;
+          flex-wrap: wrap;
           @media screen and (max-width: 376px) {
             width: 95%;
           }

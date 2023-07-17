@@ -10,6 +10,7 @@ import Gallery from "../../components/Gallery";
 import ContactUs from "../../components/ContactUs";
 import Apply from "../../components/Apply";
 import { TranslatorContext } from "../context/TranslatorContext";
+import Cards from "../../components/Cards";
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,9 @@ const HomePage = () => {
           <Splash />
           <AboutUs />
           <Services />
-          <Packages />
+          <Cards />
+          {/* <Packages /> */}
+
           <Gallery />
           <Apply />
           <ContactUs />

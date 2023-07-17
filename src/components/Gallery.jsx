@@ -10,8 +10,15 @@ import {
 } from "../assets/style/homeElements";
 
 import "./../assets/style/css/masonry.css";
-import about from "./../assets/images/about.jpg";
-import exterior from "./../assets/images/exterior.jpg";
+
+import work1 from "./../assets/images/works/work1.jpeg";
+import work2 from "./../assets/images/works/work2.jpeg";
+import work3 from "./../assets/images/works/work3.jpeg";
+import work4 from "./../assets/images/works/work4.jpeg";
+import work5 from "./../assets/images/works/work5.jpeg";
+import work6 from "./../assets/images/works/work6.jpeg";
+import work7 from "./../assets/images/works/work7.jpeg";
+
 const Gallery = () => {
   const breakpointColumnsObj = {
     default: 4,
@@ -36,12 +43,13 @@ const Gallery = () => {
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            <img className="masonry" src={about} />
-            <img className="masonry" src={exterior} />
-            <img className="masonry" src={about} />
-            <img className="masonry" src={exterior} />
-            <img className="masonry" src={about} />
-            <img className="masonry" src={exterior} />
+            <img className="masonry" src={work1} />
+            <img className="masonry" src={work2} />
+            <img className="masonry" src={work3} />
+            <img className="masonry" src={work4} />
+            <img className="masonry" src={work5} />
+            <img className="masonry" src={work6} />
+            <img className="masonry" src={work7} />
           </Masonry>
         </GalleryContainer>
       </Container>

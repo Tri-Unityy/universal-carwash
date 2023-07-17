@@ -617,11 +617,11 @@ export const SliderContainer = styled.article`
         `;
       case "lastSlide":
         return css`
-          transform: translateX(-50%);
+          transform: translateX(-100%);
         `;
       case "nextSlide":
         return css`
-          transform: translateX(50%);
+          transform: translateX(100%);
         `;
     }
   }};

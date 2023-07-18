@@ -17,55 +17,99 @@ const Cards = () => {
           <img src={bike} />
           <div class="heading">
             <h3>Bike Normal</h3>
-            <hr />
+            <div class="line"></div>
           </div>
           <div class="description">
             <h3>Bike Normal</h3>
+            <div class="line"></div>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod.
             </p>
+            <div class="tag-container">
+              <div class="tags"> Interior </div>
+              <div class="tags"> Exterior </div>
+            </div>
           </div>
         </div>
         <div class="ui-card">
           <img src={bikepremium} />
-
+          <div class="heading">
+            <h3>Bike Premium</h3>
+            <div class="line"></div>
+          </div>
           <div class="description">
             <h3>Bike Premium</h3>
+            <div class="line"></div>
+
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod.
             </p>
+            <div class="tag-container">
+              <div class="tags"> Interior </div>
+              <div class="tags"> Exterior </div>
+            </div>
           </div>
         </div>
         <div class="ui-card">
           <img src={car} />
+          <div class="heading">
+            <h3>4 x 4 Normal</h3>
+            <div class="line"></div>
+          </div>
           <div class="description">
             <h3>4 x 4 Normal</h3>
+            <div class="line"></div>
+
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod.
             </p>
+            <div class="tag-container">
+              <div class="tags"> Interior </div>
+              <div class="tags"> Exterior </div>
+            </div>
           </div>
         </div>
         <div class="ui-card">
           <img src={carpremium} />
+          <div class="heading">
+            <h3>4 x 4 Premium</h3>
+            <div class="line"></div>
+          </div>
           <div class="description">
             <h3>4 x 4 Premium</h3>
+            <div class="line"></div>
+
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod.
             </p>
+            <div class="tag-container">
+              <div class="tags"> Interior </div>
+              <div class="tags"> Exterior </div>
+            </div>
           </div>
         </div>
         <div class="ui-card">
           <img src={carrim} />
+          <div class="heading">
+            <h3>Rim Cleaning</h3>
+            <div class="line"></div>
+          </div>
           <div class="description">
             <h3>Rim Cleaning</h3>
+            <div class="line"></div>
+
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod.
             </p>
+            <div class="tag-container">
+              <div class="tags"> Interior </div>
+              <div class="tags"> Exterior </div>
+            </div>
           </div>
         </div>
       </Container>

@@ -23,10 +23,22 @@
 }
 
 
-.ui-card .heading hr{
-	background-color: #fff;
+
+.ui-card .heading:hover{
+	opacity: 0;
+	transition: all 0.3s ease-out;
+
 }
 
+
+.ui-card .heading  .line{
+	width: 150px;
+	height: 1px;
+	border-bottom: 4px solid rgb(255, 255, 255);
+	margin-bottom:2rem;
+	}
+
+	
 
 .ui-card .heading h3{
 	font-weight: 700;
@@ -77,12 +89,47 @@
 .ui-card .description h3{
 	font-weight: 700;
 	font-size: 32px;
-	color: #e80c107e;
+	color: #e80c10;
 	margin: 0 0 20px;
 	transform: translateY(30px);
 	opacity: 0;
 	transition: all 0.3s ease-out;
 }
+
+.ui-card .description .tag-container{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	margin: 0 0 20px;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out;
+	height:40px;
+}
+
+
+.ui-card .description .tag-container .tags{
+	background-color: #e80c10;
+	display: flex;
+	padding:5px;
+	border-radius: 3px;
+	color: #fff;
+	font-weight: 600;
+	flex-wrap: wrap;
+}
+
+.ui-card .description  .line{
+	width: 150px;
+	height: 1px;
+	border-bottom: 4px solid rgb(255, 255, 255);
+	margin: 0 0 20px;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out;
+	}
+
+	
 
 .ui-card .description p{
 	transform: translateY(30px);
@@ -116,3 +163,13 @@
 	opacity: 1;
 	transform: translateY(0px);
 }
+.ui-card:hover .description .line{
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.ui-card:hover .description .tag-container{
+	opacity: 1;
+	transform: translateY(0px);
+}
+

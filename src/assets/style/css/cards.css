@@ -105,14 +105,16 @@
 	transform: translateY(30px);
 	opacity: 0;
 	transition: all 0.3s ease-out;
-	height:40px;
+	height:35px;
 }
 
 
 .ui-card .description .tag-container .tags{
 	background-color: #e80c10;
 	display: flex;
-	padding:5px;
+	justify-content: center;
+	align-items: center;
+	padding:3px;
 	border-radius: 3px;
 	color: #fff;
 	font-weight: 600;

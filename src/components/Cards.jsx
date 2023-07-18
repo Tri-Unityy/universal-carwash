@@ -15,24 +15,27 @@ const Cards = () => {
       <Container $mode="packages">
         <div class="ui-card">
           <img src={bike} />
+          <div class="heading">
+            <h3>Bike Normal</h3>
+            <hr />
+          </div>
           <div class="description">
             <h3>Bike Normal</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod.
             </p>
-            <a href="#">Read More</a>
           </div>
         </div>
         <div class="ui-card">
           <img src={bikepremium} />
+
           <div class="description">
             <h3>Bike Premium</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod.
             </p>
-            <a href="#">Read More</a>
           </div>
         </div>
         <div class="ui-card">
@@ -43,7 +46,6 @@ const Cards = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod.
             </p>
-            <a href="#">Read More</a>
           </div>
         </div>
         <div class="ui-card">
@@ -54,7 +56,6 @@ const Cards = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod.
             </p>
-            <a href="#">Read More</a>
           </div>
         </div>
         <div class="ui-card">
@@ -65,7 +66,6 @@ const Cards = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod.
             </p>
-            <a href="#">Read More</a>
           </div>
         </div>
       </Container>

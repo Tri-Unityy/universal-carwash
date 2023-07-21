@@ -45,17 +45,40 @@ const Services = () => {
         <ServicesParagraphContainer>
           <SectionParagraph $mode="services">
             <motion.p variants={fadeIn("", "", 0.1, 1)}>
-              At Universal Car Wash, we believe in personalised service requests.
+              At Universal Car Wash, we believe in personalised service, and we're here to accommodate your requests.
               <ul>
                 <li>Complete washing and cleaning services (interior + exterior)</li>
+                <li>Interior detailing to restore freshness and cleanliness</li>
+                <li>Flawless exterior shine for a showroom-worthy finish</li>
                 <li>Expert scratch repairs</li>
                 <li>Personalised treatments based on your specific requests</li>
               </ul>
-              We carry out other treatments on your request such as: cleaning of stains on seats, leather treatment, dog hair, etc. In the event of damage noted during cleaning, we decline all responsibility.
-              <br/><br/>Schedule a call now for more details!
+              We carry out other treatments on your request such as: cleaning of stains on seats, leather treatment, dog hair, etc. 
+              In the event of damage noted during cleaning, we decline all responsibility.<br/>
             </motion.p>
           </SectionParagraph>
         </ServicesParagraphContainer>
+        {/* <ServicesParagraphContainer>
+          <SectionParagraph $mode="services">
+            <motion.p variants={fadeIn("", "", 0.1, 1)}>
+              <ul>
+                <li>Complete washing and cleaning services (interior + exterior)</li>
+                <li>Interior detailing to restore freshness and cleanliness</li>
+                <li>Flawless exterior shine for a showroom-worthy finish</li>
+                <li>Expert scratch repairs</li>
+                <li>Personalised treatments based on your specific requests</li>
+              </ul>
+            </motion.p>
+          </SectionParagraph>
+        </ServicesParagraphContainer>
+        <ServicesParagraphContainer>
+          <SectionParagraph $mode="services">
+            <motion.p variants={fadeIn("", "", 0.1, 1)}>
+              We carry out other treatments on your request such as: cleaning of stains on seats, leather treatment, dog hair, etc. 
+              In the event of damage noted during cleaning, we decline all responsibility.<br/>
+            </motion.p>
+          </SectionParagraph>
+        </ServicesParagraphContainer> */}
         <ServicesImageContainer>
           {/* <ServicesImage src={service1} />
           <ServicesImage src={service2} />

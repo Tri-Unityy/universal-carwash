@@ -565,8 +565,8 @@ export const ServicesParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: left;
-  align-items: flex-start;
-  width: 40%;
+  align-items: center;
+  width: 100%;
   height: 70%;
   background-color: transparent;
   @media screen and (max-width: 769px) {

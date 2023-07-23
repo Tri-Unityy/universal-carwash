@@ -33,7 +33,16 @@ const Apply = () => {
     setForm({ ...form, [name]: value });
   };
   const handleSubmit = (e) => {
-    const reply_message = `Hi this is ${form.name},\n\nI wish to schedule a carwash on the following date ${form.message} within ${form.time}. Here is my phone number ${form.number} contact me upon your acceptance. \n\nBest Regards,\n\nSandra`;
+    var successmsg = "";
+    var warningmsg = "";
+    if(lang === 'french'){
+      successmsg = "Votre demande a été envoyée avec succès";
+      warningmsg = "Une erreur s'est produite, veuillez réessayer";
+    }else{
+      successmsg = "Your request has been sent successfully";
+      warningmsg = "Something went wrong, please try again";
+    }
+    const reply_message = `Hi this is ${form.name},\n\nI wish to schedule a carwash on the following date ${form.message} within ${form.time}. Here is my phone number ${form.number} contact me upon your acceptance. \n\nBest Regards,\n\n${form.name}`;
     e.preventDefault();
     setLoading(true);
     emailjs
@@ -56,7 +65,7 @@ const Apply = () => {
             },
             position: "center",
             icon: "success",
-            title: "Your request has been sent successfully",
+            title: successmsg,
             showConfirmButton: false,
             timer: 3000,
           });
@@ -74,9 +83,8 @@ const Apply = () => {
 
           Swal.fire({
             position: "center",
-
             icon: "warning",
-            title: "Something went wrong, please try again",
+            title: warningmsg,
             showConfirmButton: false,
             timer: 1500,
           });

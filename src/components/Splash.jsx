@@ -86,13 +86,42 @@ const Splash = () => {
         </div>
         <Container $mode="splash">
           <Container $mode="div">
-            <SubHeading>
+            {/* <SubHeading>
               Reveal the{" "}
               <span style={{ color: primaryHeadingColor, fontWeight: "bold" }}>
                 {lang === "french" ? "Caché" : "Hidden"}
               </span>{" "}
               Beauty
-            </SubHeading>
+            </SubHeading> */}
+
+            {lang === "french" ? (
+              <>
+                <SubHeading>
+                  Révélez la Beauté
+                  <span
+                    style={{
+                      color: primaryHeadingColor,
+                      fontWeight: "bold",
+                      marginLeft: "10px",
+                    }}
+                  >
+                    Cachée
+                  </span>{" "}
+                </SubHeading>
+              </>
+            ) : (
+              <>
+                <SubHeading>
+                  Reveal the{" "}
+                  <span
+                    style={{ color: primaryHeadingColor, fontWeight: "bold" }}
+                  >
+                    Hidden
+                  </span>{" "}
+                  Beauty
+                </SubHeading>
+              </>
+            )}
           </Container>
         </Container>
       </SectionDiv>

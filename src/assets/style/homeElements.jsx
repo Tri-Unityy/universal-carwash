@@ -468,6 +468,13 @@ export const SubHeading = styled.h2`
   color: ${secondaryTextColor};
   margin-bottom: 1rem;
   font-weight: 400;
+  @media screen and (max-width: 501px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 321px) {
+    font-size: 2.5rem;
+  }
 `;
 
 // export const ImageContainer = styled.div`
@@ -834,7 +841,7 @@ export const ContactDetailsContainer = styled.div`
 
 export const ContactDetailsFooterContainer = styled.div`
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   height: 100%;

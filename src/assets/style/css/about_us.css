@@ -6,9 +6,11 @@
     align-items: flex-start;
     flex: 1;
     z-index: 100000000;
+
+   
+
 }
 .about{
-    position: relative;
     display: grid;
     grid-template-columns:80% 20%;
     flex-wrap: wrap;
@@ -20,7 +22,21 @@
     @media screen and (max-width: 769px) {
       display: flex;
       flex-direction: column-reverse;
-      height: 70vh;
+      height: 90vh;
+      flex-wrap: nowrap;
+    }
+    
+    @media screen and (max-width: 376px) {
+      display: flex;
+      flex-direction: column-reverse;
+      height: 100vh;
+      flex-wrap: nowrap;
+    }
+
+    @media screen and (max-width: 321px) {
+      display: flex;
+      flex-direction: column-reverse;
+      height: 120vh;
       flex-wrap: nowrap;
     }
   }

@@ -110,15 +110,21 @@
 
 
 .ui-card .description .tag-container .tags{
-	background-color: #e80c10;
+	/* background-color: #e80c10; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding:3px;
+	padding: 3px;
 	border-radius: 3px;
 	color: #fff;
 	font-weight: 600;
 	flex-wrap: wrap;
+}
+
+.ui-card .description .tag-container .tags span{
+	background-color: #e80c10; 
+  	padding: 3px; 
+  	border-radius: 3px;
 }
 
 .ui-card .description  .line{

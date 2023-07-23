@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container } from "../assets/style/homeElements";
 import work1 from "./../assets/images/works/work1.jpeg";
 import "./../assets/style/css/cards.css";
@@ -9,9 +9,17 @@ import carpremium from "./../assets/images/packages/car-premium.jpg";
 import carrim from "./../assets/images/packages/car-rim.jpg";
 import car from "./../assets/images/packages/car.jpg";
 import packagesE from "../constants/packageEnglish";
+import packagesF from "../constants/packageFrench";
+import { TranslatorContext } from "../screens/context/TranslatorContext";
 
 const Cards = () => {
-  const cardContent = packagesE;
+  const { lang } = useContext(TranslatorContext);
+  var cardContent = {};
+  if(lang == 'french'){
+    cardContent = packagesF;
+  }else{
+    cardContent = packagesE;
+  }
   const tagContent = [];
   cardContent.forEach(p => {
     tagContent.push(p.packageItems)
@@ -37,7 +45,7 @@ const Cards = () => {
             </p>
             <div class="tag-container">
               {tagContent[0].item1 ? (
-                  <div class="tags"> {tagContent[0].item1} </div>
+                  <div class="tags"> <span>{tagContent[0].item1}</span> </div>
                 ) : null}
               {/* <div class="tags"> Interior </div>
               <div class="tags"> Exterior </div> */}
@@ -61,7 +69,10 @@ const Cards = () => {
             </p>
             <div class="tag-container">
               {tagContent[1].item1 ? (
-                  <div class="tags"> {tagContent[1].item1} </div>
+                  <div class="tags"> <span>{tagContent[1].item1}</span> </div>
+                ) : null}
+              {tagContent[1].item2 ? (
+                  <div class="tags"> <span>{tagContent[1].item2}</span> </div>
                 ) : null}
               {/* <div class="tags"> Interior </div>
               <div class="tags"> Exterior </div> */}
@@ -85,10 +96,10 @@ const Cards = () => {
             </p>
             <div class="tag-container">
               {tagContent[2].item1 ? (
-                  <div class="tags"> {tagContent[2].item1} </div>
+                  <div class="tags"> <span>{tagContent[2].item1}</span> </div>
                 ) : null}
               {tagContent[2].item2 ? (
-                  <div class="tags"> {tagContent[2].item2} </div>
+                  <div class="tags"> <span>{tagContent[2].item2}</span> </div>
                 ) : null}
               {/* <div class="tags"> Interior </div>
               <div class="tags"> Exterior </div> */}
@@ -112,10 +123,10 @@ const Cards = () => {
             </p>
             <div class="tag-container">
               {tagContent[3].item1 ? (
-                  <div class="tags"> {tagContent[3].item1} </div>
+                  <div class="tags"> <span>{tagContent[3].item1}</span> </div>
                 ) : null}
               {tagContent[3].item2 ? (
-                  <div class="tags"> {tagContent[3].item2} </div>
+                  <div class="tags"> <span>{tagContent[3].item2}</span> </div>
                 ) : null}
               {/* <div class="tags"> Interior </div>
               <div class="tags"> Exterior </div> */}
@@ -139,10 +150,10 @@ const Cards = () => {
             </p>
             <div class="tag-container">
               {tagContent[4].item1 ? (
-                  <div class="tags"> {tagContent[4].item1} </div>
+                  <div class="tags"> <span>{tagContent[4].item1}</span> </div>
                 ) : null}
               {tagContent[4].item2 ? (
-                  <div class="tags"> {tagContent[4].item2} </div>
+                  <div class="tags"> <span>{tagContent[4].item2}</span> </div>
                 ) : null}
               {/* <div class="tags"> Interior </div>
               <div class="tags"> Exterior </div> */}

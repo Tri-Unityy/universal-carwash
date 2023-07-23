@@ -35,10 +35,10 @@ const Apply = () => {
   const handleSubmit = (e) => {
     var successmsg = "";
     var warningmsg = "";
-    if(lang === 'french'){
+    if (lang === "french") {
       successmsg = "Votre demande a été envoyée avec succès";
       warningmsg = "Une erreur s'est produite, veuillez réessayer";
-    }else{
+    } else {
       successmsg = "Your request has been sent successfully";
       warningmsg = "Something went wrong, please try again";
     }
@@ -106,7 +106,7 @@ const Apply = () => {
       <Container $mode="apply">
         <ApplyContentContainer>
           <TitleContainer>
-            {lang === 'french' ? (
+            {lang === "french" ? (
               <>
                 <SectionHeading>Planifier un appel</SectionHeading>
                 <SectionParagraph>
@@ -129,10 +129,13 @@ const Apply = () => {
             onSubmit={handleSubmit}
             className="form-container"
           >
-            {lang === 'french' ? (
+            {lang === "french" ? (
               <>
                 <Form.Group className=" form-group" controlId="formName">
-                  <Form.Label className=" form-label" style={{ marginTop: '20px' }}>
+                  <Form.Label
+                    className=" form-label"
+                    style={{ marginTop: "20px" }}
+                  >
                     Nom
                   </Form.Label>
                   <Form.Control
@@ -147,7 +150,9 @@ const Apply = () => {
                 </Form.Group>
 
                 <Form.Group className=" form-group" controlId="formNumber">
-                  <Form.Label className=" form-label">Numéro de téléphone</Form.Label>
+                  <Form.Label className=" form-label">
+                    Numéro de téléphone
+                  </Form.Label>
                   <Form.Control
                     required
                     type="text"
@@ -160,7 +165,9 @@ const Apply = () => {
                 </Form.Group>
 
                 <Form.Group className=" form-group" controlId="setDate">
-                  <Form.Label className=" form-label">Sélectionner la date</Form.Label>
+                  <Form.Label className=" form-label">
+                    Sélectionner la date
+                  </Form.Label>
                   <Form.Control
                     required
                     type="date"
@@ -172,7 +179,9 @@ const Apply = () => {
                   />
                 </Form.Group>
                 <Form.Group className=" form-group" controlId="setTime">
-                  <Form.Label className=" form-label">Sélectionner l'heure</Form.Label>
+                  <Form.Label className=" form-label">
+                    Sélectionner l'heure
+                  </Form.Label>
                   <Form.Select
                     required
                     name="time"
@@ -200,7 +209,10 @@ const Apply = () => {
             ) : (
               <>
                 <Form.Group className=" form-group" controlId="formName">
-                  <Form.Label className=" form-label" style={{ marginTop: '20px' }}>
+                  <Form.Label
+                    className=" form-label"
+                    style={{ marginTop: "20px" }}
+                  >
                     Name
                   </Form.Label>
                   <Form.Control

@@ -29,7 +29,7 @@ const ContactUs = () => {
   const { lang } = useContext(TranslatorContext);
   return (
     <SectionDiv id="contactus">
-      <SectionHeading>Get in Touch</SectionHeading>
+      <SectionHeading>{ lang === 'french' ? "Contactez-nous" : "Get in Touch"}</SectionHeading>
       <Container $mode="contact">
         <ContactLogo src={logo} />
         <ContactDetailsContainer>

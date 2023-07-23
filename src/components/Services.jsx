@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import "./../assets/style/css/services.css";
 import {
@@ -23,12 +23,14 @@ import i3 from "../assets/images/cubeicons/3.png";
 import i4 from "../assets/images/cubeicons/4.png";
 import i5 from "../assets/images/cubeicons/5.png";
 import i6 from "../assets/images/cubeicons/6.png";
+import { TranslatorContext } from "../screens/context/TranslatorContext";
 
 // import service1 from "../assets/images/service1.png";
 // import service2 from "../assets/images/service2.png";
 // import service3 from "../assets/images/service3.png";
 
 const Services = () => {
+  const { lang } = useContext(TranslatorContext);
   return (
     <motion.section
       id="services"
@@ -40,13 +42,52 @@ const Services = () => {
     >
       <ServicesContainer>
         <motion.div variants={textVariant()}>
-          <SectionHeading>Services</SectionHeading>
+          { lang === 'french' ? (
+            <SectionHeading>Nos Services</SectionHeading>
+          ) : (
+            <SectionHeading>Our Services</SectionHeading>
+          )}
         </motion.div>
         <ServicesParagraphContainer>
+          { lang === 'french' ? (
+            <>
+            <SectionParagraph $mode="services">
+            <motion.p variants={fadeIn("", "", 0.1, 1)}>
+            Chez Universal Car Wash, nous croyons en un service personnalisé, et nous sommes là pour répondre à vos demandes.
+            <br/>Nos services complets de lavage et de nettoyage comprennent :
+              {/* <ul>
+                <li>Nettoyage complet intérieur et extérieur</li>
+                <li>Détailing intérieur pour restaurer la fraîcheur et la propreté</li>
+                <li>Finition extérieure impeccable pour un résultat digne d'un showroom</li>
+                <li>Réparations expertes des éraflures</li>
+                <li>Traitements personnalisés selon vos demandes spécifiques</li>
+              </ul>
+              Nous effectuons également d'autres traitements sur demande, tels que le nettoyage des taches sur les sièges, le traitement du cuir, l'élimination des poils de chien, etc. 
+              En cas de dommage constaté lors du nettoyage, nous déclinons toute responsabilité.<br/> */}
+            </motion.p>
+          </SectionParagraph>
           <SectionParagraph $mode="services">
+              <ul>
+                <li>Nettoyage complet intérieur et extérieur</li>
+                <li>Détailing intérieur pour restaurer la fraîcheur et la propreté</li>
+                <li>Finition extérieure impeccable pour un résultat digne d'un showroom</li>
+                <li>Réparations expertes des éraflures</li>
+                <li>Traitements personnalisés selon vos demandes spécifiques</li>
+              </ul>
+          </SectionParagraph>
+          <SectionParagraph $mode="services">
+              Nous effectuons également d'autres traitements sur demande, tels que le nettoyage des taches sur les sièges, le traitement du cuir, l'élimination des poils de chien, etc. 
+              En cas de dommage constaté lors du nettoyage, nous déclinons toute responsabilité.<br/>
+          </SectionParagraph>
+          </>
+          ):
+          (
+            <>
+            <SectionParagraph $mode="services">
             <motion.p variants={fadeIn("", "", 0.1, 1)}>
               At Universal Car Wash, we believe in personalised service, and we're here to accommodate your requests.
-              <ul>
+              <br/>Our comprehensive washing and cleaning services include :
+              {/* <ul>
                 <li>Complete washing and cleaning services (interior + exterior)</li>
                 <li>Interior detailing to restore freshness and cleanliness</li>
                 <li>Flawless exterior shine for a showroom-worthy finish</li>
@@ -54,31 +95,25 @@ const Services = () => {
                 <li>Personalised treatments based on your specific requests</li>
               </ul>
               We carry out other treatments on your request such as: cleaning of stains on seats, leather treatment, dog hair, etc. 
-              In the event of damage noted during cleaning, we decline all responsibility.<br/>
+              In the event of damage noted during cleaning, we decline all responsibility.<br/> */}
             </motion.p>
           </SectionParagraph>
-        </ServicesParagraphContainer>
-        {/* <ServicesParagraphContainer>
           <SectionParagraph $mode="services">
-            <motion.p variants={fadeIn("", "", 0.1, 1)}>
-              <ul>
+            <ul>
                 <li>Complete washing and cleaning services (interior + exterior)</li>
                 <li>Interior detailing to restore freshness and cleanliness</li>
                 <li>Flawless exterior shine for a showroom-worthy finish</li>
                 <li>Expert scratch repairs</li>
                 <li>Personalised treatments based on your specific requests</li>
               </ul>
-            </motion.p>
           </SectionParagraph>
-        </ServicesParagraphContainer>
-        <ServicesParagraphContainer>
           <SectionParagraph $mode="services">
-            <motion.p variants={fadeIn("", "", 0.1, 1)}>
-              We carry out other treatments on your request such as: cleaning of stains on seats, leather treatment, dog hair, etc. 
+            We carry out other treatments on your request such as: cleaning of stains on seats, leather treatment, dog hair, etc. 
               In the event of damage noted during cleaning, we decline all responsibility.<br/>
-            </motion.p>
           </SectionParagraph>
-        </ServicesParagraphContainer> */}
+          </>
+          )}
+        </ServicesParagraphContainer>
         <ServicesImageContainer>
           {/* <ServicesImage src={service1} />
           <ServicesImage src={service2} />

@@ -235,6 +235,13 @@ export const SectionParagraph = styled.p`
 
   ${(props) => {
     switch (props.$mode) {
+      case "aboutus":
+        return css`
+          text-align: left;
+          @media screen and (max-width: 769px) {
+            text-align: justify;
+          }
+        `;
       case "services":
         return css`
           text-align: left;
@@ -540,7 +547,7 @@ export const AboutParagraphContainer = styled.div`
   justify-content: left;
   align-items: flex-start;
   width: 100%;
-  height: 70%;
+  height: 100%;
   background-color: transparent;
 `;
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Masonry from "react-masonry-css";
 import {
   Container,
@@ -18,6 +18,7 @@ import work4 from "./../assets/images/works/work4.jpeg";
 import work5 from "./../assets/images/works/work5.jpeg";
 import work6 from "./../assets/images/works/work6.jpeg";
 import work7 from "./../assets/images/works/work7.jpeg";
+import { TranslatorContext } from "../screens/context/TranslatorContext";
 
 const Gallery = () => {
   const breakpointColumnsObj = {
@@ -26,16 +27,29 @@ const Gallery = () => {
     700: 2,
     500: 1,
   };
+  const { lang } = useContext(TranslatorContext);
 
   return (
     <SectionDiv $mode="gallery" id="ourworks">
       <Container $mode="gallery">
         <TitleContainer>
-          <SectionHeading $mode="gallery">Our Works</SectionHeading>
-          <SectionParagraph $mode="gallery">
-            {" "}
-            Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum{" "}
-          </SectionParagraph>
+          { lang === 'french' ? (
+            <>
+            <SectionHeading $mode="gallery">Galerie</SectionHeading>
+            <SectionParagraph $mode="gallery">
+              {" "}
+              Découvrez nos transformations éclatantes.{" "}
+            </SectionParagraph>
+            </>
+          ) : (
+            <>
+            <SectionHeading $mode="gallery">Gallery</SectionHeading>
+            <SectionParagraph $mode="gallery">
+              {" "}
+              Discover Our Gleaming Transformations.{" "}
+            </SectionParagraph>
+            </>
+          )}
         </TitleContainer>
         <GalleryContainer>
           <Masonry

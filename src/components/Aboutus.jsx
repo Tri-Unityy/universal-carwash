@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 import { motion } from "framer-motion";
 import { slideIn, staggerContainer, textVariant } from "../utils/motion";
@@ -11,12 +11,10 @@ import {
   AboutParagraphContainer,
   SliderContainer,
 } from "../assets/style/homeElements";
-
+import { TranslatorContext } from "../screens/context/TranslatorContext";
 import beforeAfter from "../constants/beforeAfterSlider";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import about from "./../assets/images/about.jpg";
-import exterior from "./../assets/images/exterior.jpg";
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,
@@ -25,7 +23,7 @@ import {
 const AboutUs = () => {
   const [imageData] = useState(beforeAfter);
   const [index, setIndex] = useState(0);
-
+  const { lang } = useContext(TranslatorContext);
   useEffect(() => {
     const lastIndex = imageData.length - 1;
     if (index < 0) {
@@ -118,13 +116,23 @@ const AboutUs = () => {
           </motion.div>
           <motion.div variants={textVariant()} className="about-container">
             <AboutContainer>
-              <SectionHeading>About Us</SectionHeading>
+              <SectionHeading>
+                {lang === "french" ? " À propos de nous" : "About Us"}
+              </SectionHeading>
               <AboutParagraphContainer>
-                <SectionParagraph>
-                  Lorem ipsum dolor sit amet, enna kodumai sir ithuhuiuh
-                  consectetur adipiscing elit. Cras congue, erat a aliquam
-                  dapibus.
-                </SectionParagraph>
+                {lang === "french" ? (
+                  <SectionParagraph $mode="aboutus">
+                    Avec une passion pour la perfection, Universal Car Wash
+                    offre des services complets de lavage et de nettoyage qui
+                    répondent à tous vos besoins.
+                  </SectionParagraph>
+                ) : (
+                  <SectionParagraph $mode="aboutus">
+                    With a passion for perfection, Universal Car Wash offers
+                    comprehensive washing and cleaning services that cater to
+                    your every need.
+                  </SectionParagraph>
+                )}
               </AboutParagraphContainer>
             </AboutContainer>
           </motion.div>

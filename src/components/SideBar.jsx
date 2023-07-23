@@ -29,16 +29,16 @@ const SideBar = ({ isOpen, toggle }) => {
         <SidebarWrapper>
           <SidebarMenu>
             <SidebarLink to="about" onClick={toggle}>
-              About Us
+              { lang == 'french' ? "À propos de nous" : "About Us"}
             </SidebarLink>
             <SidebarLink to="services" onClick={toggle}>
-              Services
+              { lang == 'french' ? "Nos services" : "Services"}
             </SidebarLink>
             <SidebarLink to="ourworks" onClick={toggle}>
-              Our Works
+              { lang == 'french' ? "Galerie" : "Gallery"}
             </SidebarLink>
             <SidebarLink to="contactus" onClick={toggle}>
-              Contact Us
+              { lang == 'french' ? "Contactez-nous" : "Contact Us"}
             </SidebarLink>
             <Dropdown className="translator-container" onSelect={handleSelect}>
               <Dropdown.Toggle

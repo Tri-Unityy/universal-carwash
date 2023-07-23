@@ -203,6 +203,12 @@ export const SectionDiv = styled.div`
           justify-content: space-between;
           align-items: center;
         `;
+
+      case "contactus":
+        return css`
+          margin: 0;
+          justify-content: space-between;
+        `;
     }
   }}
 `;
@@ -235,6 +241,13 @@ export const SectionParagraph = styled.p`
 
   ${(props) => {
     switch (props.$mode) {
+      case "aboutus":
+        return css`
+          text-align: left;
+          @media screen and (max-width: 769px) {
+            text-align: justify;
+          }
+        `;
       case "services":
         return css`
           text-align: left;
@@ -352,9 +365,9 @@ export const MenuIconContainer = styled.div`
 export const Links = styled(LinkS)`
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 200px;
   height: 100%;
   color: ${secondaryTextColor};
   text-decoration: none;
@@ -461,6 +474,13 @@ export const SubHeading = styled.h2`
   color: ${secondaryTextColor};
   margin-bottom: 1rem;
   font-weight: 400;
+  @media screen and (max-width: 501px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 321px) {
+    font-size: 2.5rem;
+  }
 `;
 
 // export const ImageContainer = styled.div`
@@ -540,7 +560,7 @@ export const AboutParagraphContainer = styled.div`
   justify-content: left;
   align-items: flex-start;
   width: 100%;
-  height: 70%;
+  height: 100%;
   background-color: transparent;
 `;
 
@@ -565,8 +585,8 @@ export const ServicesParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: left;
-  align-items: flex-start;
-  width: 40%;
+  align-items: center;
+  width: 100%;
   height: 70%;
   background-color: transparent;
   @media screen and (max-width: 769px) {
@@ -825,6 +845,17 @@ export const ContactDetailsContainer = styled.div`
   margin-top: 2rem;
 `;
 
+export const ContactDetailsFooterContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  margin-top: 2rem;
+  margin-bottom: 5px;
+`;
+
 export const ContactDetails = styled.div`
   display: flex;
   flex-direction: row;
@@ -837,6 +868,9 @@ export const ContactDetails = styled.div`
     align-items: center;
     justify-content: center;
   }
+`;
+export const ContactFooterDetails = styled.div`
+  display: flex;
 `;
 
 export const Details = styled.div`

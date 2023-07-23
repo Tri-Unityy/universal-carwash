@@ -4,15 +4,13 @@ const packages = [
 
     packageType: "Bike Normal",
 
-    packagePrice: "25 CHF",
+    packagePrice: "25 CHF onwards",
 
     packageDuration: "30 mins",
 
     packageItems: {
-      item1: "Lorem ipsum lorem ipsum",
-      item2: "Lorem ipsum lorem ipsum",
-      item3: "Lorem ipsum lorem ipsum",
-      item4: "Lorem ipsum lorem ipsum",
+      item1: "service1",
+      item2: "service2",
     },
   },
   {
@@ -20,15 +18,13 @@ const packages = [
 
     packageType: "Bike Premium",
 
-    packagePrice: "100 CHF",
+    packagePrice: "100 CHF onwards",
 
     packageDuration: "45 mins",
 
     packageItems: {
       item1: "Lorem ipsum lorem ipsum",
       item2: "Lorem ipsum lorem ipsum",
-      item3: "Lorem ipsum lorem ipsum",
-      item4: "Lorem ipsum lorem ipsum",
     },
   },
   {
@@ -36,15 +32,13 @@ const packages = [
 
     packageType: "4 x 4 Normal",
 
-    packagePrice: "60 CHF",
+    packagePrice: "60 CHF onwards",
 
     packageDuration: "1 hr",
 
     packageItems: {
-      item1: "Lorem ipsum lorem ipsum",
-      item2: "Lorem ipsum lorem ipsum",
-      item3: "Lorem ipsum lorem ipsum",
-      item4: "Lorem ipsum lorem ipsum",
+      item1: "Interior",
+      item2: "Exterior",
     },
   },
   {
@@ -52,15 +46,13 @@ const packages = [
 
     packageType: "4 x 4 Premium",
 
-    packagePrice: "150 CHF",
+    packagePrice: "150 CHF onwards",
 
     packageDuration: "1 hr",
 
     packageItems: {
-      item1: "Lorem ipsum lorem ipsum",
-      item2: "Lorem ipsum lorem ipsum",
-      item3: "Lorem ipsum lorem ipsum",
-      item4: "Lorem ipsum lorem ipsum",
+      item1: "Interior",
+      item2: "Exterior",
     },
   },
   {
@@ -68,12 +60,12 @@ const packages = [
 
     packageType: "Rim Cleaning",
 
-    packagePrice: "100 CHF",
+    packagePrice: "100 CHF onwards",
 
     packageDuration: "1 hr",
 
     packageItems: {
-      item1: "Lorem ipsum lorem ipsum",
+      item1: "Complete removal & cleaning",
     },
   },
 ];

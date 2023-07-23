@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import {
   ContactDetails,
   ContactFooterDetails,
@@ -16,7 +16,7 @@ import {
 } from "../assets/style/homeElements";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from '@mui/icons-material/Instagram';
+import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from "@mui/icons-material/Call";
 import GpsFixedIcon from "@mui/icons-material/GpsFixed";
@@ -28,8 +28,10 @@ import { TranslatorContext } from "../screens/context/TranslatorContext";
 const ContactUs = () => {
   const { lang } = useContext(TranslatorContext);
   return (
-    <SectionDiv id="contactus">
-      <SectionHeading>{ lang === 'french' ? "Contactez-nous" : "Get in Touch"}</SectionHeading>
+    <SectionDiv $mode="contactus" id="contactus">
+      <SectionHeading>
+        {lang === "french" ? "Contactez-nous" : "Get in Touch"}
+      </SectionHeading>
       <Container $mode="contact">
         <ContactLogo src={logo} />
         <ContactDetailsContainer>
@@ -53,19 +55,29 @@ const ContactUs = () => {
             <Details>
               <QueryBuilderIcon sx={{ fontSize: "30px" }} />
               <ContactDetailsParagraph>
-  {lang === "french" ? "Lundi - Dimanche" : "Monday - Sunday"}
-  <br />
-  <span style={{ color: "#E80C0E" }}>9:00 AM - 9:00 PM</span>
-</ContactDetailsParagraph>
+                {lang === "french" ? "Lundi - Dimanche" : "Monday - Sunday"}
+                <br />
+                <span style={{ color: "#E80C0E" }}>9:00 AM - 9:00 PM</span>
+              </ContactDetailsParagraph>
             </Details>
           </ContactDetails>
         </ContactDetailsContainer>
         <ContactDetailsFooterContainer>
-        <ContactFooterDetails style={{flex:3, justifyContent:'flex-start'}}><p style={{fontSize:'10px',color:'white'}}>Copyright © 2023 Universal CarWash. All Rights Reserved</p></ContactFooterDetails>
-          <ContactFooterDetails style={{flex:1,justifyContent:'flex-end'}}>
-              <InstagramIcon sx={{ fontSize: "20px",color:'white',marginRight:'10px' }} />
-              <FacebookIcon sx={{ fontSize: "20px" ,color:'white',marginRight:'10px' }} />
-              <TwitterIcon sx={{ fontSize: "20px",color:'white' ,marginRight:'10px' }} />
+          <ContactFooterDetails>
+            <span style={{ fontSize: "10px", color: "white" }}>
+              Copyright © 2023 Universal CarWash. All Rights Reserved
+            </span>
+          </ContactFooterDetails>
+          <ContactFooterDetails style={{ flex: 1, justifyContent: "flex-end" }}>
+            <InstagramIcon
+              sx={{ fontSize: "20px", color: "white", marginRight: "10px" }}
+            />
+            <FacebookIcon
+              sx={{ fontSize: "20px", color: "white", marginRight: "10px" }}
+            />
+            <TwitterIcon
+              sx={{ fontSize: "20px", color: "white", marginRight: "10px" }}
+            />
           </ContactFooterDetails>
         </ContactDetailsFooterContainer>
       </Container>

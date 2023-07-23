@@ -203,6 +203,12 @@ export const SectionDiv = styled.div`
           justify-content: space-between;
           align-items: center;
         `;
+
+      case "contactus":
+        return css`
+          margin: 0;
+          justify-content: space-between;
+        `;
     }
   }}
 `;
@@ -845,8 +851,9 @@ export const ContactDetailsFooterContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  align-items: center;
+  align-items: flex-end;
   margin-top: 2rem;
+  margin-bottom: 5px;
 `;
 
 export const ContactDetails = styled.div`
@@ -864,16 +871,6 @@ export const ContactDetails = styled.div`
 `;
 export const ContactFooterDetails = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-
-  @media screen and (max-width: 769px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
 `;
 
 export const Details = styled.div`

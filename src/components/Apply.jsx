@@ -107,10 +107,11 @@ const Apply = () => {
             className="form-container"
           >
             <Form.Group className=" form-group" controlId="formName">
-              <Form.Label>Name</Form.Label>
+              <Form.Label className=" form-label" style={{marginTop:'20px'}}>Name</Form.Label>
               <Form.Control
                 required
                 name="name"
+                className="form-control"
                 onChange={handleChange}
                 value={form.name}
                 type="text"
@@ -119,10 +120,11 @@ const Apply = () => {
             </Form.Group>
 
             <Form.Group className=" form-group" controlId="formNumber">
-              <Form.Label>Phone Number</Form.Label>
+              <Form.Label className=" form-label">Phone Number</Form.Label>
               <Form.Control
                 required
                 type="text"
+                className="form-control"
                 onChange={handleChange}
                 name="number"
                 value={form.number}
@@ -131,22 +133,24 @@ const Apply = () => {
             </Form.Group>
 
             <Form.Group className=" form-group" controlId="setDate">
-              <Form.Label>Select Date</Form.Label>
+              <Form.Label className=" form-label">Select Date</Form.Label>
               <Form.Control
                 required
                 type="date"
                 name="message"
+                className="form-control"
                 onChange={handleChange}
                 value={form.message}
                 placeholder="Schedule date"
               />
             </Form.Group>
             <Form.Group className=" form-group" controlId="setTime">
-              <Form.Label>Select Time</Form.Label>
+              <Form.Label className=" form-label">Select Time</Form.Label>
               <Form.Select
                 required
                 name="time"
                 value={form.time}
+                className="form-control"
                 onChange={handleChange}
               >
                 <option>Select yout time slot</option>
@@ -163,7 +167,7 @@ const Apply = () => {
             </Form.Group>
 
             <Button type="submit" className="button-container">
-              {loading ? "Sending..." : "Send"}
+              {loading ? "Scheduling..." : "Schedule"}
             </Button>
           </Form>
         </ApplyFormContainer>

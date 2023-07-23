@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 
 import { motion } from "framer-motion";
 import { slideIn, staggerContainer, textVariant } from "../utils/motion";
@@ -11,7 +11,7 @@ import {
   AboutParagraphContainer,
   SliderContainer,
 } from "../assets/style/homeElements";
-
+import { TranslatorContext } from "../screens/context/TranslatorContext";
 import beforeAfter from "../constants/beforeAfterSlider";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -25,7 +25,7 @@ import {
 const AboutUs = () => {
   const [imageData] = useState(beforeAfter);
   const [index, setIndex] = useState(0);
-
+  const { lang } = useContext(TranslatorContext);
   useEffect(() => {
     const lastIndex = imageData.length - 1;
     if (index < 0) {
@@ -118,13 +118,17 @@ const AboutUs = () => {
           </motion.div>
           <motion.div variants={textVariant()} className="about-container">
             <AboutContainer>
-              <SectionHeading>About Us</SectionHeading>
+              <SectionHeading>{lang === "french" ? " À propos de nous" : "About Us"}</SectionHeading>
               <AboutParagraphContainer>
-                <SectionParagraph>
-                  Lorem ipsum dolor sit amet, enna kodumai sir ithuhuiuh
-                  consectetur adipiscing elit. Cras congue, erat a aliquam
-                  dapibus.
-                </SectionParagraph>
+              {lang === "french" ? (
+                  <SectionParagraph>
+                  Bienvenue chez Universal Car Wash ! Votre destination unique pour des soins complets de véhicules avec passion et perfection. Services de lavage complets répondant à tous vos besoins.</SectionParagraph>
+                ) : (
+                  <SectionParagraph>
+                    Welcome to Universal Car Wash, your one-stop destination for comprehensive vehicle care. With our passion for perfection, we offer comprehensive washing and cleaning services that cater to your every need.
+                  </SectionParagraph>
+                )}
+               
               </AboutParagraphContainer>
             </AboutContainer>
           </motion.div>

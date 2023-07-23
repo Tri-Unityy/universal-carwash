@@ -825,6 +825,16 @@ export const ContactDetailsContainer = styled.div`
   margin-top: 2rem;
 `;
 
+export const ContactDetailsFooterContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin-top: 2rem;
+`;
+
 export const ContactDetails = styled.div`
   display: flex;
   flex-direction: row;
@@ -832,6 +842,19 @@ export const ContactDetails = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+export const ContactFooterDetails = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
   @media screen and (max-width: 769px) {
     flex-direction: column;
     align-items: center;

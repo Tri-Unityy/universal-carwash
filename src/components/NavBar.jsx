@@ -19,9 +19,9 @@ import fr from "./../assets/images/french.png";
 import logo from "./../assets/images/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import { animateScroll as scroll } from "react-scroll";
+
 const NavBar = ({ toggle }) => {
   const { lang, setLang } = useContext(TranslatorContext);
-
   const [scrollNav, setScrollNav] = useState(false);
   const handleSelect = (e) => {
     setLang(e);
@@ -55,7 +55,7 @@ const NavBar = ({ toggle }) => {
           exact="true"
           offset={-80}
         >
-          About Us
+          { lang == 'french' ? "À propos" : "About Us"}
         </Links>
         <Links
           to="services"
@@ -65,7 +65,7 @@ const NavBar = ({ toggle }) => {
           exact="true"
           offset={-80}
         >
-          Services
+          { lang == 'french' ? "Nos services" : "Services"}
         </Links>
         <Links
           to="ourworks"
@@ -75,7 +75,7 @@ const NavBar = ({ toggle }) => {
           exact="true"
           offset={-80}
         >
-          Our Works
+          { lang == 'french' ? "Galerie" : "Gallery"}
         </Links>
         <Links
           to="contactus"
@@ -85,7 +85,7 @@ const NavBar = ({ toggle }) => {
           exact="true"
           offset={-80}
         >
-          Contact Us
+          { lang == 'french' ? "Contactez-nous" : "Contact Us"}
         </Links>
         <Dropdown className="translator-container" onSelect={handleSelect}>
           <Dropdown.Toggle className="translator-button" id="dropdown-basic">

@@ -359,7 +359,7 @@ export const MenuIconContainer = styled.div`
 export const Links = styled(LinkS)`
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
   width: 150px;
   height: 100%;

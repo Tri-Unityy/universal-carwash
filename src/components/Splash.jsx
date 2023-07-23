@@ -87,11 +87,30 @@ const Splash = () => {
         <Container $mode="splash">
           <Container $mode="div">
             <SubHeading>
-              Reveal the{" "}
-              <span style={{ color: primaryHeadingColor, fontWeight: "bold" }}>
-                {lang === "french" ? "Caché" : "Hidden"}
-              </span>{" "}
-              Beauty
+              {lang === "french" ? (
+                <>
+                  Révélez la Beauté{" "}
+                  <span style={{ color: primaryHeadingColor, fontWeight: "bold" }}>
+                    Cachée
+                  </span>{" "}
+                  <br/>
+                  <span style={{ fontSize: "16px" }}>
+                    <bold>Universal Car Wash</bold>, votre destination unique pour des soins complets de véhicules.
+                  </span>
+                </>
+              ) : (
+                <>
+                  Reveal the{" "}
+                  <span style={{ color: primaryHeadingColor, fontWeight: "bold" }}>
+                    Hidden
+                  </span>{" "}
+                  Beauty
+                  <br/>
+                  <span style={{ fontSize: "16px" }}>
+                    <bold>Universal Car Wash</bold>, your one-stop destination for comprehensive vehicle care.
+                  </span>
+                </>
+              )}
             </SubHeading>
           </Container>
         </Container>

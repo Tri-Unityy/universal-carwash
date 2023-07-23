@@ -29,7 +29,7 @@ const SideBar = ({ isOpen, toggle }) => {
         <SidebarWrapper>
           <SidebarMenu>
             <SidebarLink to="about" onClick={toggle}>
-              { lang == 'french' ? "À propos" : "About Us"}
+              { lang == 'french' ? "À propos de nous" : "About Us"}
             </SidebarLink>
             <SidebarLink to="services" onClick={toggle}>
               { lang == 'french' ? "Nos services" : "Services"}

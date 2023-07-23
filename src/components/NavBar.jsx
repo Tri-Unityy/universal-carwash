@@ -55,7 +55,7 @@ const NavBar = ({ toggle }) => {
           exact="true"
           offset={-80}
         >
-          { lang == 'french' ? "À propos" : "About Us"}
+          { lang == 'french' ? "À propos de nous" : "About Us"}
         </Links>
         <Links
           to="services"

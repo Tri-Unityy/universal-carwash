@@ -4,7 +4,7 @@ const packagesF = [
   
       packageType: "Vélo Normal",
   
-      packagePrice: "À partir de 25 CHF onwards",
+      packagePrice: "À partir de 25 CHF",
   
       packageDuration: "Durée maximale 30 minutes",
   

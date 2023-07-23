@@ -854,6 +854,12 @@ export const ContactDetailsFooterContainer = styled.div`
   align-items: flex-end;
   margin-top: 2rem;
   margin-bottom: 5px;
+
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const ContactDetails = styled.div`

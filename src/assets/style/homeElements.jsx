@@ -361,7 +361,7 @@ export const Links = styled(LinkS)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 200px;
   height: 100%;
   color: ${secondaryTextColor};
   text-decoration: none;

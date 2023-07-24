@@ -47,10 +47,6 @@ const Splash = () => {
                   >
                     Cachée
                   </span>{" "}
-                  <br/>
-                  <span style={{ fontSize: "16px" }}>
-                    <bold>Universal Car Wash</bold>, votre destination unique pour des soins complets de véhicules.
-                  </span>
                 </SubHeading>
               </>
             ) : (
@@ -63,10 +59,6 @@ const Splash = () => {
                     Hidden
                   </span>{" "}
                   Beauty
-                  <br/>
-                  <span style={{ fontSize: "16px" }}>
-                    <bold>Universal Car Wash</bold>, your one-stop destination for comprehensive vehicle care.
-                  </span>
                 </SubHeading>
               </>
             )}

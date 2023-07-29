@@ -542,14 +542,16 @@ export const AboutContainer = styled.div`
   height: 100%;
   /* background-color: rgba(255, 255, 255, 0.2); */
   margin-left: 2rem;
+  padding-left: 1rem;
+
   @media screen and (max-width: 376px) {
     width: 100%;
     align-items: flex-start;
-    /* padding-left: 1rem; */
+    padding-left: 1rem;
   }
 
   @media screen and (max-width: 769px) {
-    padding-left: 0rem;
+    /*padding-left: 0rem;*/
     margin: 0;
   }
 `;

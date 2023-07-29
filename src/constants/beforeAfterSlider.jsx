@@ -26,13 +26,13 @@ const beforeAfter = [
     before: before7,
     after: after7,
   },
+  // {
+  //   id: "4",
+  //   before: before13,
+  //   after: after13,
+  // },
   {
     id: "4",
-    before: before13,
-    after: after13,
-  },
-  {
-    id: "5",
     before: before15,
     after: after15,
   },

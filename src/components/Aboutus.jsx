@@ -122,15 +122,17 @@ const AboutUs = () => {
               <AboutParagraphContainer>
                 {lang === "french" ? (
                   <SectionParagraph $mode="aboutus">
-                    Avec une passion pour la perfection, Universal Car Wash
-                    offre des services complets de lavage et de nettoyage qui
-                    répondent à tous vos besoins.
+                    Votre destination unique pour des soins complets de véhicules.
+                    Avec une passion pour la perfection, nous 
+                    offrons des services complets de lavage et 
+                    de nettoyage qui répondent à tous vos besoins.
                   </SectionParagraph>
                 ) : (
                   <SectionParagraph $mode="aboutus">
-                    With a passion for perfection, Universal Car Wash offers
-                    comprehensive washing and cleaning services that cater to
-                    your every need.
+                      Your one-stop destination for comprehensive vehicle care.
+                      With a passion for perfection, we offer
+                      comprehensive washing and cleaning services that cater to
+                      your every need.
                   </SectionParagraph>
                 )}
               </AboutParagraphContainer>

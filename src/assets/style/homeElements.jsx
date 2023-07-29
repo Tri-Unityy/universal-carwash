@@ -206,7 +206,7 @@ export const SectionDiv = styled.div`
 
       case "contactus":
         return css`
-          margin: 0;
+          /*margin: 0;*/
           justify-content: space-between;
         `;
     }
@@ -223,6 +223,10 @@ export const SectionHeading = styled.h1`
       case "gallery":
         return css`
           margin-right: 1rem;
+        `;
+      case "contactus":
+        return css`
+          text-align: center;
         `;
     }
   }}
@@ -542,14 +546,16 @@ export const AboutContainer = styled.div`
   height: 100%;
   /* background-color: rgba(255, 255, 255, 0.2); */
   margin-left: 2rem;
+  padding-left: 1rem;
+
   @media screen and (max-width: 376px) {
     width: 100%;
     align-items: flex-start;
-    /* padding-left: 1rem; */
+    padding-left: 1rem;
   }
 
   @media screen and (max-width: 769px) {
-    padding-left: 0rem;
+    /*padding-left: 0rem;*/
     margin: 0;
   }
 `;
@@ -856,7 +862,7 @@ export const ContactDetailsFooterContainer = styled.div`
   margin-bottom: 5px;
 
   @media screen and (max-width: 769px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
   }
@@ -869,6 +875,7 @@ export const ContactDetails = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
+  
   @media screen and (max-width: 769px) {
     flex-direction: column;
     align-items: center;
@@ -877,6 +884,20 @@ export const ContactDetails = styled.div`
 `;
 export const ContactFooterDetails = styled.div`
   display: flex;
+
+  ${(props) => {
+    switch (props.$mode) {
+      case "social":
+        return css`
+          /*flex: "1";
+          justify-content: "flex-end";*/
+
+          @media screen and (max-width: 769px) {
+            margin-bottom: 20px;
+          }
+        `;
+    }
+  }};
 `;
 
 export const Details = styled.div`
@@ -926,6 +947,7 @@ export const ContactDetailsParagraph = styled.p`
   margin-top: 1rem;
 
   @media screen and (max-width: 769px) {
+    font-size: 1rem;
     text-align: left;
     width: 90%;
     margin-left: 1.5rem;
@@ -954,4 +976,8 @@ export const ContactLogo = styled.img`
   @media screen and (max-width: 376px) {
     width: 50%;
   }
+`;
+
+export const FooterMap = styled.div`
+  margin-top: 20px;
 `;

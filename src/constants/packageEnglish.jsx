@@ -19,7 +19,7 @@ const packagesE = [
   
       packagePrice: "100 CHF onwards",
   
-      packageDuration: "45 mins",
+      packageDuration: "",
   
       packageItems: {
         item1: "100% Hand-cleaning",
@@ -47,7 +47,7 @@ const packagesE = [
   
       packagePrice: "150 CHF onwards",
   
-      packageDuration: "1 hr",
+      packageDuration: "",
   
       packageItems: {
         item1: "Interior",

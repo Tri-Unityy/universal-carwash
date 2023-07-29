@@ -19,7 +19,7 @@ const packagesF = [
   
       packagePrice: "À partir de 100 CHF",
   
-      packageDuration: "Durée maximale 45 minutes",
+      packageDuration: "",
   
       packageItems: {
         item1: "100% nettoyage à la main",
@@ -47,7 +47,7 @@ const packagesF = [
   
       packagePrice: "À partir de 150 CHF",
   
-      packageDuration: "Durée maximale 1 h",
+      packageDuration: "",
   
       packageItems: {
         item1: "Intérieur",

@@ -66,7 +66,9 @@ const Cards = () => {
             <p>
               <ul>
                 <li>{cardContent[1].packagePrice}</li>
-                <li>{cardContent[1].packageDuration}</li>
+                {cardContent[1].packageDuration != "" && (
+                  <li>{cardContent[1].packageDuration}</li>  
+                )}
               </ul>
             </p>
             <div class="tag-container">
@@ -99,7 +101,9 @@ const Cards = () => {
             <p>
               <ul>
                 <li>{cardContent[2].packagePrice}</li>
-                <li>{cardContent[2].packageDuration}</li>
+                {cardContent[2].packageDuration != "" && (
+                  <li>{cardContent[2].packageDuration}</li>  
+                )}
               </ul>
             </p>
             <div class="tag-container">
@@ -132,7 +136,9 @@ const Cards = () => {
             <p>
               <ul>
                 <li>{cardContent[3].packagePrice}</li>
-                <li>{cardContent[3].packageDuration}</li>
+                {cardContent[3].packageDuration != "" && (
+                  <li>{cardContent[3].packageDuration}</li>  
+                )}
               </ul>
             </p>
             <div class="tag-container">
@@ -165,7 +171,9 @@ const Cards = () => {
             <p>
               <ul>
                 <li>{cardContent[4].packagePrice}</li>
-                <li>{cardContent[4].packageDuration}</li>
+                {cardContent[4].packageDuration != "" && (
+                  <li>{cardContent[4].packageDuration}</li>  
+                )}
               </ul>
             </p>
             <div class="tag-container">

@@ -80,9 +80,12 @@ const ContactUs = () => {
             </span>
           </ContactFooterDetails>
           <ContactFooterDetails $mode="social">
-            <FacebookIcon
-              sx={{ fontSize: "30px", color: "white", marginRight: "20px" }}
-            />
+            <a href="https://www.facebook.com/p/Universal-Car-Wash-100028020356983/" target="_blank" 
+            style={{textDecoration:"none"}}>
+              <FacebookIcon
+                sx={{ fontSize: "30px", color: "white", marginRight: "20px" }}
+              />
+            </a>
             <InstagramIcon
               sx={{ fontSize: "30px", color: "white", marginRight: "20px" }}
             />

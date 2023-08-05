@@ -26,7 +26,7 @@
 }
 
 .masonry:hover{
-    -webkit-filter: blur(3px);
-	filter: blur(3px);
-    /* transform: scale(1.25); */
+    /* -webkit-filter: blur(3px);
+	filter: blur(3px); */
+    transform: scale(1.12);
 }

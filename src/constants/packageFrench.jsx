@@ -59,7 +59,7 @@ const packagesF = [
   
       packageType: "Nettoyage des Jantes",
   
-      packagePrice: "À partir de 50 CHF",
+      packagePrice: "50 CHF par jante",
   
       packageDuration: "",
   

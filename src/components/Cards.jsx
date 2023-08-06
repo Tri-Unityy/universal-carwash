@@ -39,7 +39,9 @@ const Cards = () => {
             <p>
               <ul>
                 <li>{cardContent[0].packagePrice}</li>
-                <li>{cardContent[0].packageDuration}</li>
+                {cardContent[0].packageDuration != "" && (
+                  <li>{cardContent[0].packageDuration}</li>
+                )}
               </ul>
             </p>
             <div class="tag-container">

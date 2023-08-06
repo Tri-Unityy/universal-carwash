@@ -6,7 +6,7 @@ const packagesE = [
   
       packagePrice: "25 CHF onwards",
   
-      packageDuration: "30 mins",
+      packageDuration: "",
   
       packageItems: {
         item1: "100% Hand-cleaning",
@@ -31,7 +31,7 @@ const packagesE = [
   
       packageType: "4 x 4 Normal",
   
-      packagePrice: "60 CHF onwards",
+      packagePrice: "80 CHF onwards",
   
       packageDuration: "1 hr",
   
@@ -45,7 +45,7 @@ const packagesE = [
   
       packageType: "4 x 4 Premium",
   
-      packagePrice: "150 CHF onwards",
+      packagePrice: "300 CHF onwards",
   
       packageDuration: "",
   
@@ -59,9 +59,9 @@ const packagesE = [
   
       packageType: "Rim Cleaning",
   
-      packagePrice: "100 CHF onwards",
+      packagePrice: "50 CHF per Rim",
   
-      packageDuration: "30 mins",
+      packageDuration: "",
   
       packageItems: {
         item1: "Complete removal & cleaning",

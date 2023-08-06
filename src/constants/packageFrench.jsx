@@ -6,7 +6,7 @@ const packagesF = [
   
       packagePrice: "À partir de 25 CHF",
   
-      packageDuration: "Durée maximale 30 minutes",
+      packageDuration: "",
   
       packageItems: {
         item1: "100% nettoyage à la main",
@@ -31,7 +31,7 @@ const packagesF = [
   
       packageType: "4 x 4 Normal",
   
-      packagePrice: "À partir de 60 CHF",
+      packagePrice: "À partir de 80 CHF",
   
       packageDuration: "Durée maximale 1 h",
   
@@ -59,9 +59,9 @@ const packagesF = [
   
       packageType: "Nettoyage des Jantes",
   
-      packagePrice: "À partir de 100 CHF",
+      packagePrice: "50 CHF par jante",
   
-      packageDuration: "Durée maximale 30 minutes",
+      packageDuration: "",
   
       packageItems: {
         item1: "Nettoyage complet et enlèvement des saletés",

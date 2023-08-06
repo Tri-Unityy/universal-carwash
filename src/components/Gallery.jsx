@@ -40,31 +40,49 @@ const Gallery = () => {
     500: 1,
   };
   const { lang } = useContext(TranslatorContext);
-  
+
   // const gallery = require.context("./../assets/images/works", true)
   // const galleryList = gallery.keys().map(g => gallery(g));
-  const galleryList = [work1, work2, work3, work4, work5, work6, work7, work8, 
-    work9, work10, work11, work12, work13, work14, work15, work16, work17, work18];
+  const galleryList = [
+    work1,
+    work2,
+    work3,
+    work4,
+    work5,
+    work6,
+    work7,
+    work8,
+    work9,
+    work10,
+    work11,
+    work12,
+    work13,
+    work14,
+    work15,
+    work16,
+    work17,
+    work18,
+  ];
 
   return (
     <SectionDiv $mode="gallery" id="ourworks">
       <Container $mode="gallery">
         <TitleContainer>
-          { lang === 'french' ? (
+          {lang === "french" ? (
             <>
-            <SectionHeading $mode="gallery">Galerie</SectionHeading>
-            <SectionParagraph $mode="gallery">
-              {" "}
-              Découvrez nos transformations éclatantes.{" "}
-            </SectionParagraph>
+              <SectionHeading $mode="gallery">Galerie</SectionHeading>
+              <SectionParagraph $mode="gallery">
+                {" "}
+                Découvrez nos transformations éclatantes.{" "}
+              </SectionParagraph>
             </>
           ) : (
             <>
-            <SectionHeading $mode="gallery">Gallery</SectionHeading>
-            <SectionParagraph $mode="gallery">
-              {" "}
-              Discover Our Gleaming Transformations.{" "}
-            </SectionParagraph>
+              <SectionHeading $mode="gallery">Gallery</SectionHeading>
+              <SectionParagraph $mode="gallery">
+                {" "}
+                Discover Our Gleaming Transformations.{" "}
+              </SectionParagraph>
             </>
           )}
         </TitleContainer>
@@ -74,15 +92,10 @@ const Gallery = () => {
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            {/* <img className="masonry" src={work1} />
-            <img className="masonry" src={work2} />
-            <img className="masonry" src={work3} />
-            <img className="masonry" src={work4} />
-            <img className="masonry" src={work5} />
-            <img className="masonry" src={work6} />
-            <img className="masonry" src={work7} /> */}
-            {galleryList.map(element => (
-              <img className="masonry" src={element} />
+            {galleryList.map((element) => (
+              <div className="masonry-container">
+                <img className="masonry" src={element} />
+              </div>
             ))}
           </Masonry>
         </GalleryContainer>

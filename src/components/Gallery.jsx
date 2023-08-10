@@ -16,7 +16,6 @@ import work2 from "./../assets/images/works/work2.jpeg";
 import work3 from "./../assets/images/works/work3.jpeg";
 import work4 from "./../assets/images/works/work4.jpg";
 import work5 from "./../assets/images/works/work5.jpeg";
-import work6 from "./../assets/images/works/work6.jpg";
 import work7 from "./../assets/images/works/work7.jpg";
 import work8 from "./../assets/images/works/work8.jpg";
 import work9 from "./../assets/images/works/work9.jpg";
@@ -49,7 +48,7 @@ const Gallery = () => {
     work3,
     work4,
     work5,
-    work6,
+
     work7,
     work8,
     work9,

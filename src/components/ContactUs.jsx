@@ -83,12 +83,14 @@ const ContactUs = () => {
             <a href="https://www.facebook.com/p/Universal-Car-Wash-100028020356983/" target="_blank" 
             style={{textDecoration:"none"}}>
               <FacebookIcon
-                sx={{ fontSize: "30px", color: "white", marginRight: "20px" }}
+                sx={{ fontSize: "25px", color: "white", marginRight: "20px" }}
               />
             </a>
-            <InstagramIcon
-              sx={{ fontSize: "30px", color: "white", marginRight: "20px" }}
-            />
+            <a href="" style={{textDecoration:"none"}}>
+              <InstagramIcon
+                sx={{ fontSize: "25px", color: "white", marginRight: "20px" }}
+              />
+            </a>
             {/* <TwitterIcon
               sx={{ fontSize: "30px", color: "white", marginRight: "20px" }}
             /> */}

@@ -207,6 +207,7 @@ export const SectionDiv = styled.div`
       case "contactus":
         return css`
           /*margin: 0;*/
+          margin-bottom: 0.5rem;
           justify-content: space-between;
         `;
     }
@@ -941,7 +942,7 @@ export const TimeTableContents = styled.div`
 
 export const ContactDetailsParagraph = styled.p`
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   font-weight: 600;
   margin-top: 1rem;
@@ -964,7 +965,7 @@ export const ContactDetailsParagraph = styled.p`
 `;
 
 export const ContactLogo = styled.img`
-  width: 15%;
+  width: 18%;
   height: auto;
 
   @media screen and (max-width: 769px) {

@@ -33,15 +33,15 @@ const ContactUs = () => {
 
   return (
     <SectionDiv $mode="contactus" id="contactus">
-      <SectionHeading $mode="contactus">
+      {/* <SectionHeading $mode="contactus">
         {lang === "french" ? "Contactez-nous" : "Get in Touch"}
-      </SectionHeading>
+      </SectionHeading> */}
       <Container $mode="contact">
         <ContactLogo src={logo} />
         <ContactDetailsContainer>
           <ContactDetails>
             <Details>
-              <CallIcon sx={{ fontSize: "30px" }} />
+              <CallIcon sx={{ fontSize: "35px" }} />
               <ContactDetailsParagraph>
                 <a href="tel:+41793270036" style={{textDecoration:"none", color: secondaryTextColor}}>
                   +41793270036
@@ -49,7 +49,7 @@ const ContactUs = () => {
               </ContactDetailsParagraph>
             </Details>
             <Details>
-              <EmailIcon sx={{ fontSize: "30px" }} />
+              <EmailIcon sx={{ fontSize: "35px" }} />
               <ContactDetailsParagraph>
                 <a href="mailto:info@universalcarwash.ch" style={{textDecoration:"none", color: secondaryTextColor}}>
                   info@universalcarwash.ch
@@ -57,13 +57,13 @@ const ContactUs = () => {
               </ContactDetailsParagraph>
             </Details>
             <Details>
-              <MapIcon sx={{ fontSize: "30px" }} />
+              <MapIcon sx={{ fontSize: "35px" }} />
               <ContactDetailsParagraph>
                 Route de Saint-Georges 77 -1213 Petit-Lancy
               </ContactDetailsParagraph>
             </Details>
             <Details>
-              <QueryBuilderIcon sx={{ fontSize: "30px" }} />
+              <QueryBuilderIcon sx={{ fontSize: "35px" }} />
               <ContactDetailsParagraph>
                 {lang === "french" ? "Lundi - Dimanche" : "Monday - Sunday"}
                 <br />
@@ -86,7 +86,8 @@ const ContactUs = () => {
                 sx={{ fontSize: "25px", color: "white", marginRight: "20px" }}
               />
             </a>
-            <a href="" style={{textDecoration:"none"}}>
+            <a href="https://instagram.com/universal_car_wash_geneva?igshid=MzRlODBiNWFlZA==" target="_blank"
+            style={{textDecoration:"none"}}>
               <InstagramIcon
                 sx={{ fontSize: "25px", color: "white", marginRight: "20px" }}
               />

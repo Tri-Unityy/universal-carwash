@@ -33,7 +33,7 @@ const packagesE = [
   
       packagePrice: "80 CHF onwards",
   
-      packageDuration: "1 hr",
+      packageDuration: "Max 1 hr",
   
       packageItems: {
         item1: "Interior",

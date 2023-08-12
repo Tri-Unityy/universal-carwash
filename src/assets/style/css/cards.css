@@ -132,6 +132,7 @@
 	background-color: #e80c10; 
   	padding: 3px; 
   	border-radius: 3px;
+	font-size: 14px;
 
 	  @media screen and (max-width: 376px) {
 		font-size: small;
@@ -146,14 +147,17 @@
 	transform: translateY(30px);
 	opacity: 0;
 	transition: all 0.3s ease-out;
-	}
-
-	
+}
 
 .ui-card .description p{
 	transform: translateY(30px);
 	opacity: 0;
 	transition: all 0.3s ease-out 0.2s;
+	font-size: larger;
+}
+
+.ui-card .description p span{
+	font-size: medium;
 }
 
 .ui-card .description a{

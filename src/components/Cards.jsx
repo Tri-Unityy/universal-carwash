@@ -10,6 +10,9 @@ import car from "./../assets/images/packages/car.jpg";
 import packagesE from "../constants/packageEnglish";
 import packagesF from "../constants/packageFrench";
 import { ServiceContext, TranslatorContext } from "../screens/context/TranslatorContext";
+import PaymentsIcon from "@mui/icons-material/Payments";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { primaryHeadingColor, successColor } from "../assets/resources/colors";
 
 const Cards = () => {
   const { lang } = useContext(TranslatorContext);
@@ -40,12 +43,12 @@ const Cards = () => {
             <h3>{cardContent[0].packageType}</h3>
             <div class="line"></div>
             <p>
-              <ul>
-                <li>{cardContent[0].packagePrice}</li>
-                {cardContent[0].packageDuration != "" && (
-                  <li>{cardContent[0].packageDuration}</li>
-                )}
-              </ul>
+              <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}{cardContent[0].packagePrice} <br/>
+              {cardContent[0].packageDuration != "" && (
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  {cardContent[0].packageDuration}
+                </span>
+              )}
             </p>
             <div class="tag-container">
               {tagContent[0].item1 ? (
@@ -69,12 +72,12 @@ const Cards = () => {
             <h3>{cardContent[1].packageType}</h3>
             <div class="line"></div>
             <p>
-              <ul>
-                <li>{cardContent[1].packagePrice}</li>
-                {cardContent[1].packageDuration != "" && (
-                  <li>{cardContent[1].packageDuration}</li>  
-                )}
-              </ul>
+            <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}{cardContent[1].packagePrice} <br/>
+              {cardContent[1].packageDuration != "" && (
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  {cardContent[1].packageDuration}
+                </span>
+              )}
             </p>
             <div class="tag-container">
               {tagContent[1].item1 ? (
@@ -109,12 +112,12 @@ const Cards = () => {
             <h3>{cardContent[2].packageType}</h3>
             <div class="line"></div>
             <p>
-              <ul>
-                <li>{cardContent[2].packagePrice}</li>
-                {cardContent[2].packageDuration != "" && (
-                  <li>{cardContent[2].packageDuration}</li>  
-                )}
-              </ul>
+            <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}{cardContent[2].packagePrice} <br/>
+              {cardContent[2].packageDuration != "" && (
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  {cardContent[2].packageDuration}
+                </span>
+              )}
             </p>
             <div class="tag-container">
               {tagContent[2].item1 ? (
@@ -144,12 +147,12 @@ const Cards = () => {
             <h3>{cardContent[3].packageType}</h3>
             <div class="line"></div>
             <p>
-              <ul>
-                <li>{cardContent[3].packagePrice}</li>
-                {cardContent[3].packageDuration != "" && (
-                  <li>{cardContent[3].packageDuration}</li>  
-                )}
-              </ul>
+            <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}{cardContent[3].packagePrice} <br/>
+              {cardContent[3].packageDuration != "" && (
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  {cardContent[3].packageDuration}
+                </span>
+              )}
             </p>
             <div class="tag-container">
               {tagContent[3].item1 ? (
@@ -184,12 +187,12 @@ const Cards = () => {
             <h3>{cardContent[4].packageType}</h3>
             <div class="line"></div>
             <p>
-              <ul>
-                <li>{cardContent[4].packagePrice}</li>
-                {cardContent[4].packageDuration != "" && (
-                  <li>{cardContent[4].packageDuration}</li>  
-                )}
-              </ul>
+              <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}{cardContent[4].packagePrice} <br/>
+              {cardContent[4].packageDuration != "" && (
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  {cardContent[4].packageDuration}
+                </span>
+              )}
             </p>
             <div class="tag-container">
               {tagContent[4].item1 ? (

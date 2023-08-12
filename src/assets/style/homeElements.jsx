@@ -618,19 +618,57 @@ export const ServicesImageContainer = styled.div`
   flex-wrap: wrap;
 
   @media screen and (max-width: 769px) {
+    justify-content: space-around;
+    gap: 2px;
+  }
+
+  @media screen and (max-width: 426px) {
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 376px) {
+    gap: 10px;
   }
 `;
 
 export const ServicesImage = styled.img`
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   /* background-color: rgba(255, 255, 255, 0.1); */
   border-radius: 5px;
-  margin-bottom: 1rem;
+  margin: 1rem;
   :hover {
     transform: scale(1.1);
     transition: all 0.2s ease-in-out;
+  }
+
+  @media screen and (max-width: 769px) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media screen and (max-width: 426px) {
+    width: 45px;
+    height: 45px;
+  }
+`;
+
+export const OneService = styled.button`
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+`;
+
+export const OneServiceText = styled.p`
+  font-size: 18px;
+  color: #fff;
+
+  @media screen and (max-width: 769px) {
+    font-size: 12px;
   }
 `;
 

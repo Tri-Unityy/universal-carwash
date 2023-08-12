@@ -6,9 +6,25 @@
     justify-content: center;
     align-items: center;
     /* border:1px solid red; */
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;word-wrap:break-word ;
 }
 
 /* .services-paragraph{
     
 } */
+
+.oneService:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.oneService:hover p{
+    color: black;
+    font-weight: 700;
+}
+
+.oneServiceSelectp {
+    color: black;
+    font-weight: 700;
+}

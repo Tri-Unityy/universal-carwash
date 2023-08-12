@@ -50,12 +50,9 @@
 	transition: all 0.3s ease-out;
 }
 
-
-
-
 .ui-card{
-    height: 450px;
-	width: 350px;
+    height: 400px;
+	width: 300px;
 	position: relative;
 	overflow: hidden;
 	transition: all 0.3s ease-out;
@@ -66,6 +63,11 @@
 	display:flex;
 	justify-content: center;
 	align-items: center;
+
+	@media screen and (max-width: 376px) {
+		height: 300px;
+		width: 250px;
+	  }
 }
 
 .ui-card img{
@@ -85,6 +87,10 @@
 	text-align: left;
 	color: #fff;
 	font-size: 18px;
+
+	@media screen and (max-width: 376px) {
+		font-size: medium;
+	  }
 }
 .ui-card .description h3{
 	font-weight: 700;
@@ -125,6 +131,10 @@
 	background-color: #e80c10; 
   	padding: 3px; 
   	border-radius: 3px;
+
+	  @media screen and (max-width: 376px) {
+		font-size: small;
+	  }
 }
 
 .ui-card .description  .line{

@@ -9,10 +9,11 @@ import carrim from "./../assets/images/packages/car-rim.jpg";
 import car from "./../assets/images/packages/car.jpg";
 import packagesE from "../constants/packageEnglish";
 import packagesF from "../constants/packageFrench";
-import { TranslatorContext } from "../screens/context/TranslatorContext";
+import { ServiceContext, TranslatorContext } from "../screens/context/TranslatorContext";
 
 const Cards = () => {
   const { lang } = useContext(TranslatorContext);
+  const { service } = useContext(ServiceContext);
   var cardContent = {};
   if (lang == "french") {
     cardContent = packagesF;
@@ -27,7 +28,9 @@ const Cards = () => {
   return (
     <>
       <Container $mode="packages">
-        <div class="ui-card">
+        {service == 1 && (
+          <>
+          <div class="ui-card">
           <img src={bike} />
           <div class="heading">
             <h3>{cardContent[0].packageType}</h3>
@@ -91,7 +94,12 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div class="ui-card">
+          </>
+        )}
+
+        {service == 2 && (
+          <>
+          <div class="ui-card">
           <img src={car} />
           <div class="heading">
             <h3>{cardContent[2].packageType}</h3>
@@ -161,7 +169,12 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div class="ui-card">
+          </>
+        )}
+
+        {service == 3 && (
+          <>
+          <div class="ui-card">
           <img src={carrim} />
           <div class="heading">
             <h3>{cardContent[4].packageType}</h3>
@@ -196,6 +209,8 @@ const Cards = () => {
             </div>
           </div>
         </div>
+          </>
+        )}
       </Container>
     </>
   );

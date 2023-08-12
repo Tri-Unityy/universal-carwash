@@ -612,7 +612,7 @@ export const ServicesImageContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   height: 100%;
   flex-wrap: wrap;
@@ -623,17 +623,19 @@ export const ServicesImageContainer = styled.div`
   }
 
   @media screen and (max-width: 426px) {
+    justify-content: space-around;
     gap: 8px;
   }
 
   @media screen and (max-width: 376px) {
+    justify-content: space-around;
     gap: 10px;
   }
 `;
 
 export const ServicesImage = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   /* background-color: rgba(255, 255, 255, 0.1); */
   border-radius: 5px;
@@ -644,8 +646,8 @@ export const ServicesImage = styled.img`
   }
 
   @media screen and (max-width: 769px) {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
   }
 
   @media screen and (max-width: 426px) {

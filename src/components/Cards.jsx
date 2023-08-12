@@ -214,8 +214,99 @@ const Cards = () => {
         </div>
           </>
         )}
+
+        {service == 4 && (
+          <>
+          <div class="ui-card">
+          <img src="" />
+          <div class="heading">
+            <h3>Micro Scratches Repair</h3>
+            <div class="line"></div>
+          </div>
+          <div class="description">
+            <h3>Correcting Medium defects</h3>
+            <div class="line"></div>
+            <p>
+              {/* <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "} <br/>
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  
+                </span> */}
+            </p>
+            <div class="tag-container">
+                <div class="tags">
+                  {" "}
+                  <span>MECHANICAL POLISHING WITH BUFFER</span>{" "}
+                </div>
+            </div>
+          </div>
+        </div>
+          <div class="ui-card">
+          <img src="" />
+          <div class="heading">
+            <h3>Scratches, Scuffs Repair</h3>
+            <div class="line"></div>
+          </div>
+          <div class="description">
+            <h3>Small and Medium Scratches and Scuffs</h3>
+            <div class="line"></div>
+            <p>
+              <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}FROM 45.- <br/>
+                {/* <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  
+                </span> */}
+            </p>
+            <div class="tag-container">
+                <div class="tags">
+                  {/* {" "}
+                  <span></span>{" "} */}
+                </div>
+            </div>
+          </div>
+        </div>
+          </>
+        )}
+
+        {service == 6 && (
+          <>
+          <div class="ui-card" style={{width: "80%"}}>
+          <img src="" />
+          <div class="heading">
+            <h3>Other services</h3>
+            <div class="line"></div>
+          </div>
+          <div class="description">
+            <h3>Other services</h3>
+            <div class="line"></div>
+            <p style={{textAlign: "right"}}>
+              <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "} <br/>
+                <span>{" "}
+                  HEADLIGHT LENS RESTORATION (DURING THIS SERVICE, EXTERIOR OR INTERIOR WASH IS OFFERED)
+                </span>{" "}PER UNIT 190 CHF <br/>
+                <span>{" "}
+                  CHROME CARE
+                </span>{" "}FROM 40 CHF <br />
+                <span>{" "}
+                  LEATHER MAINTENANCE WAX SHINE
+                </span>{" "}(UPON REQUEST) <br/>
+                <span>{" "}
+                SEAT CLEANING
+                </span>{" "}FROM 20 CHF <br/>
+                <span>{" "}
+                CHASSIS-ENGINE WASH
+                </span>{" "}110 CHF <br/>
+            </p>
+            {/* <div class="tag-container">
+                <div class="tags">
+                  {" "}
+                  <span></span>{" "}
+                </div>
+            </div> */}
+          </div>
+        </div>
+        </>
+        )}
       </Container>
-    </>
+    </>    
   );
 };
 

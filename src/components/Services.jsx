@@ -15,6 +15,7 @@ import {
 
 import i1 from "../assets/images/cubeicons/1.png";
 import i2 from "../assets/images/cubeicons/2.png";
+import i3 from "../assets/images/cubeicons/3.png";
 import i4 from "../assets/images/cubeicons/4.png";
 import i5 from "../assets/images/cubeicons/5.png";
 import i6 from "../assets/images/cubeicons/6.png";
@@ -66,10 +67,11 @@ const Services = () => {
             //     </motion.p>
             //   </SectionParagraph>
               <SectionParagraph $mode="services">
-                Nous effectuons également d'autres traitements sur demande, tels
-                que le nettoyage des taches sur les sièges, le traitement du
-                cuir, l'élimination des poils de chien, etc. En cas de dommage
-                constaté lors du nettoyage, nous déclinons toute responsabilité.
+                Nous proposons à la fois des forfaits et des catégories de services individuels. 
+                En plus des services principaux, nous effectuons d'autres traitements sur demande 
+                tels que le nettoyage de taches sur les sièges, le traitement du cuir, l'élimination 
+                des poils de chien, etc. En cas de dommage constaté lors du nettoyage, nous déclinons 
+                toute responsabilité.
                 <br /><br/>
               </SectionParagraph>
             // </>
@@ -96,7 +98,8 @@ const Services = () => {
             //     </motion.p>
             //   </SectionParagraph>
               <SectionParagraph $mode="services">
-                We carry out other treatments on your request such as: cleaning
+                We provide both packages and individual service categories. Other than the main services, 
+                we carry out other treatments on your request such as: cleaning
                 of stains on seats, leather treatment, dog hair, etc. In the
                 event of damage noted during cleaning, we decline all
                 responsibility.
@@ -115,7 +118,7 @@ const Services = () => {
           </OneService>
           <OneService className="oneService" style={{backgroundColor: service == 2 && "white"}} 
           onClick={()=>setService(2)}>
-            <ServicesImage src={i5} />
+            <ServicesImage src={i6} />
             <OneServiceText style={{color: service == 2 && "black", fontWeight: service == 2 && 700}}>
               4x4 Services
             </OneServiceText>
@@ -129,7 +132,7 @@ const Services = () => {
           </OneService>
           <OneService className="oneService" style={{backgroundColor: service == 4 && "white"}} 
           onClick={()=>setService(4)}>
-            <ServicesImage src={i6} />
+            <ServicesImage src={i5} />
             <OneServiceText style={{color: service == 4 && "black", fontWeight: service == 4 && 700}}>
               Repairing
             </OneServiceText>
@@ -139,6 +142,13 @@ const Services = () => {
             <ServicesImage src={i2} />
             <OneServiceText style={{color: service == 5 && "black", fontWeight: service == 5 && 700}}>
               Treatments
+            </OneServiceText>
+          </OneService>
+          <OneService className="oneService" style={{backgroundColor: service == 6 && "white"}} 
+          onClick={()=>setService(6)}>
+            <ServicesImage src={i3} />
+            <OneServiceText style={{color: service == 6 && "black", fontWeight: service == 6 && 700}}>
+              Other Services
             </OneServiceText>
           </OneService>
         </ServicesImageContainer>

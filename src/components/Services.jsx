@@ -70,7 +70,7 @@ const Services = () => {
                 que le nettoyage des taches sur les sièges, le traitement du
                 cuir, l'élimination des poils de chien, etc. En cas de dommage
                 constaté lors du nettoyage, nous déclinons toute responsabilité.
-                <br />
+                <br /><br/>
               </SectionParagraph>
             // </>
           ) : (
@@ -100,7 +100,7 @@ const Services = () => {
                 of stains on seats, leather treatment, dog hair, etc. In the
                 event of damage noted during cleaning, we decline all
                 responsibility.
-                <br />
+                <br /><br/>
               </SectionParagraph>
             // </>
           )}
@@ -110,14 +110,14 @@ const Services = () => {
           onClick={()=>setService(1)}>
             <ServicesImage src={i1} />
             <OneServiceText style={{color: service == 1 && "black", fontWeight: service == 1 && 700}}>
-              Bike Service
+              Bike Services
             </OneServiceText>
           </OneService>
           <OneService className="oneService" style={{backgroundColor: service == 2 && "white"}} 
           onClick={()=>setService(2)}>
             <ServicesImage src={i5} />
             <OneServiceText style={{color: service == 2 && "black", fontWeight: service == 2 && 700}}>
-              Car Service
+              4x4 Services
             </OneServiceText>
           </OneService>
           <OneService className="oneService" style={{backgroundColor: service == 3 && "white"}} 

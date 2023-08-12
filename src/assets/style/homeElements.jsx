@@ -252,7 +252,7 @@ export const SectionParagraph = styled.p`
           text-align: left;
           display: flex;
           flex-direction: column;
-          gap: 30px;
+          gap: 15px;
 
           @media screen and (max-width: 769px) {
             text-align: justify;

@@ -22,21 +22,21 @@
     @media screen and (max-width: 769px) {
       display: flex;
       flex-direction: column-reverse;
-      height: 130vh;
+      height: 150vh;
       flex-wrap: nowrap;
     }
     
     @media screen and (max-width: 376px) {
       display: flex;
       flex-direction: column-reverse;
-      height: 130vh;
+      height: 150vh;
       flex-wrap: nowrap;
     }
 
     @media screen and (max-width: 321px) {
       display: flex;
       flex-direction: column-reverse;
-      height: 130vh;
+      height: 150vh;
       flex-wrap: nowrap;
     }
   }

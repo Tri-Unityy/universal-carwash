@@ -92,7 +92,7 @@ const Apply = () => {
       );
   };
   return (
-    <SectionDiv>
+    <SectionDiv id="apply">
       <video
         autoPlay
         loop

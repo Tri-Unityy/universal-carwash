@@ -248,7 +248,12 @@ export const SectionParagraph = styled.p`
     switch (props.$mode) {
       case "aboutus":
         return css`
+          font-size: 18px;
           text-align: left;
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+
           @media screen and (max-width: 769px) {
             text-align: justify;
           }

@@ -60,7 +60,7 @@ const AboutUs = () => {
             <ArrowBackIosIcon
               onClick={() => setIndex(index - 1)}
               className="slider-icon"
-              sx={{ color: "#fff" }}
+              sx={{ color: "#fff" , margin: "10px"}}
             />
             <SectionDiv $mode="slider">
               {imageData.map((item, indexPackage) => {
@@ -81,14 +81,14 @@ const AboutUs = () => {
                   <>
                     <SliderContainer key={id} $mode={position}>
                       <ReactCompareSlider
-                        style={{ width: "100%", height: "95%" }}
+                        style={{ width: "100%", height: "auto", borderRadius: "15px" }}
                         itemOne={
                           <ReactCompareSliderImage
                             src={before}
                             style={{
                               width: "100%",
                               height: "100%",
-                              objectFit: "fill",
+                              objectFit: "contain",
                             }}
                           />
                         }
@@ -98,7 +98,7 @@ const AboutUs = () => {
                             style={{
                               width: "100%",
                               height: "100%",
-                              objectFit: "fill",
+                              objectFit: "contain",
                             }}
                           />
                         }
@@ -111,7 +111,7 @@ const AboutUs = () => {
             <ArrowForwardIosIcon
               onClick={() => setIndex(index + 1)}
               className="slider-icon"
-              sx={{ color: "#fff" }}
+              sx={{ color: "#fff" , margin: "10px"}}
             />
           </motion.div>
           <motion.div variants={textVariant()} className="about-container">
@@ -122,17 +122,25 @@ const AboutUs = () => {
               <AboutParagraphContainer>
                 {lang === "french" ? (
                   <SectionParagraph $mode="aboutus">
-                    Votre destination unique pour des soins complets de véhicules.
-                    Avec une passion pour la perfection, nous 
-                    offrons des services complets de lavage et 
-                    de nettoyage qui répondent à tous vos besoins.
+                    Bienvenue chez Universal Car Wash, votre destination unique pour 
+                    des soins ultimes de véhicules. Profitez d'un service personnalisé 
+                    et d'une attention méticuleuse aux détails grâce à nos services 
+                    complets de lavage et de nettoyage adaptés à vos besoins. Planifiez 
+                    une date avec nous pour dévoiler le plan de soins parfait pour votre véhicule.
+                    <a className="aboutus-button" href="#apply">
+                      Planifier maintenant
+                    </a>
                   </SectionParagraph>
                 ) : (
                   <SectionParagraph $mode="aboutus">
-                      Your one-stop destination for comprehensive vehicle care.
-                      With a passion for perfection, we offer
-                      comprehensive washing and cleaning services that cater to
-                      your every need.
+                      Welcome to Universal Car Wash, your one-stop destination for 
+                      ultimate vehicle care. Enjoy personalized service and meticulous 
+                      attention to detail with our comprehensive washing and cleaning 
+                      services tailored to your needs. Schedule a date with us to unveil 
+                      the perfect care plan for your vehicle.
+                      <a className="aboutus-button" href="#apply">
+                        Schedule Now
+                      </a>
                   </SectionParagraph>
                 )}
               </AboutParagraphContainer>

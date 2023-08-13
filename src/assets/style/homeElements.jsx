@@ -20,15 +20,20 @@ export const Container = styled.section`
       case "nav":
         return css`
           top: 0;
-          position: absolute;
+          position: fixed;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          width: 90%;
+          width: 100%;
           height: 50px;
           padding-top: 8px;
-          z-index: 11111111;
+          z-index: 111111111;
+
+          background-color: rgb(32, 32, 32);
+          background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 60%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+          background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+          background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
 
           @media screen and (max-width: 768px) {
             left: 0;
@@ -619,7 +624,7 @@ export const ServicesImageContainer = styled.div`
 
   @media screen and (max-width: 769px) {
     justify-content: space-around;
-    gap: 2px;
+    gap: 8px;
   }
 
   @media screen and (max-width: 426px) {
@@ -634,8 +639,8 @@ export const ServicesImageContainer = styled.div`
 `;
 
 export const ServicesImage = styled.img`
-  width: 130px;
-  height: 130px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
   /* background-color: rgba(255, 255, 255, 0.1); */
   border-radius: 5px;
@@ -663,6 +668,11 @@ export const OneService = styled.button`
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
+  padding: 25px;
+
+  @media screen and (max-width: 376px) {
+    padding: 20px;
+  }
 `;
 
 export const OneServiceText = styled.p`

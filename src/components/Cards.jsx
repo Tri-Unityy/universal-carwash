@@ -9,10 +9,14 @@ import carrim from "./../assets/images/packages/car-rim.jpg";
 import car from "./../assets/images/packages/car.jpg";
 import packagesE from "../constants/packageEnglish";
 import packagesF from "../constants/packageFrench";
-import { TranslatorContext } from "../screens/context/TranslatorContext";
+import { ServiceContext, TranslatorContext } from "../screens/context/TranslatorContext";
+import PaymentsIcon from "@mui/icons-material/Payments";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { primaryHeadingColor, successColor } from "../assets/resources/colors";
 
 const Cards = () => {
   const { lang } = useContext(TranslatorContext);
+  const { service } = useContext(ServiceContext);
   var cardContent = {};
   if (lang == "french") {
     cardContent = packagesF;
@@ -27,7 +31,9 @@ const Cards = () => {
   return (
     <>
       <Container $mode="packages">
-        <div class="ui-card">
+        {service == 1 && (
+          <>
+          <div class="ui-card">
           <img src={bike} />
           <div class="heading">
             <h3>{cardContent[0].packageType}</h3>
@@ -37,12 +43,12 @@ const Cards = () => {
             <h3>{cardContent[0].packageType}</h3>
             <div class="line"></div>
             <p>
-              <ul>
-                <li>{cardContent[0].packagePrice}</li>
-                {cardContent[0].packageDuration != "" && (
-                  <li>{cardContent[0].packageDuration}</li>
-                )}
-              </ul>
+              <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}{cardContent[0].packagePrice} <br/>
+              {cardContent[0].packageDuration != "" && (
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  {cardContent[0].packageDuration}
+                </span>
+              )}
             </p>
             <div class="tag-container">
               {tagContent[0].item1 ? (
@@ -66,12 +72,12 @@ const Cards = () => {
             <h3>{cardContent[1].packageType}</h3>
             <div class="line"></div>
             <p>
-              <ul>
-                <li>{cardContent[1].packagePrice}</li>
-                {cardContent[1].packageDuration != "" && (
-                  <li>{cardContent[1].packageDuration}</li>  
-                )}
-              </ul>
+            <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}{cardContent[1].packagePrice} <br/>
+              {cardContent[1].packageDuration != "" && (
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  {cardContent[1].packageDuration}
+                </span>
+              )}
             </p>
             <div class="tag-container">
               {tagContent[1].item1 ? (
@@ -91,7 +97,12 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div class="ui-card">
+          </>
+        )}
+
+        {service == 2 && (
+          <>
+          <div class="ui-card">
           <img src={car} />
           <div class="heading">
             <h3>{cardContent[2].packageType}</h3>
@@ -101,12 +112,12 @@ const Cards = () => {
             <h3>{cardContent[2].packageType}</h3>
             <div class="line"></div>
             <p>
-              <ul>
-                <li>{cardContent[2].packagePrice}</li>
-                {cardContent[2].packageDuration != "" && (
-                  <li>{cardContent[2].packageDuration}</li>  
-                )}
-              </ul>
+            <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}{cardContent[2].packagePrice} <br/>
+              {cardContent[2].packageDuration != "" && (
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  {cardContent[2].packageDuration}
+                </span>
+              )}
             </p>
             <div class="tag-container">
               {tagContent[2].item1 ? (
@@ -136,12 +147,12 @@ const Cards = () => {
             <h3>{cardContent[3].packageType}</h3>
             <div class="line"></div>
             <p>
-              <ul>
-                <li>{cardContent[3].packagePrice}</li>
-                {cardContent[3].packageDuration != "" && (
-                  <li>{cardContent[3].packageDuration}</li>  
-                )}
-              </ul>
+            <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}{cardContent[3].packagePrice} <br/>
+              {cardContent[3].packageDuration != "" && (
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  {cardContent[3].packageDuration}
+                </span>
+              )}
             </p>
             <div class="tag-container">
               {tagContent[3].item1 ? (
@@ -161,7 +172,12 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div class="ui-card">
+          </>
+        )}
+
+        {service == 3 && (
+          <>
+          <div class="ui-card">
           <img src={carrim} />
           <div class="heading">
             <h3>{cardContent[4].packageType}</h3>
@@ -171,12 +187,12 @@ const Cards = () => {
             <h3>{cardContent[4].packageType}</h3>
             <div class="line"></div>
             <p>
-              <ul>
-                <li>{cardContent[4].packagePrice}</li>
-                {cardContent[4].packageDuration != "" && (
-                  <li>{cardContent[4].packageDuration}</li>  
-                )}
-              </ul>
+              <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}{cardContent[4].packagePrice} <br/>
+              {cardContent[4].packageDuration != "" && (
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  {cardContent[4].packageDuration}
+                </span>
+              )}
             </p>
             <div class="tag-container">
               {tagContent[4].item1 ? (
@@ -196,8 +212,101 @@ const Cards = () => {
             </div>
           </div>
         </div>
+          </>
+        )}
+
+        {service == 4 && (
+          <>
+          <div class="ui-card">
+          <img src="" />
+          <div class="heading">
+            <h3>Micro Scratches Repair</h3>
+            <div class="line"></div>
+          </div>
+          <div class="description">
+            <h3>Correcting Medium defects</h3>
+            <div class="line"></div>
+            <p>
+              {/* <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "} <br/>
+                <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  
+                </span> */}
+            </p>
+            <div class="tag-container">
+                <div class="tags">
+                  {" "}
+                  <span>MECHANICAL POLISHING WITH BUFFER</span>{" "}
+                </div>
+            </div>
+          </div>
+        </div>
+          <div class="ui-card">
+          <img src="" />
+          <div class="heading">
+            <h3>Scratches, Scuffs Repair</h3>
+            <div class="line"></div>
+          </div>
+          <div class="description">
+            <h3>Small and Medium Scratches and Scuffs</h3>
+            <div class="line"></div>
+            <p>
+              <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "}FROM 45.- <br/>
+                {/* <span><AccessTimeIcon sx={{ color: primaryHeadingColor }} fontSize="small"/>{" "}
+                  
+                </span> */}
+            </p>
+            <div class="tag-container">
+                <div class="tags">
+                  {/* {" "}
+                  <span></span>{" "} */}
+                </div>
+            </div>
+          </div>
+        </div>
+          </>
+        )}
+
+        {service == 6 && (
+          <>
+          <div class="ui-card" style={{width: "80%"}}>
+          <img src="" />
+          <div class="heading">
+            <h3>Other services</h3>
+            <div class="line"></div>
+          </div>
+          <div class="description">
+            <h3>Other services</h3>
+            <div class="line"></div>
+            <p style={{textAlign: "right"}}>
+              <PaymentsIcon sx={{ color: primaryHeadingColor }} />{" "} <br/>
+                <span>{" "}
+                  HEADLIGHT LENS RESTORATION (DURING THIS SERVICE, EXTERIOR OR INTERIOR WASH IS OFFERED)
+                </span>{" "}PER UNIT 190 CHF <br/>
+                <span>{" "}
+                  CHROME CARE
+                </span>{" "}FROM 40 CHF <br />
+                <span>{" "}
+                  LEATHER MAINTENANCE WAX SHINE
+                </span>{" "}(UPON REQUEST) <br/>
+                <span>{" "}
+                SEAT CLEANING
+                </span>{" "}FROM 20 CHF <br/>
+                <span>{" "}
+                CHASSIS-ENGINE WASH
+                </span>{" "}110 CHF <br/>
+            </p>
+            {/* <div class="tag-container">
+                <div class="tags">
+                  {" "}
+                  <span></span>{" "}
+                </div>
+            </div> */}
+          </div>
+        </div>
+        </>
+        )}
       </Container>
-    </>
+    </>    
   );
 };
 

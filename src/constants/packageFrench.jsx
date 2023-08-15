@@ -4,7 +4,7 @@ const packagesF = [
   
       packageType: "Vélo Normal",
   
-      packagePrice: "À partir de 25 CHF",
+      packagePrice: "Dès 25 CHF",
   
       packageDuration: "",
   
@@ -17,7 +17,7 @@ const packagesF = [
   
       packageType: "Vélo Premium",
   
-      packagePrice: "À partir de 100 CHF",
+      packagePrice: "Dès 100 CHF",
   
       packageDuration: "",
   
@@ -31,9 +31,9 @@ const packagesF = [
   
       packageType: "4 x 4 Normal",
   
-      packagePrice: "À partir de 80 CHF",
+      packagePrice: "Dès 80 CHF",
   
-      packageDuration: "Durée maximale 1 h",
+      packageDuration: "Max 1 hr",
   
       packageItems: {
         item1: "Intérieur",
@@ -45,7 +45,7 @@ const packagesF = [
   
       packageType: "4 x 4 Premium",
   
-      packagePrice: "À partir de 150 CHF",
+      packagePrice: "Dès 150 CHF",
   
       packageDuration: "",
   

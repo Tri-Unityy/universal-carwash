@@ -27,7 +27,6 @@ import work14 from "./../assets/images/works/work14.jpg";
 import work15 from "./../assets/images/works/work15.jpg";
 import work16 from "./../assets/images/works/work16.jpg";
 import work17 from "./../assets/images/works/work17.jpg";
-import work18 from "./../assets/images/works/work18.jpg";
 
 import { TranslatorContext } from "../screens/context/TranslatorContext";
 
@@ -60,7 +59,6 @@ const Gallery = () => {
     work15,
     work16,
     work17,
-    work18,
   ];
 
   return (

@@ -20,15 +20,20 @@ export const Container = styled.section`
       case "nav":
         return css`
           top: 0;
-          position: absolute;
+          position: fixed;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          width: 90%;
+          width: 100%;
           height: 50px;
           padding-top: 8px;
-          z-index: 11111111;
+          z-index: 111111111;
+
+          background-color: rgb(32, 32, 32);
+          background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 60%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+          background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+          background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
 
           @media screen and (max-width: 768px) {
             left: 0;
@@ -207,6 +212,7 @@ export const SectionDiv = styled.div`
       case "contactus":
         return css`
           /*margin: 0;*/
+          margin-bottom: 0.5rem;
           justify-content: space-between;
         `;
     }
@@ -248,6 +254,10 @@ export const SectionParagraph = styled.p`
       case "aboutus":
         return css`
           text-align: left;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
           @media screen and (max-width: 769px) {
             text-align: justify;
           }
@@ -607,25 +617,70 @@ export const ServicesImageContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   height: 100%;
   flex-wrap: wrap;
 
   @media screen and (max-width: 769px) {
+    justify-content: space-around;
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 426px) {
+    justify-content: space-around;
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 376px) {
+    justify-content: space-around;
+    gap: 10px;
   }
 `;
 
 export const ServicesImage = styled.img`
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
   /* background-color: rgba(255, 255, 255, 0.1); */
   border-radius: 5px;
-  margin-bottom: 1rem;
+  margin: 1rem;
   :hover {
     transform: scale(1.1);
     transition: all 0.2s ease-in-out;
+  }
+
+  @media screen and (max-width: 769px) {
+    width: 90px;
+    height: 90px;
+  }
+
+  @media screen and (max-width: 426px) {
+    width: 45px;
+    height: 45px;
+  }
+`;
+
+export const OneService = styled.button`
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 25px;
+
+  @media screen and (max-width: 376px) {
+    padding: 20px;
+  }
+`;
+
+export const OneServiceText = styled.p`
+  font-size: 18px;
+  color: #fff;
+
+  @media screen and (max-width: 769px) {
+    font-size: 12px;
   }
 `;
 
@@ -941,7 +996,7 @@ export const TimeTableContents = styled.div`
 
 export const ContactDetailsParagraph = styled.p`
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   font-weight: 600;
   margin-top: 1rem;
@@ -964,7 +1019,7 @@ export const ContactDetailsParagraph = styled.p`
 `;
 
 export const ContactLogo = styled.img`
-  width: 15%;
+  width: 18%;
   height: auto;
 
   @media screen and (max-width: 769px) {

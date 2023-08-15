@@ -9,12 +9,16 @@ import Packages from "../../components/Packages";
 import Gallery from "../../components/Gallery";
 import ContactUs from "../../components/ContactUs";
 import Apply from "../../components/Apply";
-import { TranslatorContext } from "../context/TranslatorContext";
+import {
+  ServiceContext,
+  TranslatorContext,
+} from "../context/TranslatorContext";
 import Cards from "../../components/Cards";
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [lang, setLang] = useState("french");
+  const [service, setService] = useState(1);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -22,19 +26,21 @@ const HomePage = () => {
   return (
     <>
       <TranslatorContext.Provider value={{ lang, setLang }}>
-        <Container $mode="home">
-          <NavBar toggle={toggle} />
-          <SideBar isOpen={isOpen} toggle={toggle} />
-          <Splash />
-          <AboutUs />
-          <Services />
-          <Cards />
-          {/* <Packages /> */}
+        <ServiceContext.Provider value={{ service, setService }}>
+          <Container $mode="home">
+            <NavBar toggle={toggle} />
+            <SideBar isOpen={isOpen} toggle={toggle} />
+            <Splash />
+            <AboutUs />
+            <Services />
+            <Cards />
+            {/* <Packages /> */}
 
-          <Gallery />
-          <Apply />
-          <ContactUs />
-        </Container>
+            <Gallery />
+            <Apply />
+            <ContactUs />
+          </Container>
+        </ServiceContext.Provider>
       </TranslatorContext.Provider>
     </>
   );

@@ -20,6 +20,7 @@ import i4 from "../assets/images/cubeicons/4.png";
 import i5 from "../assets/images/cubeicons/5.png";
 import i6 from "../assets/images/cubeicons/6.png";
 import { ServiceContext, TranslatorContext } from "../screens/context/TranslatorContext";
+import ServiceCards from "./ServiceCards";
 
 const Services = () => {
   const { lang } = useContext(TranslatorContext);
@@ -153,6 +154,7 @@ const Services = () => {
           </OneService>
         </ServicesImageContainer>
       </ServicesContainer>
+      <ServiceCards />
     </motion.section>
   );
 };

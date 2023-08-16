@@ -111,6 +111,7 @@ export const Container = styled.section`
           border-radius: 5px;
           margin-bottom: 2rem;
           flex-wrap: wrap;
+          gap: 5px;
           @media screen and (max-width: 376px) {
             width: 95%;
           }

@@ -1,24 +1,16 @@
 import { styled, css } from "styled-components";
-import {
-  primaryTextColor,
-  secondaryTextColor,
-  bodyText1,
-  primaryHeadingColor,
-  bodyText1Mobile,
-  sectionText1,
-} from "../resources/colors";
+import { primaryHeadingColor } from "../resources/colors";
 
-export const Container = styled.section`
+export const Container = styled.div`
   ${(props) => {
     switch (props.$mode) {
       case "price":
         return css`
           display: flex;
           flex-direction: column;
-          height: 100vh;
+          min-height: 100vh;
           width: 100%;
-          overflow: hidden;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
           background-color: rgb(32, 32, 32);
           background-image: linear-gradient(
@@ -47,6 +39,10 @@ export const Container = styled.section`
             linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
           background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
           background-position: 0px 0px, 0px 0px, 5px 5px,  0px 0px;
+
+          @media screen and (max-width: 769px) {
+            min-height: 100%;
+          }
         `;
     }
   }}
@@ -66,6 +62,7 @@ export const PriceHeadingContainer = styled.div`
   height: 30%;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
 `;
 
 export const PriceHeading = styled.h2`
@@ -74,6 +71,10 @@ export const PriceHeading = styled.h2`
   -webkit-text-stroke: 0.06vw ${primaryHeadingColor};
   text-transform: uppercase;
   position: relative;
+
+  @media screen and (max-width: 769px) {
+    font-size: 10vw;
+  }
 
   &::before {
     content: attr(data-text);
@@ -125,7 +126,7 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: auto;
+  height: 100%;
   flex-wrap: wrap;
 `;
 
@@ -135,7 +136,7 @@ export const Cards = styled.div`
   width: 400px;
   height: 200px;
   padding: 10px;
-  background-color: #ffffff85;
+  background-color: #ffffff95;
   margin: 20px 10px 10px 0px;
   border-radius: 5px;
 

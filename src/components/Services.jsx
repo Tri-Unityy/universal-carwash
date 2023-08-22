@@ -114,42 +114,28 @@ const Services = () => {
           onClick={()=>setService(1)}>
             <ServicesImage src={i1} />
             <OneServiceText style={{color: service == 1 && "black", fontWeight: service == 1 && 700}}>
-              Bike Services
+            Interior Detailing
             </OneServiceText>
           </OneService>
           <OneService className="oneService" style={{backgroundColor: service == 2 && "white"}} 
           onClick={()=>setService(2)}>
             <ServicesImage src={i6} />
             <OneServiceText style={{color: service == 2 && "black", fontWeight: service == 2 && 700}}>
-              4x4 Services
-            </OneServiceText>
-          </OneService>
-          <OneService className="oneService" style={{backgroundColor: service == 3 && "white"}} 
-          onClick={()=>setService(3)}>
-            <ServicesImage src={i4} />
-            <OneServiceText style={{color: service == 3 && "black", fontWeight: service == 3 && 700}}>
-              Rim Cleaning
-            </OneServiceText>
-          </OneService>
-          <OneService className="oneService" style={{backgroundColor: service == 4 && "white"}} 
-          onClick={()=>setService(4)}>
-            <ServicesImage src={i5} />
-            <OneServiceText style={{color: service == 4 && "black", fontWeight: service == 4 && 700}}>
-              Repairing
+            Exterior polishing
             </OneServiceText>
           </OneService>
           <OneService className="oneService" style={{backgroundColor: service == 5 && "white"}} 
-          onClick={()=>setService(5)}>
+          onClick={()=>setService(3)}>
             <ServicesImage src={i2} />
             <OneServiceText style={{color: service == 5 && "black", fontWeight: service == 5 && 700}}>
-              Treatments
+            Advanced protection
             </OneServiceText>
           </OneService>
           <OneService className="oneService" style={{backgroundColor: service == 6 && "white"}} 
-          onClick={()=>setService(6)}>
+          onClick={()=>setService(4)}>
             <ServicesImage src={i3} />
             <OneServiceText style={{color: service == 6 && "black", fontWeight: service == 6 && 700}}>
-              Other Services
+            Convenient Care
             </OneServiceText>
           </OneService>
         </ServicesImageContainer>

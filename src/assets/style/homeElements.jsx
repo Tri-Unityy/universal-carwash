@@ -266,6 +266,9 @@ export const SectionParagraph = styled.p`
       case "services":
         return css`
           text-align: left;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
           @media screen and (max-width: 769px) {
             text-align: justify;
           }

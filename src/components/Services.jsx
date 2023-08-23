@@ -124,17 +124,17 @@ const Services = () => {
             Exterior polishing
             </OneServiceText>
           </OneService>
-          <OneService className="oneService" style={{backgroundColor: service == 5 && "white"}} 
+          <OneService className="oneService" style={{backgroundColor: service == 3 && "white"}} 
           onClick={()=>setService(3)}>
             <ServicesImage src={i2} />
-            <OneServiceText style={{color: service == 5 && "black", fontWeight: service == 5 && 700}}>
+            <OneServiceText style={{color: service == 3 && "black", fontWeight: service == 3 && 700}}>
             Advanced protection
             </OneServiceText>
           </OneService>
-          <OneService className="oneService" style={{backgroundColor: service == 6 && "white"}} 
+          <OneService className="oneService" style={{backgroundColor: service == 4 && "white"}} 
           onClick={()=>setService(4)}>
             <ServicesImage src={i3} />
-            <OneServiceText style={{color: service == 6 && "black", fontWeight: service == 6 && 700}}>
+            <OneServiceText style={{color: service == 4 && "black", fontWeight: service == 4 && 700}}>
             Convenient Care
             </OneServiceText>
           </OneService>

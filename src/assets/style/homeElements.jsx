@@ -103,7 +103,7 @@ export const Container = styled.section`
           position: relative;
           display: flex;
           flex-direction: row;
-          width: 90%;
+          width: 95%;
           height: 100%;
           justify-content: space-evenly;
           align-items: center;
@@ -638,6 +638,39 @@ export const ServicesImageContainer = styled.div`
     gap: 10px;
   }
 `;
+
+export const ServicesExtendContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  padding :1rem;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  background-color: rgb(32, 32, 32);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 60%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+    background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+    background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+
+  @media screen and (max-width: 769px) {
+    justify-content: space-around;
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 426px) {
+    justify-content: space-around;
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 376px) {
+    justify-content: space-around;
+    gap: 10px;
+  }
+`;
+
 
 export const ServicesImage = styled.img`
   width: 90px;

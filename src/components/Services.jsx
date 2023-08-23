@@ -114,28 +114,28 @@ const Services = () => {
           onClick={()=>setService(1)}>
             <ServicesImage src={i1} />
             <OneServiceText style={{color: service == 1 && "black", fontWeight: service == 1 && 700}}>
-            Interior Detailing
+            { lang == "french" ? ('Détail Intérieur') :('Interior Detailing')}
             </OneServiceText>
           </OneService>
           <OneService className="oneService" style={{backgroundColor: service == 2 && "white"}} 
           onClick={()=>setService(2)}>
             <ServicesImage src={i6} />
             <OneServiceText style={{color: service == 2 && "black", fontWeight: service == 2 && 700}}>
-            Exterior polishing
+            { lang == "french" ? ('Polissage Extérieur') :('Exterior Polishing')}
             </OneServiceText>
           </OneService>
           <OneService className="oneService" style={{backgroundColor: service == 3 && "white"}} 
           onClick={()=>setService(3)}>
             <ServicesImage src={i2} />
             <OneServiceText style={{color: service == 3 && "black", fontWeight: service == 3 && 700}}>
-            Advanced protection
+            { lang == "french" ? ('Protection Avancée') :('Advanced Protection')}
             </OneServiceText>
           </OneService>
           <OneService className="oneService" style={{backgroundColor: service == 4 && "white"}} 
           onClick={()=>setService(4)}>
             <ServicesImage src={i3} />
             <OneServiceText style={{color: service == 4 && "black", fontWeight: service == 4 && 700}}>
-            Convenient Care
+            { lang == "french" ? ('Soins Pratiques') :('Convenient Care')}
             </OneServiceText>
           </OneService>
         </ServicesImageContainer>

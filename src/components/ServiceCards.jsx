@@ -76,7 +76,8 @@ const ServiceCards = () => {
             </a>
             </>
           ):(
-            <>Indulge in the ultimate hand wash and polish, or our Chrome care to revive chrome surfaces. 
+            <>
+            Indulge in the ultimate hand wash and polish, or our Chrome care to revive chrome surfaces. 
             Treat your vehicle's undercarriage and engine to a thorough cleansing with our Chassis-Engine Detailing. 
             Elevate your vehicle's allure with our Superior Body Polishing for flawless surfaces. Achieve a stunning, 
             head-turning appearance that lasts.

@@ -6,12 +6,16 @@ export const Container = styled.div`
     switch (props.$mode) {
       case "price":
         return css`
+          padding: 10px;
+          margin-top: 20px;
+          border-radius: 10px;
           display: flex;
           flex-direction: column;
-          min-height: 100vh;
-          width: 100%;
-          justify-content: space-between;
+          min-height: 100%;
+          width: 95%;
+          justify-content: center;
           align-items: center;
+
           background-color: rgb(32, 32, 32);
           background-image: linear-gradient(
               to bottom,
@@ -51,7 +55,7 @@ export const Container = styled.div`
 export const PriceContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   height: 100%;
 `;
 
@@ -137,7 +141,7 @@ export const Cards = styled.div`
   height: 200px;
   padding: 10px;
   background-color: #ffffff95;
-  margin: 20px 10px 10px 0px;
+  margin: 20px 10px 10px 10px;
   border-radius: 5px;
 
   &:hover {

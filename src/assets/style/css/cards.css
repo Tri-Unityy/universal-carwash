@@ -76,6 +76,25 @@
 		width: 250px;
 	  }
 }
+.ui-card_second{
+    height: 400px;
+	width: 550px;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease-out;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+
+	@media screen and (max-width: 376px) {
+		height: 300px;
+		width: 250px;
+	  }
+}
 
 .ui-service-card{
     height: 400px;

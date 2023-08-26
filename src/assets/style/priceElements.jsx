@@ -1,5 +1,5 @@
 import { styled, css } from "styled-components";
-import { primaryHeadingColor } from "../resources/colors";
+import { primaryHeadingColor, primaryTextColor } from "../resources/colors";
 
 export const Container = styled.div`
   ${(props) => {
@@ -94,6 +94,23 @@ export const PriceHeading = styled.h2`
   }
 `;
 
+export const PriceParagraph = styled.p`
+  color: transparent;
+  color: ${primaryTextColor};
+  position: relative;
+	bottom: 0;
+	left: 0;
+	padding: 5px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+
+  @media screen and (max-width: 769px) {
+    font-size: 14px;
+  }
+`;
+
 export const TabContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -137,7 +154,7 @@ export const CardContainer = styled.div`
 export const Cards = styled.div`
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 350px;
   height: 200px;
   padding: 10px;
   background-color: #ffffff95;
@@ -150,4 +167,24 @@ export const Cards = styled.div`
     -webkit-box-shadow: 0px 13px 41px -1px rgba(185, 79, 79, 0.67);
     -moz-box-shadow: 0px 13px 41px -1px rgba(185, 79, 79, 0.67);
   }
+`;
+
+export const CardHeading = styled.h3`
+	font-weight: 700;
+	font-size: 25px;
+	color: #e80c10;
+	margin: 0 0 20px;
+	opacity: 1;
+	transition: all 0.3s ease-out;
+`;
+
+export const CardContent = styled.div`
+	display: flex;
+  flex-direction: row;
+  justify-content: space-betwen;
+  gap: 50px;
+`;
+
+export const CardPrice = styled.div`
+	align: right;
 `;

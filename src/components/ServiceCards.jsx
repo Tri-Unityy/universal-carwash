@@ -1,13 +1,17 @@
 import React, { useContext } from "react";
 import {
   CardContainer,
+  CardHeading,
   Cards,
   Container,
+  CardContent,
   PriceContainer,
   PriceHeading,
   PriceHeadingContainer,
+  PriceParagraph,
   TabContainer,
   Tabs,
+  CardPrice,
 } from "../assets/style/priceElements";
 
 import "./../assets/style/css/cards.css";
@@ -42,8 +46,28 @@ const ServiceCards = () => {
     <>
       <Container $mode="price">
         <PriceContainer>
+          <PriceParagraph>Description</PriceParagraph>
           <CardContainer>
-            {service == 1 && <Cards>Cards1</Cards>}
+            {service == 1 && 
+              <>
+                <Cards>
+                <CardHeading>Leather Maintenance Wax shine (UPON REQUEST)</CardHeading>
+                  <CardContent>
+                    <div>
+                      Description
+                    </div>
+                    <CardPrice>
+                      price
+                    </CardPrice>
+                  </CardContent>
+                </Cards>
+                <Cards>Cards1</Cards>
+                <Cards>Cards1</Cards>
+                <Cards>Cards1</Cards>
+                <Cards>Cards1</Cards>
+                <Cards>Cards1</Cards>
+              </>
+            }
             {service == 2 && <Cards>Cards2</Cards>}
             {service == 3 && <Cards>Cards3</Cards>}
             {service == 4 && <Cards>Cards4</Cards>}

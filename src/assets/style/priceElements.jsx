@@ -1,5 +1,6 @@
 import { styled, css } from "styled-components";
 import { primaryHeadingColor, primaryTextColor } from "../resources/colors";
+import cardbg from "../../assets/images/cardbg2.png";
 
 export const Container = styled.div`
   ${(props) => {
@@ -104,7 +105,7 @@ export const PriceParagraph = styled.p`
 	width: 100%;
 	text-align: center;
 	color: #fff;
-	font-size: 14px;
+	font-size: 25px;
 
   @media screen and (max-width: 769px) {
     font-size: 14px;
@@ -149,6 +150,8 @@ export const CardContainer = styled.div`
   width: 100%;
   height: 100%;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Cards = styled.div`
@@ -157,7 +160,8 @@ export const Cards = styled.div`
   width: 350px;
   height: 200px;
   padding: 10px;
-  background-color: #ffffff95;
+  background-image: url(${cardbg});
+  background-size: cover;
   margin: 20px 10px 10px 10px;
   border-radius: 5px;
 
@@ -167,24 +171,64 @@ export const Cards = styled.div`
     -webkit-box-shadow: 0px 13px 41px -1px rgba(185, 79, 79, 0.67);
     -moz-box-shadow: 0px 13px 41px -1px rgba(185, 79, 79, 0.67);
   }
+
+  @media screen and (max-width: 400px) {
+    width: 280px;
+    height: 140px;
+  }
+`;
+
+export const CardHeadingContainer = styled.div`
+	display: flex;
+  flex:1;
+  justify-content: center;
 `;
 
 export const CardHeading = styled.h3`
-	font-weight: 700;
-	font-size: 25px;
+	font-weight: 600;
+	font-size: 20px;
 	color: #e80c10;
 	margin: 0 0 20px;
 	opacity: 1;
 	transition: all 0.3s ease-out;
 `;
 
+export const CardContentHeading = styled.h5`
+	font-weight: 400;
+	font-size: 15px;
+	color: 	#ffffff;
+	opacity: 1;
+	transition: all 0.3s ease-out;
+`;
+
+export const CardContentPrice = styled.h5`
+	font-weight: 600;
+	font-size: 25px;
+	color: 	#ffffff;
+	opacity: 1;
+	transition: all 0.3s ease-out;
+`;
+
 export const CardContent = styled.div`
 	display: flex;
+  flex:1;
   flex-direction: row;
-  justify-content: space-betwen;
-  gap: 50px;
+  justify-content: center;
 `;
 
 export const CardPrice = styled.div`
-	align: right;
+flex: 1;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+`;
+
+export const CardDescription = styled.div`
+	flex:3;
+  height: 100%;
+  display: flex;
+align-items: center;
+justify-content: center;
 `;

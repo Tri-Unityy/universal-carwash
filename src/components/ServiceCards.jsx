@@ -12,6 +12,10 @@ import {
   TabContainer,
   Tabs,
   CardPrice,
+  CardDescription,
+  CardContentHeading,
+  CardHeadingContainer,
+  CardContentPrice
 } from "../assets/style/priceElements";
 
 import "./../assets/style/css/cards.css";
@@ -46,22 +50,40 @@ const ServiceCards = () => {
     <>
       <Container $mode="price">
         <PriceContainer>
-          <PriceParagraph>Description</PriceParagraph>
           <CardContainer>
             {service == 1 && 
               <>
+              <PriceParagraph>Description</PriceParagraph>
                 <Cards>
+                  <CardHeadingContainer>
                 <CardHeading>Leather Maintenance Wax shine (UPON REQUEST)</CardHeading>
+                </CardHeadingContainer>
                   <CardContent>
-                    <div>
-                      Description
-                    </div>
+                    <CardDescription>
+                      <CardContentHeading>This service is provided according to  This service is provided according to the customer prefernce the customer prefernce</CardContentHeading>
+                    </CardDescription>
                     <CardPrice>
-                      price
+                    <CardContentPrice>
+                    80$
+                      </CardContentPrice> 
                     </CardPrice>
                   </CardContent>
                 </Cards>
-                <Cards>Cards1</Cards>
+                <Cards>
+                  <CardHeadingContainer>
+                <CardHeading>GlassMaintenance Wax shine (UPON REQUEST)</CardHeading>
+                </CardHeadingContainer>
+                  <CardContent>
+                    <CardDescription>
+                      <CardContentHeading>This service is provided according to  This service is provided according to the customer prefernce the customer prefernce</CardContentHeading>
+                    </CardDescription>
+                    <CardPrice>
+                    <CardContentPrice>
+                    90$
+                      </CardContentPrice> 
+                    </CardPrice>
+                  </CardContent>
+                </Cards>
                 <Cards>Cards1</Cards>
                 <Cards>Cards1</Cards>
                 <Cards>Cards1</Cards>

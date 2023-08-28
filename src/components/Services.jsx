@@ -128,7 +128,7 @@ const Services = () => {
                 fontWeight: service == 1 && 700,
               }}
             >
-              Interior Detailing
+              { lang === "french" ? ('Détail Intérieur') : ('Interior Detailing')}
             </OneServiceText>
           </OneService>
           <OneService
@@ -143,7 +143,7 @@ const Services = () => {
                 fontWeight: service == 2 && 700,
               }}
             >
-              Exterior polishing
+              { lang === "french" ? ('Polissage Extérieur') : ('Exterior polishing')}
             </OneServiceText>
           </OneService>
           <OneService
@@ -158,7 +158,7 @@ const Services = () => {
                 fontWeight: service == 3 && 700,
               }}
             >
-              Advanced protection
+              { lang === "french" ? ('Protection Avancée') : ('Advanced protection')}
             </OneServiceText>
           </OneService>
           <OneService
@@ -173,7 +173,7 @@ const Services = () => {
                 fontWeight: service == 4 && 700,
               }}
             >
-              Convenient Care
+              { lang === "french" ? ('Soins Pratiques') : ('Convenient Care')}
             </OneServiceText>
           </OneService>
         </ServicesImageContainer>

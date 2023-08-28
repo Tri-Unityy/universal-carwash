@@ -24,6 +24,8 @@ import interior from "./../assets/images/interior.jpeg";
 import Exterior from "./../assets/images/Exterior.jpeg";
 import packagesE from "../constants/packageEnglish";
 import packagesF from "../constants/packageFrench";
+import pricesE from "../constants/priceEnglish";
+import pricesF from "../constants/priceFrench";
 import {
   ServiceContext,
   TranslatorContext,
@@ -36,10 +38,13 @@ const ServiceCards = () => {
   const { lang } = useContext(TranslatorContext);
   const { service } = useContext(ServiceContext);
   var cardContent = {};
+  var priceContent = {};
   if (lang == "french") {
     cardContent = packagesF;
+    priceContent = pricesF;
   } else {
     cardContent = packagesE;
+    priceContent = pricesE;
   }
   const tagContent = [];
   cardContent.forEach((p) => {
@@ -54,45 +59,87 @@ const ServiceCards = () => {
             {service == 1 && 
               <>
               <PriceParagraph>Description</PriceParagraph>
+              { priceContent[0]['services'] != [] &&
+              priceContent[0]['services'].map((element) => (
                 <Cards>
-                  <CardHeadingContainer>
-                <CardHeading>Leather Maintenance Wax shine (UPON REQUEST)</CardHeading>
-                </CardHeadingContainer>
-                  <CardContent>
-                    <CardDescription>
-                      <CardContentHeading>This service is provided according to  This service is provided according to the customer prefernce the customer prefernce</CardContentHeading>
-                    </CardDescription>
-                    <CardPrice>
-                    <CardContentPrice>
-                    80$
-                      </CardContentPrice> 
-                    </CardPrice>
-                  </CardContent>
-                </Cards>
-                <Cards>
-                  <CardHeadingContainer>
-                <CardHeading>GlassMaintenance Wax shine (UPON REQUEST)</CardHeading>
-                </CardHeadingContainer>
-                  <CardContent>
-                    <CardDescription>
-                      <CardContentHeading>This service is provided according to  This service is provided according to the customer prefernce the customer prefernce</CardContentHeading>
-                    </CardDescription>
-                    <CardPrice>
-                    <CardContentPrice>
-                    90$
-                      </CardContentPrice> 
-                    </CardPrice>
-                  </CardContent>
-                </Cards>
-                <Cards>Cards1</Cards>
-                <Cards>Cards1</Cards>
-                <Cards>Cards1</Cards>
-                <Cards>Cards1</Cards>
+                <CardHeadingContainer>
+              <CardHeading>{element.name}</CardHeading>
+              </CardHeadingContainer>
+                <CardContent>
+                  <CardDescription>
+                    <CardContentHeading>{element.desc}</CardContentHeading>
+                  </CardDescription>
+                  <CardPrice>
+                  <CardContentPrice>{element.price}</CardContentPrice> 
+                  </CardPrice>
+                </CardContent>
+              </Cards>
+              ))}
               </>
             }
-            {service == 2 && <Cards>Cards2</Cards>}
-            {service == 3 && <Cards>Cards3</Cards>}
-            {service == 4 && <Cards>Cards4</Cards>}
+            {service == 2 && 
+            <>
+            <PriceParagraph>Description</PriceParagraph>
+            { priceContent[1]['services'] != [] &&
+            priceContent[1]['services'].map((element) => (
+              <Cards>
+              <CardHeadingContainer>
+            <CardHeading>{element.name}</CardHeading>
+            </CardHeadingContainer>
+              <CardContent>
+                <CardDescription>
+                  <CardContentHeading>{element.desc}</CardContentHeading>
+                </CardDescription>
+                <CardPrice>
+                <CardContentPrice>{element.price}</CardContentPrice> 
+                </CardPrice>
+              </CardContent>
+            </Cards>
+            ))}
+            </>
+            }
+            {service == 3 && 
+            <>
+            <PriceParagraph>Description</PriceParagraph>
+            { priceContent[2]['services'] != [] &&
+            priceContent[2]['services'].map((element) => (
+              <Cards>
+              <CardHeadingContainer>
+            <CardHeading>{element.name}</CardHeading>
+            </CardHeadingContainer>
+              <CardContent>
+                <CardDescription>
+                  <CardContentHeading>{element.desc}</CardContentHeading>
+                </CardDescription>
+                <CardPrice>
+                <CardContentPrice>{element.price}</CardContentPrice> 
+                </CardPrice>
+              </CardContent>
+            </Cards>
+            ))}
+            </>
+            }
+            {service == 4 && 
+            <>
+            <PriceParagraph>Description</PriceParagraph>
+            { priceContent[3]['services'] != [] &&
+            priceContent[3]['services'].map((element) => (
+              <Cards>
+              <CardHeadingContainer>
+            <CardHeading>{element.name}</CardHeading>
+            </CardHeadingContainer>
+              <CardContent>
+                <CardDescription>
+                  <CardContentHeading>{element.desc}</CardContentHeading>
+                </CardDescription>
+                <CardPrice>
+                <CardContentPrice>{element.price}</CardContentPrice> 
+                </CardPrice>
+              </CardContent>
+            </Cards>
+            ))}
+            </>
+            }
           </CardContainer>
         </PriceContainer>
       </Container>

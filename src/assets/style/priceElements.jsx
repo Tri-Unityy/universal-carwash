@@ -172,7 +172,7 @@ export const Cards = styled.div`
     -moz-box-shadow: 0px 13px 41px -1px rgba(185, 79, 79, 0.67);
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (min-width: 426px) and (max-width: 769px) {
     width: 280px;
     height: 140px;
   }
@@ -191,6 +191,10 @@ export const CardHeading = styled.h3`
 	margin: 0 0 20px;
 	opacity: 1;
 	transition: all 0.3s ease-out;
+
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    font-size: 15px;
+  }
 `;
 
 export const CardContentHeading = styled.h5`
@@ -199,6 +203,10 @@ export const CardContentHeading = styled.h5`
 	color: 	#ffffff;
 	opacity: 1;
 	transition: all 0.3s ease-out;
+
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    font-size: 10px;
+  }
 `;
 
 export const CardContentPrice = styled.h5`
@@ -207,6 +215,10 @@ export const CardContentPrice = styled.h5`
 	color: 	#ffffff;
 	opacity: 1;
 	transition: all 0.3s ease-out;
+
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    font-size: 20px;
+  }
 `;
 
 export const CardContent = styled.div`

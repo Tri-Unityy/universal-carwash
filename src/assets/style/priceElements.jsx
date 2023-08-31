@@ -99,13 +99,13 @@ export const PriceParagraph = styled.p`
   color: transparent;
   color: ${primaryTextColor};
   position: relative;
-	bottom: 0;
-	left: 0;
-	padding: 5px;
-	width: 100%;
-	text-align: center;
-	color: #fff;
-	font-size: 25px;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
 
   @media screen and (max-width: 769px) {
     font-size: 14px;
@@ -179,18 +179,18 @@ export const Cards = styled.div`
 `;
 
 export const CardHeadingContainer = styled.div`
-	display: flex;
-  flex:1;
+  display: flex;
+  flex: 1;
   justify-content: center;
 `;
 
 export const CardHeading = styled.h3`
-	font-weight: 600;
-	font-size: 20px;
-	color: #e80c10;
-	margin: 0 0 20px;
-	opacity: 1;
-	transition: all 0.3s ease-out;
+  font-weight: 600;
+  font-size: 20px;
+  color: #e80c10;
+  margin: 0 0 20px;
+  opacity: 1;
+  transition: all 0.3s ease-out;
 
   @media screen and (min-width: 426px) and (max-width: 769px) {
     font-size: 15px;
@@ -198,11 +198,11 @@ export const CardHeading = styled.h3`
 `;
 
 export const CardContentHeading = styled.h5`
-	font-weight: 400;
-	font-size: 15px;
-	color: 	#ffffff;
-	opacity: 1;
-	transition: all 0.3s ease-out;
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffffff;
+  opacity: 1;
+  transition: all 0.3s ease-out;
 
   @media screen and (min-width: 426px) and (max-width: 769px) {
     font-size: 10px;
@@ -210,11 +210,11 @@ export const CardContentHeading = styled.h5`
 `;
 
 export const CardContentPrice = styled.h5`
-	font-weight: 600;
-	font-size: 25px;
-	color: 	#ffffff;
-	opacity: 1;
-	transition: all 0.3s ease-out;
+  font-weight: 600;
+  font-size: 25px;
+  color: #ffffff;
+  opacity: 1;
+  transition: all 0.3s ease-out;
 
   @media screen and (min-width: 426px) and (max-width: 769px) {
     font-size: 20px;
@@ -222,25 +222,25 @@ export const CardContentPrice = styled.h5`
 `;
 
 export const CardContent = styled.div`
-	display: flex;
-  flex:1;
+  display: flex;
+  flex: 1;
   flex-direction: row;
   justify-content: center;
 `;
 
 export const CardPrice = styled.div`
-flex: 1;
-height: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
 
 export const CardDescription = styled.div`
-	flex:3;
+  flex: 3;
   height: 100%;
   display: flex;
-align-items: center;
-justify-content: center;
+  align-items: center;
+  justify-content: center;
 `;

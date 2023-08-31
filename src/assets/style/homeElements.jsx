@@ -28,7 +28,7 @@ export const Container = styled.section`
           width: 100%;
           height: 50px;
           padding-top: 8px;
-          z-index: 111111111;
+          z-index: 9999999999999999999999999;
 
           background-color: rgb(32, 32, 32);
           background-image: linear-gradient(

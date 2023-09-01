@@ -72,7 +72,7 @@
 	align-items: center;
 
 	@media screen and (max-width: 376px) {
-		height: 300px;
+		height: 400px;
 		width: 250px;
 	  }
 }

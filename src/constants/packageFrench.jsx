@@ -2,7 +2,7 @@ const packagesF = [
     {
       packageId: "1",
   
-      packageType: "Vélo Normal",
+      packageType: "Vélo Classic Express",
   
       packagePrice: "Dès 25 CHF",
   
@@ -10,6 +10,7 @@ const packagesF = [
   
       packageItems: {
         item1: "100% nettoyage à la main",
+        item2 : "Réparations des Rayures"
       },
     },
     {
@@ -17,41 +18,41 @@ const packagesF = [
   
       packageType: "Vélo Premium",
   
-      packagePrice: "Dès 100 CHF",
+      packagePrice: "Dès 150 CHF",
   
       packageDuration: "",
   
       packageItems: {
         item1: "100% nettoyage à la main",
-        item2: "Réparation des éraflures"
+        item2: "Réparation des Rayures"
       },
     },
     {
       packageId: "3",
   
-      packageType: "4 x 4 Normal",
+      packageType: "4x4 Classic Express (Lavage rapide)",
   
       packagePrice: "Dès 80 CHF",
   
-      packageDuration: "Max 1 hr",
+      packageDuration: "Max 1hr 15min",
   
       packageItems: {
-        item1: "Intérieur",
-        item2: "Extérieur",
+        item1: "Intérieur + Extérieur",
+        item2 : "Micro, Berline, VUS, Fourgonnette",
       },
     },
     {
       packageId: "4",
   
-      packageType: "4 x 4 Premium",
+      packageType: "4x4 Premium",
   
       packagePrice: "Dès 150 CHF",
   
       packageDuration: "",
   
       packageItems: {
-        item1: "Intérieur",
-        item2: "Extérieur",
+        item1: "Intérieur + Extérieur",
+        item2 : "Micro, Berline, VUS, Fourgonnette",
       },
     },
     {

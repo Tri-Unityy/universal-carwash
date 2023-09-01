@@ -47,29 +47,6 @@ const Services = () => {
         </motion.div>
         <ServicesParagraphContainer>
           {lang === "french" ? (
-            // <>
-            //   <SectionParagraph $mode="services">
-            //     <motion.p variants={fadeIn("", "", 0.1, 1)}>
-            //       Nos services complets de lavage et de nettoyage comprennent :
-            //       <ul>
-            //         <li>Nettoyage complet intérieur et extérieur</li>
-            //         <li>
-            //           Détailing intérieur pour restaurer la fraîcheur et la
-            //           propreté
-            //         </li>
-            //         <li>
-            //           Finition extérieure impeccable pour un résultat digne d'un
-            //           showroom
-            //         </li>
-            //         <li>Réparations expertes des éraflures</li>
-            //         <li>
-            //           Traitements personnalisés selon vos demandes spécifiques
-            //         </li>
-            //       </ul>
-            //       {/* Nous effectuons également d'autres traitements sur demande, tels que le nettoyage des taches sur les sièges, le traitement du cuir, l'élimination des poils de chien, etc.
-            //       En cas de dommage constaté lors du nettoyage, nous déclinons toute responsabilité.<br /> */}
-            //     </motion.p>
-            //   </SectionParagraph>
             <SectionParagraph $mode="services">
               Nous proposons à la fois des forfaits et des catégories de
               services individuels. En plus des services principaux, nous
@@ -81,28 +58,6 @@ const Services = () => {
               <br />
             </SectionParagraph>
           ) : (
-            // </>
-            // <>
-            //   <SectionParagraph $mode="services">
-            //     <motion.p variants={fadeIn("", "", 0.1, 1)}>
-            //       Our comprehensive washing and cleaning services include :
-            //       <ul>
-            //         <li>
-            //           Complete washing and cleaning services (interior + exterior)
-            //         </li>
-            //         <li>
-            //           Interior detailing to restore freshness and cleanliness
-            //         </li>
-            //         <li>Flawless exterior shine for a showroom-worthy finish</li>
-            //         <li>Expert scratch repairs</li>
-            //         <li>
-            //           Personalised treatments based on your specific requests
-            //         </li>
-            //       </ul>
-            //       {/* We carry out other treatments on your request such as: cleaning of stains on seats, leather treatment, dog hair, etc.
-            //       In the event of damage noted during cleaning, we decline all responsibility.<br /> */}
-            //     </motion.p>
-            //   </SectionParagraph>
             <SectionParagraph $mode="services">
               We provide both packages and individual service categories. Other
               than the main services, we carry out other treatments on your
@@ -112,7 +67,6 @@ const Services = () => {
               <br />
               <br />
             </SectionParagraph>
-            // </>
           )}
         </ServicesParagraphContainer>
         <ServicesImageContainer>

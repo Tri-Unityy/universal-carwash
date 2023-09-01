@@ -58,7 +58,7 @@ const ServiceCards = () => {
           <CardContainer>
             {service == 1 && 
               <>
-              <PriceParagraph>Description</PriceParagraph>
+              <PriceParagraph>{priceContent[0]['description'] != "" && priceContent[0]['description']}</PriceParagraph>
               { priceContent[0]['services'] != [] &&
               priceContent[0]['services'].map((element) => (
                 <Cards>
@@ -79,7 +79,7 @@ const ServiceCards = () => {
             }
             {service == 2 && 
             <>
-            <PriceParagraph>Description</PriceParagraph>
+            <PriceParagraph>{priceContent[1]['description'] != "" && priceContent[1]['description']}</PriceParagraph>
             { priceContent[1]['services'] != [] &&
             priceContent[1]['services'].map((element) => (
               <Cards>
@@ -100,7 +100,7 @@ const ServiceCards = () => {
             }
             {service == 3 && 
             <>
-            <PriceParagraph>Description</PriceParagraph>
+            <PriceParagraph>{priceContent[2]['description'] != "" && priceContent[2]['description']}</PriceParagraph>
             { priceContent[2]['services'] != [] &&
             priceContent[2]['services'].map((element) => (
               <Cards>
@@ -121,7 +121,7 @@ const ServiceCards = () => {
             }
             {service == 4 && 
             <>
-            <PriceParagraph>Description</PriceParagraph>
+            <PriceParagraph>{priceContent[3]['description'] != "" && priceContent[3]['description']}</PriceParagraph>
             { priceContent[3]['services'] != [] &&
             priceContent[3]['services'].map((element) => (
               <Cards>

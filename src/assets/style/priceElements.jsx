@@ -105,7 +105,7 @@ export const PriceParagraph = styled.p`
   width: 100%;
   text-align: center;
   color: #fff;
-  font-size: 25px;
+  font-size: 18px;
 
   @media screen and (max-width: 769px) {
     font-size: 14px;

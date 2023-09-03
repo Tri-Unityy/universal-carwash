@@ -106,6 +106,7 @@ export const PriceParagraph = styled.p`
   text-align: center;
   color: #fff;
   font-size: 18px;
+  padding-top: 25px;
 
   @media screen and (max-width: 769px) {
     font-size: 14px;
@@ -194,6 +195,10 @@ export const CardHeading = styled.h3`
 
   @media screen and (min-width: 426px) and (max-width: 769px) {
     font-size: 15px;
+  }
+
+  @media screen and (max-width: 426px) {
+    font-size: 15.5px;
   }
 `;
 

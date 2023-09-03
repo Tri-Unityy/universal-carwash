@@ -106,7 +106,7 @@ export const PriceParagraph = styled.p`
   text-align: center;
   color: #fff;
   font-size: 18px;
-  padding-top: 25px;
+  margin: 20px 10px 10px 10px;
 
   @media screen and (max-width: 769px) {
     font-size: 14px;

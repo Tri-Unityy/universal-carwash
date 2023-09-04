@@ -95,8 +95,6 @@ const Cards = () => {
                   <span>{tagContent[1].item2}</span>{" "}
                 </div>
               ) : null}
-              {/* <div class="tags"> Interior </div>
-              <div class="tags"> Exterior </div> */}
             </div>
           </div>
         </div>
@@ -130,8 +128,6 @@ const Cards = () => {
                   <span>{tagContent[2].item2}</span>{" "}
                 </div>
               ) : null}
-              {/* <div class="tags"> Interior </div>
-              <div class="tags"> Exterior </div> */}
             </div>
           </div>
         </div>
@@ -165,8 +161,6 @@ const Cards = () => {
                   <span>{tagContent[3].item2}</span>{" "}
                 </div>
               ) : null}
-              {/* <div class="tags"> Interior </div>
-              <div class="tags"> Exterior </div> */}
             </div>
           </div>
         </div>
@@ -200,8 +194,6 @@ const Cards = () => {
                   <span>{tagContent[4].item2}</span>{" "}
                 </div>
               ) : null}
-              {/* <div class="tags"> Interior </div>
-              <div class="tags"> Exterior </div> */}
             </div>
           </div>
         </div>

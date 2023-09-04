@@ -1,17 +1,22 @@
 import { styled, css } from "styled-components";
-import { primaryHeadingColor } from "../resources/colors";
+import { primaryHeadingColor, primaryTextColor } from "../resources/colors";
+import cardbg from "../../assets/images/cardbg2.png";
 
 export const Container = styled.div`
   ${(props) => {
     switch (props.$mode) {
       case "price":
         return css`
+          padding: 10px;
+          margin-top: 20px;
+          border-radius: 10px;
           display: flex;
           flex-direction: column;
-          min-height: 100vh;
-          width: 100%;
-          justify-content: space-between;
+          min-height: 100%;
+          width: 95%;
+          justify-content: center;
           align-items: center;
+
           background-color: rgb(32, 32, 32);
           background-image: linear-gradient(
               to bottom,
@@ -51,7 +56,7 @@ export const Container = styled.div`
 export const PriceContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   height: 100%;
 `;
 
@@ -87,6 +92,24 @@ export const PriceHeading = styled.h2`
     -webkit-text-stroke: 0.06vw ${primaryHeadingColor};
     overflow: hidden;
     border-bottom: 2px solid ${primaryHeadingColor};
+  }
+`;
+
+export const PriceParagraph = styled.p`
+  color: transparent;
+  color: ${primaryTextColor};
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin: 20px 10px 10px 10px;
+
+  @media screen and (max-width: 769px) {
+    font-size: 14px;
   }
 `;
 
@@ -128,16 +151,19 @@ export const CardContainer = styled.div`
   width: 100%;
   height: 100%;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Cards = styled.div`
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 350px;
   height: 200px;
   padding: 10px;
-  background-color: #ffffff95;
-  margin: 20px 10px 10px 0px;
+  background-image: url(${cardbg});
+  background-size: cover;
+  margin: 20px 10px 10px 10px;
   border-radius: 5px;
 
   &:hover {
@@ -146,4 +172,80 @@ export const Cards = styled.div`
     -webkit-box-shadow: 0px 13px 41px -1px rgba(185, 79, 79, 0.67);
     -moz-box-shadow: 0px 13px 41px -1px rgba(185, 79, 79, 0.67);
   }
+
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    width: 280px;
+    height: 140px;
+  }
+`;
+
+export const CardHeadingContainer = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+`;
+
+export const CardHeading = styled.h3`
+  font-weight: 600;
+  font-size: 20px;
+  color: #e80c10;
+  margin: 0 0 20px;
+  opacity: 1;
+  transition: all 0.3s ease-out;
+
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 426px) {
+    font-size: 15.5px;
+  }
+`;
+
+export const CardContentHeading = styled.h5`
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffffff;
+  opacity: 1;
+  transition: all 0.3s ease-out;
+
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    font-size: 10px;
+  }
+`;
+
+export const CardContentPrice = styled.h5`
+  font-weight: 600;
+  font-size: 25px;
+  color: #ffffff;
+  opacity: 1;
+  transition: all 0.3s ease-out;
+
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    font-size: 20px;
+  }
+`;
+
+export const CardContent = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+`;
+
+export const CardPrice = styled.div`
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+
+export const CardDescription = styled.div`
+  flex: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

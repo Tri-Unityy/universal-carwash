@@ -2,7 +2,7 @@ const packagesE = [
     {
       packageId: "1",
   
-      packageType: "Bike Normal",
+      packageType: "Bike Classic Express",
   
       packagePrice: "25 CHF onwards",
   
@@ -10,6 +10,7 @@ const packagesE = [
   
       packageItems: {
         item1: "100% Hand-cleaning",
+        item2: "Scratch Repairs"
       },
     },
     {
@@ -17,7 +18,7 @@ const packagesE = [
   
       packageType: "Bike Premium",
   
-      packagePrice: "100 CHF onwards",
+      packagePrice: "150 CHF onwards",
   
       packageDuration: "",
   
@@ -29,29 +30,29 @@ const packagesE = [
     {
       packageId: "3",
   
-      packageType: "4 x 4 Normal",
+      packageType: "4x4 Classic Express (Quick wash)",
   
       packagePrice: "80 CHF onwards",
   
-      packageDuration: "Max 1 hr",
+      packageDuration: "Max 1hr 15min",
   
       packageItems: {
-        item1: "Interior",
-        item2: "Exterior",
+        item1: "Interior + Exterior",
+        item2: " Micro, Sedan, SUV, Van",
       },
     },
     {
       packageId: "4",
   
-      packageType: "4 x 4 Premium",
+      packageType: "4x4 Premium",
   
-      packagePrice: "300 CHF onwards",
+      packagePrice: "150 CHF onwards",
   
       packageDuration: "",
   
       packageItems: {
-        item1: "Interior",
-        item2: "Exterior",
+        item1: "Interior + Exterior",
+        item2: " Micro, Sedan, SUV, Van",
       },
     },
     {

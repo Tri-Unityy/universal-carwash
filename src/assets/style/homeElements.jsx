@@ -28,10 +28,33 @@ export const Container = styled.section`
           width: 100%;
           height: 50px;
           padding-top: 8px;
-          z-index: 111111111;
+          z-index: 9999999999999999999999999;
 
           background-color: rgb(32, 32, 32);
-          background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 60%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+          background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 1),
+              rgba(0, 0, 0, 0) 60%,
+              rgba(0, 0, 0, 0) 80%,
+              rgba(0, 0, 0, 1)
+            ),
+            linear-gradient(
+              45deg,
+              black 25%,
+              transparent 25%,
+              transparent 75%,
+              black 75%,
+              black
+            ),
+            linear-gradient(
+              45deg,
+              black 25%,
+              transparent 25%,
+              transparent 75%,
+              black 75%,
+              black
+            ),
+            linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
           background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
           background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
 
@@ -111,9 +134,10 @@ export const Container = styled.section`
           border-radius: 5px;
           margin-bottom: 2rem;
           flex-wrap: wrap;
-          gap: 5px;
+          gap: 30px;
           @media screen and (max-width: 376px) {
             width: 95%;
+            gap: 5px;
           }
         `;
 
@@ -622,7 +646,7 @@ export const ServicesImageContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100% !important;
   height: 100%;
   flex-wrap: wrap;
 
@@ -639,6 +663,11 @@ export const ServicesImageContainer = styled.div`
   @media screen and (max-width: 376px) {
     justify-content: space-around;
     gap: 10px;
+  }
+  @media screen and (max-width: 321px) {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: left;
   }
 `;
 
@@ -649,14 +678,37 @@ export const ServicesExtendContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   border-radius: 10px;
-  padding :1rem;
+  padding: 1rem;
   width: 100%;
   height: 100%;
   flex-wrap: wrap;
   background-color: rgb(32, 32, 32);
-    background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 60%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
-    background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
-    background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0) 80%,
+      rgba(0, 0, 0, 1)
+    ),
+    linear-gradient(
+      45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
+    ),
+    linear-gradient(
+      45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
+    ),
+    linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
 
   @media screen and (max-width: 769px) {
     justify-content: space-around;
@@ -673,7 +725,6 @@ export const ServicesExtendContainer = styled.div`
     gap: 10px;
   }
 `;
-
 
 export const ServicesImage = styled.img`
   width: 90px;
@@ -967,7 +1018,7 @@ export const ContactDetails = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
-  
+
   @media screen and (max-width: 769px) {
     flex-direction: column;
     align-items: center;

@@ -38,7 +38,7 @@ const packagesF = [
   
       packageItems: {
         item1: "Intérieur + Extérieur",
-        item2 : "Micro, Berline, VUS, Fourgonnette",
+        item2 : "Micro, Sedan, SUV, Van",
       },
     },
     {
@@ -52,7 +52,7 @@ const packagesF = [
   
       packageItems: {
         item1: "Intérieur + Extérieur",
-        item2 : "Micro, Berline, VUS, Fourgonnette",
+        item2 : "Micro, Sedan, SUV, Van",
       },
     },
     {

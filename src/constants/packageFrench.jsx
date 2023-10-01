@@ -2,7 +2,7 @@ const packagesF = [
     {
       packageId: "1",
   
-      packageType: "Vélo Classic Express",
+      packageType: "Moto Classic Express",
   
       packagePrice: "Dès 25 CHF",
   
@@ -16,7 +16,7 @@ const packagesF = [
     {
       packageId: "2",
   
-      packageType: "Vélo Premium",
+      packageType: "Moto Premium",
   
       packagePrice: "Dès 150 CHF",
   
@@ -38,7 +38,7 @@ const packagesF = [
   
       packageItems: {
         item1: "Intérieur + Extérieur",
-        item2 : "Micro, Berline, VUS, Fourgonnette",
+        item2 : "Micro, Sedan, SUV, Van",
       },
     },
     {
@@ -52,7 +52,7 @@ const packagesF = [
   
       packageItems: {
         item1: "Intérieur + Extérieur",
-        item2 : "Micro, Berline, VUS, Fourgonnette",
+        item2 : "Micro, Sedan, SUV, Van",
       },
     },
     {

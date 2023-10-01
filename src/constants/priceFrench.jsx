@@ -59,6 +59,11 @@ const pricesF = [
         desc: "Polissage avancé avec une polisseuse pour CORRIGER LES DÉFAUTS MOYENS (MICRO-RAYURES).",
         price: "Dès 110.-",
       },
+      {
+        name: "RÉNOVATION OPTIQUES",
+        desc: "Remplacement du phare de manière adaptable.",
+        price: "Dès 110.-",
+      },
     ]
   },
   {

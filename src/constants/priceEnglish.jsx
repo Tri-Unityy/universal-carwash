@@ -59,6 +59,11 @@ const pricesE = [
         desc: "Advanced machine polishing to CORRECT MEDIUM DEFECTS(MICRO SCRATCHES).",
         price: "From 110.-",
       },
+      {
+        name: "HEADLIGHT RESTORATION",
+        desc: "Replacing the Headlight in adaptable manner.",
+        price: "From 110.-",
+      },
       ]
     },
     {

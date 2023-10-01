@@ -2,7 +2,7 @@ const packagesF = [
     {
       packageId: "1",
   
-      packageType: "Vélo Classic Express",
+      packageType: "Moto Classic Express",
   
       packagePrice: "Dès 25 CHF",
   
@@ -16,7 +16,7 @@ const packagesF = [
     {
       packageId: "2",
   
-      packageType: "Vélo Premium",
+      packageType: "Moto Premium",
   
       packagePrice: "Dès 150 CHF",
   

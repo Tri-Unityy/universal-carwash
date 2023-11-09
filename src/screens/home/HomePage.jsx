@@ -14,6 +14,7 @@ import {
   TranslatorContext,
 } from "../context/TranslatorContext";
 import Cards from "../../components/Cards";
+import Notice from "../../components/Notice";
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +31,7 @@ const HomePage = () => {
           <Container $mode="home">
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />
+            <Notice />
             <Splash />
             <AboutUs />
             <Services />

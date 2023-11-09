@@ -1136,7 +1136,7 @@ export const NoticeDiv = styled.div`
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 9999999999999999999999999;
+  z-index: 1000000000;
 
   /*@media screen and (max-width: 769px) {
     width: 80%;

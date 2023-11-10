@@ -54,6 +54,9 @@ const ContactUs = () => {
                 <a href="mailto:info@universalcarwash.ch" style={{textDecoration:"none", color: secondaryTextColor}}>
                   info@universalcarwash.ch
                 </a>
+                {/* <a href="mailto:alvinjeghan@yahoo.com" style={{textDecoration:"none", color: secondaryTextColor}}>
+                  Click here to mail us
+                </a> */}
               </ContactDetailsParagraph>
             </Details>
             <Details>

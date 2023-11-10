@@ -1124,3 +1124,27 @@ export const ContactLogo = styled.img`
 export const FooterMap = styled.div`
   margin-top: 20px;
 `;
+
+export const NoticeDiv = styled.div`
+  margin-top: 50px;
+  width: 100%;
+  background-color: black;
+  height: 4.5%;
+  font-size: 18px;
+  color: ${primaryHeadingColor};
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1000000000;
+
+  /*@media screen and (max-width: 769px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 426px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 376px) {
+    width: 90%;
+  }*/
+`;

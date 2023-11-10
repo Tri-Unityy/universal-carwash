@@ -51,12 +51,12 @@ const ContactUs = () => {
             <Details>
               <EmailIcon sx={{ fontSize: "35px" }} />
               <ContactDetailsParagraph>
-                {/* <a href="mailto:info@universalcarwash.ch" style={{textDecoration:"none", color: secondaryTextColor}}>
+                <a href="mailto:info@universalcarwash.ch" style={{textDecoration:"none", color: secondaryTextColor}}>
                   info@universalcarwash.ch
-                </a> */}
-                <a href="mailto:alvinjeghan@yahoo.com" style={{textDecoration:"none", color: secondaryTextColor}}>
-                  Click here to mail us
                 </a>
+                {/* <a href="mailto:alvinjeghan@yahoo.com" style={{textDecoration:"none", color: secondaryTextColor}}>
+                  Click here to mail us
+                </a> */}
               </ContactDetailsParagraph>
             </Details>
             <Details>

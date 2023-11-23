@@ -20,26 +20,47 @@ const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [lang, setLang] = useState("french");
   const [service, setService] = useState(1);
+  const [section, setSection] = useState(1);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
   console.log(lang);
   return (
     <>
-      <TranslatorContext.Provider value={{ lang, setLang }}>
+      <TranslatorContext.Provider value={{ lang, setLang , setSection , section }}>
         <ServiceContext.Provider value={{ service, setService }}>
           <Container $mode="home">
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />
             <Notice />
-            <Splash />
-            <AboutUs />
-            <Services />
-            <Cards />
-            {/* <Packages /> */}
+            {section == 1 && (
+              <>
+                <Splash />
+                <AboutUs />
+              </>
+            )}
+          
+            {section == 2 && (
+              <>
+                <Services />
+              </>
+            )}
+            {section == 3 && (
+              <>
+                <Gallery />
+              </>
+            )}
 
-            <Gallery />
-            <Apply />
+            {section == 4 && (
+              <>
+                <Cards />
+              </>
+            )}
+            {section == 5 && (
+              <>
+                <Apply />
+              </>
+            )}
             <ContactUs />
           </Container>
         </ServiceContext.Provider>

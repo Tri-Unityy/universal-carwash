@@ -22,6 +22,7 @@ import { animateScroll as scroll } from "react-scroll";
 
 const NavBar = ({ toggle }) => {
   const { lang, setLang } = useContext(TranslatorContext);
+  const {section , setSection} = useContext(TranslatorContext);
   const [scrollNav, setScrollNav] = useState(false);
   const handleSelect = (e) => {
     setLang(e);
@@ -54,6 +55,7 @@ const NavBar = ({ toggle }) => {
           spy={true}
           exact="true"
           offset={-80}
+          onClick={() => setSection(1)}
         >
           { lang == 'french' ? "À propos de nous" : "About Us"}
         </Links>
@@ -64,6 +66,7 @@ const NavBar = ({ toggle }) => {
           spy={true}
           exact="true"
           offset={-80}
+          onClick={() => setSection(2)}
         >
           { lang == 'french' ? "Nos services" : "Services"}
         </Links>
@@ -74,6 +77,7 @@ const NavBar = ({ toggle }) => {
           spy={true}
           exact="true"
           offset={-80}
+          onClick={() => setSection(3)}
         >
           { lang == 'french' ? "Galerie" : "Gallery"}
         </Links>
@@ -84,8 +88,20 @@ const NavBar = ({ toggle }) => {
           spy={true}
           exact="true"
           offset={-80}
+          onClick={() => setSection(4)}
         >
           { lang == 'french' ? "Contactez-nous" : "Contact Us"}
+        </Links>
+        <Links
+          to="booking"
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact="true"
+          offset={-80}
+          onClick={() => setSection(5)}
+        >
+          { lang == 'french' ? "Booking" : "Booking"}
         </Links>
         <Dropdown className="translator-container" onSelect={handleSelect}>
           <Dropdown.Toggle className="translator-button" id="dropdown-basic">

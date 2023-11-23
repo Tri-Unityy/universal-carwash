@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "../assets/style/homeElements";
+import { Container, SectionDiv } from "../assets/style/homeElements";
 import Slider from "./Slider";
 
 const Packages = () => {

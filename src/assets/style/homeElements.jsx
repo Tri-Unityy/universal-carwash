@@ -20,16 +20,43 @@ export const Container = styled.section`
       case "nav":
         return css`
           top: 0;
-          left: 5%;
-          position: absolute;
+          position: fixed;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          width: 90%;
+          width: 100%;
           height: 50px;
           padding-top: 8px;
-          z-index: 11111111;
+          z-index: 9999999999999999999999999;
+
+          background-color: rgb(32, 32, 32);
+          background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 1),
+              rgba(0, 0, 0, 0) 60%,
+              rgba(0, 0, 0, 0) 80%,
+              rgba(0, 0, 0, 1)
+            ),
+            linear-gradient(
+              45deg,
+              black 25%,
+              transparent 25%,
+              transparent 75%,
+              black 75%,
+              black
+            ),
+            linear-gradient(
+              45deg,
+              black 25%,
+              transparent 25%,
+              transparent 75%,
+              black 75%,
+              black
+            ),
+            linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+          background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+          background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
 
           @media screen and (max-width: 768px) {
             left: 0;
@@ -56,12 +83,12 @@ export const Container = styled.section`
       case "splash":
         return css`
           margin-top: 70px;
-          display: grid;
-          grid-template-columns: 40% 60%;
+          display: flex;
           width: 90%;
           z-index: 10000;
           height: 90vh;
           margin-bottom: 2rem;
+          justify-content: center;
           @media screen and (max-width: 501px) {
             display: flex;
             flex-direction: column-reverse;
@@ -70,29 +97,19 @@ export const Container = styled.section`
       case "div":
         return css`
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           flex-wrap: wrap;
-          width: 100%;
+          width: 50%;
           height: 100%;
-
+          justify-content: space-around;
+          align-items: center;
           @media screen and (max-width: 501px) {
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
           }
         `;
-      case "about":
-        return css`
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: flex-end;
-          width: 90%;
-          height: 90vh;
-          margin-bottom: 2rem;
-        `;
+
       case "services":
         return css`
           display: flex;
@@ -108,14 +125,20 @@ export const Container = styled.section`
         return css`
           position: relative;
           display: flex;
-          flex-direction: column;
-          width: 100%;
-          height: 80vh;
-          justify-content: center;
+          flex-direction: row;
+          width: 95%;
+          height: 100%;
+          justify-content: space-evenly;
           align-items: center;
           background-color: transparent;
           border-radius: 5px;
           margin-bottom: 2rem;
+          flex-wrap: wrap;
+          gap: 30px;
+          @media screen and (max-width: 376px) {
+            width: 95%;
+            gap: 5px;
+          }
         `;
 
       case "slider":
@@ -136,20 +159,47 @@ export const Container = styled.section`
           display: flex;
           flex-direction: column;
           width: 90%;
-          height: 90vh;
+          height: 100%;
           background-color: transparent;
           justify-content: right;
           align-items: flex-end;
           margin-bottom: 2rem;
+          margin-top: 2rem;
+        `;
+
+      case "apply":
+        return css`
+          display: grid;
+          grid-template-columns: 70% 30%;
+          width: 100%;
+          height: 80vh;
+          padding-right: 2rem;
+
+          @media screen and (max-width: 1025px) {
+            height: 90vh;
+            grid-template-columns: 60% 40%;
+          }
+
+          @media screen and (max-width: 769px) {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+          }
         `;
 
       case "contact":
         return css`
           position: relative;
+          margin-top: 3rem;
           display: flex;
-          flex-direction: row;
-          width: 100%;
-          height: 60vh;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 90%;
+          height: 100%;
         `;
     }
   }}
@@ -164,11 +214,31 @@ export const SectionDiv = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  overflow: hidden;
+
   ${(props) => {
     switch (props.$mode) {
       case "about":
         return css`
           /* background-color: rgba(255, 255, 255, 0.2); */
+        `;
+      case "gallery":
+        return css`
+          background-color: #fff;
+        `;
+
+      case "slider":
+        return css`
+          margin: 0;
+          justify-content: space-between;
+          align-items: center;
+        `;
+
+      case "contactus":
+        return css`
+          /*margin: 0;*/
+          margin-bottom: 0.5rem;
+          justify-content: space-between;
         `;
     }
   }}
@@ -178,12 +248,16 @@ export const SectionHeading = styled.h1`
   font-size: 3rem;
   color: ${primaryHeadingColor};
   margin-bottom: 1rem;
-  font-weight: 800;
+  font-weight: 700;
   ${(props) => {
     switch (props.$mode) {
       case "gallery":
         return css`
           margin-right: 1rem;
+        `;
+      case "contactus":
+        return css`
+          text-align: center;
         `;
     }
   }}
@@ -194,7 +268,7 @@ export const SectionParagraph = styled.p`
   color: ${secondaryTextColor};
   margin-bottom: 1rem;
   font-weight: 400;
-  text-align: right;
+  text-align: justify;
 
   @media screen and (max-width: 376px) {
     text-align: justify;
@@ -202,9 +276,30 @@ export const SectionParagraph = styled.p`
 
   ${(props) => {
     switch (props.$mode) {
+      case "aboutus":
+        return css`
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          @media screen and (max-width: 769px) {
+            text-align: justify;
+          }
+        `;
       case "services":
         return css`
           text-align: left;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          @media screen and (max-width: 769px) {
+            text-align: justify;
+          }
+        `;
+      case "gallery":
+        return css`
+          color: #000;
         `;
     }
   }}
@@ -223,6 +318,17 @@ export const CommonDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  ${(props) => {
+    switch (props.$mode) {
+      case "row":
+        return css`
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+        `;
+    }
+  }}
 `;
 ////////////////////////////////////////
 
@@ -301,21 +407,29 @@ export const MenuIconContainer = styled.div`
 export const Links = styled(LinkS)`
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 200px;
   height: 100%;
   color: ${secondaryTextColor};
   text-decoration: none;
   font-size: ${bodyText1};
   cursor: pointer;
+
   &.active {
     border-bottom: 3px solid ${primaryHeadingColor};
   }
+
   &:hover {
     color: ${primaryHeadingColor};
     transition: 0.2s ease-in-out;
   }
+`;
+
+export const TranslatorButtonIcon = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
 `;
 
 /* End */
@@ -402,6 +516,13 @@ export const SubHeading = styled.h2`
   color: ${secondaryTextColor};
   margin-bottom: 1rem;
   font-weight: 400;
+  @media screen and (max-width: 501px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 321px) {
+    font-size: 2.5rem;
+  }
 `;
 
 // export const ImageContainer = styled.div`
@@ -457,26 +578,33 @@ export const Button = styled(LinkS)`
 export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  width: 70%;
-  height: 80%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
   /* background-color: rgba(255, 255, 255, 0.2); */
-  padding-right: 1rem;
+  margin-left: 2rem;
+  padding-left: 1rem;
+
   @media screen and (max-width: 376px) {
     width: 100%;
     align-items: flex-start;
     padding-left: 1rem;
+  }
+
+  @media screen and (max-width: 769px) {
+    /*padding-left: 0rem;*/
+    margin: 0;
   }
 `;
 
 export const AboutParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: right;
-  align-items: flex-end;
-  width: 70%;
-  height: 70%;
+  justify-content: left;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
   background-color: transparent;
 `;
 
@@ -501,11 +629,11 @@ export const ServicesParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: left;
-  align-items: flex-start;
-  width: 40%;
+  align-items: center;
+  width: 100%;
   height: 70%;
   background-color: transparent;
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: 769px) {
     width: 100%;
   }
   @media screen and (max-width: 426px) {
@@ -518,30 +646,141 @@ export const ServicesImageContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100% !important;
+  height: 100%;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 769px) {
+    justify-content: space-around;
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 426px) {
+    justify-content: space-around;
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 376px) {
+    justify-content: space-around;
+    gap: 10px;
+  }
+  @media screen and (max-width: 321px) {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: left;
+  }
+`;
+
+export const ServicesExtendContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1rem;
   width: 100%;
-  height: 40%;
+  height: 100%;
+  flex-wrap: wrap;
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0) 80%,
+      rgba(0, 0, 0, 1)
+    ),
+    linear-gradient(
+      45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
+    ),
+    linear-gradient(
+      45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
+    ),
+    linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+
+  @media screen and (max-width: 769px) {
+    justify-content: space-around;
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 426px) {
+    justify-content: space-around;
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 376px) {
+    justify-content: space-around;
+    gap: 10px;
+  }
 `;
 
 export const ServicesImage = styled.img`
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
   border-radius: 5px;
-
+  margin: 1rem;
   :hover {
     transform: scale(1.1);
     transition: all 0.2s ease-in-out;
   }
+
+  @media screen and (max-width: 769px) {
+    width: 90px;
+    height: 90px;
+  }
+
+  @media screen and (max-width: 426px) {
+    width: 45px;
+    height: 45px;
+  }
 `;
 
-//////////////////////// SLider ///////////////////////////////
+export const OneService = styled.button`
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 25px;
+
+  @media screen and (max-width: 376px) {
+    padding: 20px;
+  }
+`;
+
+export const OneServiceText = styled.p`
+  font-size: 18px;
+  color: #fff;
+
+  @media screen and (max-width: 769px) {
+    font-size: 12px;
+  }
+`;
+
+//////////////////////// Slider ///////////////////////////////
 /* Start */
 
 export const SliderContainer = styled.article`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 0;
-  width: 80%;
+  width: 90%;
   height: 100%;
   opacity: 0;
   transition: all 0.5s linear;
@@ -556,11 +795,11 @@ export const SliderContainer = styled.article`
         `;
       case "lastSlide":
         return css`
-          transform: translateX(-50%);
+          transform: translateX(-100%);
         `;
       case "nextSlide":
         return css`
-          transform: translateX(50%);
+          transform: translateX(100%);
         `;
     }
   }};
@@ -604,12 +843,15 @@ export const SliderContentContainer = styled.div`
 export const SliderContentInnerContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   width: 80%;
   height: 80%;
   background-color: transparent;
   overflow: hidden;
+  @media screen and (max-width: 376px) {
+    width: 90%;
+  }
 `;
 
 export const SliderHeading = styled.h1`
@@ -617,6 +859,10 @@ export const SliderHeading = styled.h1`
   color: ${primaryHeadingColor};
   margin-bottom: 1rem;
   font-weight: 800;
+
+  @media screen and (max-width: 321px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const SliderText = styled.p`
@@ -624,6 +870,10 @@ export const SliderText = styled.p`
   color: #000;
   margin-bottom: 1rem;
   font-weight: 400;
+
+  @media screen and (max-width: 321px) {
+    font-size: 1rem;
+  }
 
   ${(props) => {
     switch (props.$mode) {
@@ -653,25 +903,25 @@ export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   height: 20%;
   background-color: transparent;
   overflow: hidden;
-  @media screen and (max-width: 376px) {
-    padding-left: 1rem;
+  @media screen and (max-width: 426px) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 40%;
   }
 `;
 
 export const GalleryContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   width: 100%;
   height: 100%;
   /* background-color: rgba(255, 255, 255, 0.2); */
-  overflow: hidden;
+  overflow-y: auto;
 
   @media screen and (max-width: 376px) {
     padding-left: 1rem;
@@ -690,6 +940,37 @@ export const GalleryImageContainer = styled.div`
   overflow: hidden;
 `;
 
+///////////////////////// Apply ///////////////////////////
+/* Start */
+export const ApplyContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1000000;
+
+  overflow: hidden;
+  @media screen and (max-width: 1025px) {
+    width: 90%;
+  }
+`;
+
+export const ApplyFormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  overflow: hidden;
+  border-radius: 8px;
+  z-index: 1000000;
+`;
+
 ///////////////////////// Contact /////////////////////////
 /* Start */
 
@@ -705,5 +986,165 @@ export const ContactMapContainer = styled.div`
 
 export const ContactDetailsContainer = styled.div`
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  margin-top: 2rem;
+`;
+
+export const ContactDetailsFooterContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  margin-top: 2rem;
+  margin-bottom: 5px;
+
+  @media screen and (max-width: 769px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export const ContactDetails = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+export const ContactFooterDetails = styled.div`
+  display: flex;
+
+  ${(props) => {
+    switch (props.$mode) {
+      case "social":
+        return css`
+          /*flex: "1";
+          justify-content: "flex-end";*/
+
+          @media screen and (max-width: 769px) {
+            margin-bottom: 20px;
+          }
+        `;
+    }
+  }};
+`;
+
+export const Details = styled.div`
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+  color: ${primaryHeadingColor};
+
+  @media screen and (max-width: 769px) {
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+  }
+`;
+
+export const TimeTable = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  align-items: flex-end;
+  width: 30%;
+  height: 100%;
+`;
+
+export const TimeTableContents = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 80%;
+  width: 100%;
+  color: ${primaryHeadingColor};
+  background-color: #fff;
+  border-radius: 8px;
+  padding-left: 1rem;
+`;
+
+export const ContactDetailsParagraph = styled.p`
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1rem;
+
+  @media screen and (max-width: 769px) {
+    font-size: 1rem;
+    text-align: left;
+    width: 90%;
+    margin-left: 1.5rem;
+  }
+
+  ${(props) => {
+    switch (props.$mode) {
+      case "dark":
+        return css`
+          color: #000;
+        `;
+    }
+  }};
+`;
+
+export const ContactLogo = styled.img`
+  width: 18%;
+  height: auto;
+
+  @media screen and (max-width: 769px) {
+    width: 30%;
+  }
+  @media screen and (max-width: 426px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 376px) {
+    width: 50%;
+  }
+`;
+
+export const FooterMap = styled.div`
+  margin-top: 20px;
+`;
+
+export const NoticeDiv = styled.div`
+  margin-top: 50px;
+  width: 100%;
+  background-color: black;
+  height: 4.5%;
+  font-size: 18px;
+  color: ${primaryHeadingColor};
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1000000000;
+
+  /*@media screen and (max-width: 769px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 426px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 376px) {
+    width: 90%;
+  }*/
 `;

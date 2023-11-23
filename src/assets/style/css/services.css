@@ -2,13 +2,29 @@
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 80vh;
+    height: 100%;
     justify-content: center;
     align-items: center;
     /* border:1px solid red; */
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;word-wrap:break-word ;
 }
 
-.services-paragraph{
+/* .services-paragraph{
     
+} */
+
+.oneService:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.oneService:hover p{
+    color: black;
+    font-weight: 700;
+}
+
+.oneServiceSelectp {
+    color: black;
+    font-weight: 700;
 }

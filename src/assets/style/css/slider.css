@@ -1,0 +1,57 @@
+.slider-icon{
+    z-index:1000000000000000000000000000;
+}
+
+
+.slider-icon-about{
+    z-index:1000000000000000000000000000;
+
+    @media screen and (max-width: 769px) {
+        display: none;
+      }
+
+}
+
+
+.translator-container{
+    margin-left:1rem;
+}
+
+.translator-button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+    
+}
+
+
+.translator-button:hover{
+    cursor: pointer;
+    color: #E80C0E;
+    background-color: #00000091;
+}
+
+.translator-button:focus{
+    outline: none;
+    background-color: #00000091;
+
+}
+
+.translator-button:active{
+    outline: none;
+    background-color: #00000091;
+
+}
+
+.custom-dropdown-menu {
+    width: 150px !important;
+  }
+
+
+.select-container{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 70px;
+}

@@ -23,15 +23,10 @@ const beforeAfter = [
     before: before6,
     after: after6,
   },
-  {
-    id: "3",
-    before: before7,
-    after: after7,
-  },
   // {
-  //   id: "4",
-  //   before: before13,
-  //   after: after13,
+  //   id: "3",
+  //   before: before7,
+  //   after: after7,
   // },
   {
     id: "4",

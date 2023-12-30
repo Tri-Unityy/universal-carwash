@@ -18,7 +18,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import NavBarPrices from "../../components/NavBarPrices";
 
-const Prices = () => {
+const Services = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [lang, setLang] = useState("french");
   const toggle = () => {
@@ -82,4 +82,4 @@ const Prices = () => {
   );
 };
 
-export default Prices;
+export default Services;

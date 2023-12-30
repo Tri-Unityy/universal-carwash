@@ -12,7 +12,7 @@ import {
 import "./../assets/style/css/masonry.css";
 
 import work1 from "./../assets/images/works/work1.jpg";
-import work2 from "./../assets/images/works/work2.jpeg";
+import work2 from "./../assets/images/works/work2.jpg";
 import work3 from "./../assets/images/works/work3.jpeg";
 import work4 from "./../assets/images/works/work4.jpg";
 import work5 from "./../assets/images/works/work5.jpeg";
@@ -20,18 +20,17 @@ import work6 from "./../assets/images/works/work6.jpg";
 import work7 from "./../assets/images/works/work7.jpg";
 import work8 from "./../assets/images/works/work8.jpg";
 import work9 from "./../assets/images/works/work9.jpg";
-import work10 from "./../assets/images/works/work10.jpg";
+import work10 from "./../assets/images/works/work10.jpeg";
 import work11 from "./../assets/images/works/work11.jpg";
-import work12 from "./../assets/images/works/work12.jpg";
+import work12 from "./../assets/images/works/work12.jpeg";
 import work13 from "./../assets/images/works/work13.jpg";
-import work14 from "./../assets/images/works/work14.jpg";
-import work15 from "./../assets/images/works/work15.jpg";
+import work14 from "./../assets/images/works/work14.jpeg";
+import work15 from "./../assets/images/works/work15.jpeg";
 import work16 from "./../assets/images/works/work16.jpg";
 import work17 from "./../assets/images/works/work17.jpeg";
 import work18 from "./../assets/images/works/work18.jpg";
 import work19 from "./../assets/images/works/work19.jpg";
-import work20 from "./../assets/images/works/work20.jpg";
-// import work21 from "./../assets/images/works/work21.jpg";
+import work20 from "./../assets/images/works/work20.jpeg";
 
 import { TranslatorContext } from "../screens/context/TranslatorContext";
 
@@ -67,7 +66,6 @@ const Gallery = () => {
     work18,
     work19,
     work20,
-    // work21,
   ];
 
   return (

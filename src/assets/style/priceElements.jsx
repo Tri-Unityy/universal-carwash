@@ -53,6 +53,29 @@ export const Container = styled.div`
   }}
 `;
 
+export const CardDetailContainer = styled.div`
+  ${(props) => {
+    switch (props.$mode) {
+      case "detail":
+        return css`
+          padding: 10px;
+          margin-top: 20px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          min-height: 100%;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+
+          @media screen and (max-width: 769px) {
+            min-height: 100%;
+          }
+        `;
+    }
+  }}
+`;
+
 export const PriceContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -155,6 +178,37 @@ export const CardContainer = styled.div`
   align-items: center;
 `;
 
+export const CardServiceContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 550px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px; 
+  margin: 20px auto;
+
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1025px) {
+    height: 450px;
+  }
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    height: 650px;
+  }
+  @media screen and (min-width: 376px) and (max-width: 426px) {
+    height: 500px;
+  }
+  @media screen and (min-width: 321px) and (max-width: 376px) {
+    height: 500px;
+  }
+  @media screen and (max-width: 321px) {
+    height: 450px;
+  }
+`;
+
 export const Cards = styled.div`
   display: flex;
   flex-direction: column;
@@ -177,6 +231,249 @@ export const Cards = styled.div`
     width: 280px;
     height: 140px;
   }
+`;
+
+export const DetailsCards = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 20px 10px 10px 10px;
+  border-radius: 5px;
+
+
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    width: 280px;
+    height: 140px;
+  }
+`;
+
+export const CarouselContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height: 100%;
+`;
+
+export const CarouselContent1 = styled.div`
+display: flex;
+align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex:1;
+`;
+
+export const CarouselContent2 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex:8;
+`;
+
+export const MainServiceHeading = styled.h1`
+  font-weight: 600;
+  font-size:60px;
+  color: #E80C0E;
+  opacity: 1;
+  text-align:center;
+
+  @media screen and (min-width: 769px) and (max-width: 1025px) {
+    font-size: 50px;
+  }
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 426px) {
+    font-size: 30px;
+  }
+`;
+
+export const CarouselContent = styled.div`
+  display: flex;
+  flex-direction:column;
+  flex:1;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const MainServiceHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  align-items:center;
+  @media screen and (min-width: 769px) and (max-width: 1025px) {
+    height: 120px;
+  }
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    height: 100px;
+  }
+  @media screen and (max-width: 426px) {
+    height: 80px;
+  }
+`;
+
+export const ImageSection = styled.div`
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  background-color: #252525;
+  width: 100%;
+  height: 100%;
+
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    flex: 1.5;
+  }
+  @media screen and (min-width: 376px) and (max-width: 426px) {
+    flex: 0.8;
+  }
+  @media screen and (min-width: 321px) and (max-width: 376px) {
+    flex: 0.7;
+  }
+  @media screen and (max-width: 321px) {
+    flex: 0.6;
+  }
+`;
+
+export const SubServiceHeader = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: #E80C0E;
+  width: 100%;
+`;
+export const SubServiceDescription = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-right:10px;
+  padding-left:10px;
+`;
+export const SubServiceBullets = styled.div`
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+`;
+export const BulletsContainer = styled.div`
+  display: flex;
+  padding-left:20px;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  margin-bottom:5px;
+`;
+export const IconSection = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right:10px;
+
+`;
+export const PointSection = styled.div`
+  display: flex;
+  flex: 4;
+  align-items: center;
+
+
+@media screen and (min-width: 426px) and (max-width: 769px) {
+  flex: 1.7;
+}
+@media screen and (max-width: 426px) {
+  flex: 2.5;
+}
+@media screen and (max-width: 376px) {
+  flex: 3;
+}
+@media screen and (max-width: 321px) {
+  flex: 4;
+}
+`;
+export const SubServicePrice = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
+export const SubServiceHeading = styled.h5`
+  font-weight: 600;
+  font-size: 25px;
+  color: #ffffff;
+  opacity: 1;
+  text-align:center;
+
+  @media screen and (min-width: 426px) and (max-width: 1025px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 426px) {
+    font-size: 15px;
+  }
+`;
+
+export const SubServiceDescriptionText = styled.h5`
+  font-weight: 600;
+  font-size: 20px;
+  color: #000000;
+  opacity: 1;
+  text-align:center;
+
+  @media screen and (min-width: 769px) and (max-width: 1025px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 426px) {
+    font-size: 14px;
+  }
+`;
+export const SubServiceBulletsText = styled.p`
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+margin-bottom:0px;
+
+  @media screen and (min-width: 769px) and (max-width: 1025px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 426px) {
+    font-size: 15px;
+  }
+`;
+export const SubServicePriceText = styled.h5`
+  font-weight: 700;
+  font-size: 30px;
+  color: #E80C0E;
+  opacity: 1;
+  text-align:center;
+
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    font-size: 20px;
+  }
+`;
+
+export const BreakDownSection = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;  
+  flex-direction: column;
 `;
 
 export const CardHeadingContainer = styled.div`

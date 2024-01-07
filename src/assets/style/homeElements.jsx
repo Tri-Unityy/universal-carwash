@@ -652,7 +652,7 @@ export const ServicesImageContainer = styled.div`
 
   @media screen and (max-width: 769px) {
     justify-content: space-around;
-    gap: 8px;
+    gap: 10px;
   }
 
   @media screen and (max-width: 426px) {
@@ -661,8 +661,9 @@ export const ServicesImageContainer = styled.div`
   }
 
   @media screen and (max-width: 376px) {
-    justify-content: space-around;
-    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: left;
   }
   @media screen and (max-width: 321px) {
     flex-wrap: nowrap;
@@ -749,17 +750,64 @@ export const ServicesImage = styled.img`
   }
 `;
 
+export const MainServiceHeading = styled.h1`
+  font-weight: 600;
+  font-size:60px;
+  color: #E80C0E;
+  opacity: 1;
+  text-align:center;
+
+  @media screen and (min-width: 769px) and (max-width: 1025px) {
+    font-size: 50px;
+  }
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 426px) {
+    font-size: 30px;
+  }
+`;
+export const MainServiceHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  align-items:center;
+  @media screen and (min-width: 769px) and (max-width: 1025px) {
+    height: 120px;
+  }
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    height: 100px;
+  }
+  @media screen and (max-width: 426px) {
+    height: 80px;
+  }
+`;
 export const OneService = styled.button`
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
-  padding: 25px;
+  width:200px;
+  height :250px;
 
+  @media screen and (min-width: 769px) and (max-width: 1025px) {
+    width:200px;
+  height :250px;
+  }
+  @media screen and (min-width: 426px) and (max-width: 769px) {
+    width:250px;
+    height :250px;
+  }
+  @media screen and (max-width: 426px) {
+    width:150px;
+    height :175px;
+  }
   @media screen and (max-width: 376px) {
-    padding: 20px;
+    width:auto;
+    height :auto;
   }
 `;
 
@@ -767,9 +815,24 @@ export const OneServiceText = styled.p`
   font-size: 18px;
   color: #fff;
 
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 426px) {
     font-size: 12px;
   }
+`;
+
+export const ImageSector = styled.div`
+  display: flex;
+  flex: 1.5;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+`;
+export const TextSector = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `;
 
 //////////////////////// Slider ///////////////////////////////

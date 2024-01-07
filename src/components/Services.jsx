@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import "./../assets/style/css/services.css";
-import { staggerContainer, textVariant, fadeIn } from "../utils/motion";
+import { staggerContainer} from "../utils/motion";
 import {
-  SectionHeading,
   SectionParagraph,
   ServicesParagraphContainer,
   ServicesImageContainer,
@@ -11,8 +10,12 @@ import {
   ServicesContainer,
   OneService,
   OneServiceText,
+  TextSector,
+  ImageSector,
+  MainServiceHeading,
+  MainServiceHeader
 } from "../assets/style/homeElements";
-
+import ServiceDetailsCards from "./Service_Details_Cards";
 import i1 from "../assets/images/cubeicons/1.png";
 import i2 from "../assets/images/cubeicons/2.png";
 import i3 from "../assets/images/cubeicons/3.png";
@@ -23,7 +26,8 @@ import {
   ServiceContext,
   TranslatorContext,
 } from "../screens/context/TranslatorContext";
-import ServiceCards from "./ServiceCards";
+//import ServiceCards from "./ServiceCards";
+
 
 const Services = () => {
   const { lang } = useContext(TranslatorContext);
@@ -36,15 +40,16 @@ const Services = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
+      style={{ marginTop:'50px' }}
     >
       <ServicesContainer>
-        <motion.div variants={textVariant()}>
-          {lang === "french" ? (
-            <SectionHeading>Nos Services</SectionHeading>
-          ) : (
-            <SectionHeading>Our Services</SectionHeading>
-          )}
-        </motion.div>
+        <MainServiceHeader>
+        <MainServiceHeading>
+                  {lang === "french"
+                    ? "Nos Services"
+                    : "Our Services"}
+                </MainServiceHeading>
+                </MainServiceHeader>
         <ServicesParagraphContainer>
           {lang === "french" ? (
             <SectionParagraph $mode="services">
@@ -75,7 +80,10 @@ const Services = () => {
             style={{ backgroundColor: service == 1 && "white" }}
             onClick={() => setService(1)}
           >
+            <ImageSector>
             <ServicesImage src={i1} />
+            </ImageSector>
+            <TextSector>
             <OneServiceText
               style={{
                 color: service == 1 && "black",
@@ -84,13 +92,17 @@ const Services = () => {
             >
               { lang === "french" ? ('Détail Intérieur') : ('Interior Detailing')}
             </OneServiceText>
+            </TextSector>
           </OneService>
           <OneService
             className="oneService"
             style={{ backgroundColor: service == 2 && "white" }}
             onClick={() => setService(2)}
           >
+            <ImageSector>
             <ServicesImage src={i6} />
+            </ImageSector>
+            <TextSector>
             <OneServiceText
               style={{
                 color: service == 2 && "black",
@@ -99,13 +111,17 @@ const Services = () => {
             >
               { lang === "french" ? ('Polissage Extérieur') : ('Exterior polishing')}
             </OneServiceText>
+            </TextSector>
           </OneService>
           <OneService
             className="oneService"
             style={{ backgroundColor: service == 3 && "white" }}
             onClick={() => setService(3)}
           >
+            <ImageSector>
             <ServicesImage src={i2} />
+            </ImageSector>
+            <TextSector>
             <OneServiceText
               style={{
                 color: service == 3 && "black",
@@ -114,13 +130,17 @@ const Services = () => {
             >
               { lang === "french" ? ('Protection Avancée') : ('Advanced protection')}
             </OneServiceText>
+            </TextSector>
           </OneService>
           <OneService
             className="oneService"
             style={{ backgroundColor: service == 4 && "white" }}
             onClick={() => setService(4)}
           >
+             <ImageSector>
             <ServicesImage src={i3} />
+            </ImageSector>
+            <TextSector>
             <OneServiceText
               style={{
                 color: service == 4 && "black",
@@ -129,10 +149,11 @@ const Services = () => {
             >
               { lang === "french" ? ('Soins Pratiques') : ('Convenient Care')}
             </OneServiceText>
+            </TextSector>
           </OneService>
         </ServicesImageContainer>
       </ServicesContainer>
-      <ServiceCards />
+      <ServiceDetailsCards/>
     </motion.section>
   );
 };

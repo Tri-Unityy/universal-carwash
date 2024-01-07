@@ -26,9 +26,10 @@ import {
   ServiceContext,
   TranslatorContext,
 } from "../screens/context/TranslatorContext";
-import ServiceCards from "./ServiceCards";
+//import ServiceCards from "./ServiceCards";
 
-const Services = () => {
+
+const ServicesPage = () => {
   const { lang } = useContext(TranslatorContext);
   const { service, setService } = useContext(ServiceContext);
   return (
@@ -152,9 +153,9 @@ const Services = () => {
           </OneService>
         </ServicesImageContainer>
       </ServicesContainer>
-      <ServiceCards />
+      <ServiceDetailsCards/>
     </motion.section>
   );
 };
 
-export default Services;
+export default ServicesPage;

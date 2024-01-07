@@ -19,6 +19,7 @@ import fr from "./../assets/images/french.png";
 import logo from "./../assets/images/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const NavBar = ({ toggle }) => {
   const { lang, setLang } = useContext(TranslatorContext);
@@ -57,7 +58,9 @@ const NavBar = ({ toggle }) => {
           offset={-80}
           onClick={() => setSection(1)}
         >
-          { lang == 'french' ? "À propos de nous" : "About Us"}
+          <Link to={"/"} style={{"textDecoration":'none', "color":'white'}}> 
+            { lang == 'french' ? "À propos de nous" : "About Us"}
+          </Link>
         </Links>
         <Links
           to="services"
@@ -68,7 +71,9 @@ const NavBar = ({ toggle }) => {
           offset={-80}
           onClick={() => setSection(2)}
         >
-          { lang == 'french' ? "Nos services" : "Services"}
+          <Link to={"/services"} style={{"textDecoration":'none', "color":'white'}}> 
+            { lang == 'french' ? "Nos services" : "Services"} 
+          </Link>
         </Links>
         <Links
           to="ourworks"

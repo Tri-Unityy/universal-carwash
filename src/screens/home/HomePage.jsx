@@ -33,35 +33,6 @@ const HomePage = () => {
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />
             <Notice />
-            {/* {section == 1 && (
-              <>
-                <Splash />
-                <AboutUs />
-              </>
-            )}
-          
-            {section == 2 && (
-              <>
-                <Services />
-              </>
-            )}
-            {section == 3 && (
-              <>
-                <Gallery />
-              </>
-            )}
-
-            {section == 4 && (
-              <>
-                <Cards />
-              </>
-            )}
-            {section == 5 && (
-              <>
-                <Apply />
-              </>
-            )} */}
-            
             
                 <Splash />
                 <AboutUs />

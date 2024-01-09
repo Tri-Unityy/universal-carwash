@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "../assets/style/layoutElements";
-import Booking from "../screens/booking/Booking";
+import BookingPage from "../screens/booking/BookingPage";
 
 const BookingLayout = () => {
   return (
     <Container $mode="home">
-      <Booking />
+      <BookingPage />
     </Container>
   );
 };

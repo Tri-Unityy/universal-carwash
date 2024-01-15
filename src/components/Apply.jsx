@@ -260,7 +260,7 @@ const Apply = () => {
                     className="form-control"
                     onChange={handleChange}
                   >
-                    <option>Select yout time slot</option>
+                    <option>Select your time slot</option>
                     <option value="09 am - 10 am">09 am - 10 am</option>
                     <option value="10 am - 11 am">10 am - 11 am</option>
                     <option value="11 am - 12 pm">11 am - 12 pm</option>

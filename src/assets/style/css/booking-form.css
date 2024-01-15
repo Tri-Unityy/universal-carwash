@@ -1,0 +1,31 @@
+.form-container-booking {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    background-color: #fff;
+    /* border: 1px solid #e5e5e5; */
+    padding: 3rem;
+  }
+
+
+  .form-control-booking{
+    background: transparent;
+width: 90%;
+    color: #252525;
+  border: 1px solid #252525;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.form-label{
+    color: black;
+}

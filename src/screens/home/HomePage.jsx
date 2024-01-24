@@ -8,7 +8,6 @@ import Services from "../../components/Services";
 import Packages from "../../components/Packages";
 import Gallery from "../../components/Gallery";
 import ContactUs from "../../components/ContactUs";
-import Apply from "../../components/Apply";
 import {
   ServiceContext,
   TranslatorContext,
@@ -39,7 +38,6 @@ const HomePage = () => {
                 <Services />
                 <Cards />
                 <Gallery />
-                <Apply />
             <ContactUs />
           </Container>
         </ServiceContext.Provider>

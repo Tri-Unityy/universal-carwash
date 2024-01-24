@@ -29,3 +29,8 @@ width: 90%;
 .form-label{
     color: black;
 }
+
+.sub-label{
+  font-size: 10px;
+  padding-left: 3px;
+}

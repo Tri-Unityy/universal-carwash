@@ -63,13 +63,13 @@ const NavBar = ({ toggle }) => {
           </Link>
         </Links>
         <Links
-          to="services"
+          // to="services"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
           offset={-80}
-          onClick={() => setSection(2)}
+          // onClick={() => setSection(2)}
         >
           <Link to={"/services"} style={{"textDecoration":'none', "color":'white'}}> 
             { lang == 'french' ? "Nos services" : "Services"} 

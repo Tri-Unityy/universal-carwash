@@ -15,6 +15,9 @@ import {
 import Cards from "../../components/Cards";
 import Notice from "../../components/Notice";
 
+
+import Cardsv2 from "../../components/Cardsv2";
+
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [lang, setLang] = useState("french");
@@ -37,6 +40,7 @@ const HomePage = () => {
                 <AboutUs />
                 <Services />
                 <Cards />
+                {/* <Cardsv2 /> */}
                 <Gallery />
             <ContactUs />
           </Container>

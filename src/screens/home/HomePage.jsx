@@ -40,7 +40,7 @@ const HomePage = () => {
                 <AboutUs />
                 <Services />
                 <Cards />
-                {/* <Cardsv2 /> */}
+                <Cardsv2 />
                 <Gallery />
             <ContactUs />
           </Container>

@@ -98,15 +98,17 @@ const NavBar = ({ toggle }) => {
           { lang == 'french' ? "Contactez-nous" : "Contact Us"}
         </Links>
         <Links
-          to="booking"
+          // to="booking"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
           offset={-80}
-          onClick={() => setSection(5)}
+          // onClick={() => setSection(3)}
         >
+          <Link to={"/booking"} style={{"textDecoration":'none', "color":'white'}}> 
           { lang == 'french' ? "Booking" : "Booking"}
+          </Link>
         </Links>
         <Dropdown className="translator-container" onSelect={handleSelect}>
           <Dropdown.Toggle className="translator-button" id="dropdown-basic">

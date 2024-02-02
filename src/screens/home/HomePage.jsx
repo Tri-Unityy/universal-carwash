@@ -17,6 +17,7 @@ import Notice from "../../components/Notice";
 
 
 import Cardsv2 from "../../components/Cardsv2";
+import BookNow from "../../components/BookNow";
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,8 @@ const HomePage = () => {
                 <Cards />
                 <Cardsv2 />
                 <Gallery />
-            <ContactUs />
+                <BookNow />
+                <ContactUs />
           </Container>
         </ServiceContext.Provider>
       </TranslatorContext.Provider>

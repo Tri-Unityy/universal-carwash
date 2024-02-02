@@ -190,6 +190,25 @@ export const Container = styled.section`
           }
         `;
 
+      case "booknow":
+        return css`
+          display: grid;
+          grid-template-columns: 62% 38%;
+          width: 98%;
+          padding: 20px;
+          margin: 10px;
+          background: #E80C0E;
+
+          @media screen and (max-width: 769px) {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+          }
+        `;
+
       case "contact":
         return css`
           position: relative;
@@ -233,7 +252,13 @@ export const SectionDiv = styled.div`
           justify-content: space-between;
           align-items: center;
         `;
-
+      
+      case "booknow":
+        return css`
+          margin-bottom: 0.5rem;
+          justify-content: space-between;
+        `;
+      
       case "contactus":
         return css`
           /*margin: 0;*/
@@ -300,6 +325,11 @@ export const SectionParagraph = styled.p`
       case "gallery":
         return css`
           color: #000;
+        `;
+      
+      case "booknow":
+        return css`
+          margin: 25px;
         `;
     }
   }}
@@ -507,6 +537,17 @@ export const Heading = styled.h1`
   color: ${primaryHeadingColor};
   margin-bottom: 1rem;
   font-weight: 800;
+  
+    ${(props)=>{
+      switch(props.$mode) {
+        case "booknow":
+          return css`
+          color: #fff;
+          font-weight: 800;
+          font-size: 3rem;
+        `;
+      }
+    }}
 `;
 
 export const SubHeading = styled.h2`

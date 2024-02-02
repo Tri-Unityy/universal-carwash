@@ -152,6 +152,9 @@ const Services = () => {
           </OneService>
         </ServicesImageContainer>
       </ServicesContainer>
+      <a className="services-button" href="/services" target="_blank">
+        { lang === "french" ? ('Plus de détails') : ('More details')}
+      </a>
       <ServiceCards />
     </motion.section>
   );

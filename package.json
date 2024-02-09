@@ -20,6 +20,7 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.4",
     "bootstrap": "^5.3.2",
+    "firebase": "^10.8.0",
     "framer-motion": "^10.12.16",
     "leaflet": "^1.9.4",
     "node-sass": "^9.0.0",

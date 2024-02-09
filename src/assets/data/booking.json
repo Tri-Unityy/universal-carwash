@@ -1,0 +1,11 @@
+{
+    "bookingId" : "001" , 
+    "name" : "Ninthu" ,
+    "email" : "ninthu1999@gmail.com" ,
+    "phone" : "0766194332" , 
+    "address" : "No 49/52 Kovil Road ,  Kurumankadu , Vavuniya" ,
+    "pickup" : true,
+    "pickupAddress" : "No 2/8/8 Moratuwa" ,
+    "date" : "2012-04-23T18:25:43.511Z" ,
+    "timeslot" : 1
+}

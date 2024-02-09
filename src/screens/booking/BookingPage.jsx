@@ -16,6 +16,8 @@ import "./../../assets/style/css/booking-form.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import bookingPageImage from "./../../assets/images/booking.jpg"
+import {  collection, getDocs } from 'firebase/firestore/lite';
+
 const BookingPage = () => {
   const [selectedLocation, setSelectedLocation] = useState("");
 

@@ -28,7 +28,7 @@ export const Container = styled.div`
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          overflow: hidden;
+          /* overflow: hidden; */
         `;
     }
   }}

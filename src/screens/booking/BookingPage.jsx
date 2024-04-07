@@ -25,12 +25,14 @@ import {
   addDoc,
 } from "firebase/firestore/lite"; // Import required Firestore modules
 import { db } from "./../../utils/firebase.config";
+import Swal from "sweetalert2";
 
 const BookingPage = () => {
   const [selectedLocation, setSelectedLocation] = useState("");
   const [availableTimeSlots, setAvailableTimeSlots] = useState([]); // State to store available time slots
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTimeSlot, setSelectedTimeSlot] = useState("");
+  const [isBookingEnabled, setIsBookingEnabled] = useState(false);
 
   const handleLocationChange = (event) => {
     setSelectedLocation(event.target.value);
@@ -38,6 +40,7 @@ const BookingPage = () => {
 
   const handleTimeSlotClick = (slot) => {
     setSelectedTimeSlot(slot);
+    setIsBookingEnabled(true);
   };
 
   const handleDateChange = async (event) => {
@@ -82,6 +85,7 @@ const BookingPage = () => {
       (slot) => !bookedTimeSlots.includes(slot)
     );
     setAvailableTimeSlots(availableSlots);
+    setIsBookingEnabled(false);
   };
 
   const handleConfirmBooking = async () => {
@@ -91,6 +95,8 @@ const BookingPage = () => {
       email: document.getElementsByName("email")[0].value,
       phone: document.getElementsByName("number")[0].value,
       address: document.getElementsByName("address")[0].value,
+      carnumber: document.getElementsByName("carnumber")[0].value,
+      carmodel: document.getElementsByName("carmodel")[0].value,
       pickup: selectedLocation === "yes" ? true : false,
       pickupAddress:
         selectedLocation === "yes"
@@ -108,7 +114,17 @@ const BookingPage = () => {
         bookingData
       );
       console.log("Booking added with ID: ", docRef.id);
-      // You may want to show a success message to the user
+      
+      Swal.fire({
+        icon: 'success',
+        title: 'Booking Successful!',
+        text: 'Your booking has been confirmed.',
+        confirmButtonText: 'OK'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.reload(); // Reload the page
+        }
+      });
     } catch (e) {
       console.error("Error adding booking: ", e);
       // You may want to show an error message to the user
@@ -163,6 +179,29 @@ const BookingPage = () => {
                     className="form-control-booking"
                     type="text"
                     placeholder="Enter Address"
+                  />
+                </Form.Group>
+              </FormWrapper>
+              <FormWrapper>
+                <Form.Group className=" form-group" controlId="carnumber">
+                  <Form.Label className=" form-label">Car Number</Form.Label>
+                  <Form.Control
+                    required
+                    type="text"
+                    className="form-control-booking"
+                    name="carnumber"
+                    placeholder="Enter Car Number"
+                  />
+                </Form.Group>
+
+                <Form.Group className=" form-group" controlId="carmodel">
+                  <Form.Label className=" form-label">Car Model</Form.Label>
+                  <Form.Control
+                    required
+                    name="carmodel"
+                    className="form-control-booking"
+                    type="text"
+                    placeholder="Enter Car Model"
                   />
                 </Form.Group>
               </FormWrapper>
@@ -235,7 +274,7 @@ const BookingPage = () => {
                   <TimeSlots
                     key={slot}
                     onClick={() => handleTimeSlotClick(slot)}
-                    
+                    selected={selectedTimeSlot === slot}
                   >
                     {slot}
                   </TimeSlots>
@@ -251,6 +290,7 @@ const BookingPage = () => {
                     cursor: "pointer",
                   }}
                   onClick={handleConfirmBooking} // Call handleConfirmBooking when button is clicked
+                  disabled={!isBookingEnabled}
                 >
                   Confirm Booking
                 </Button>

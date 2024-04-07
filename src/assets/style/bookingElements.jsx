@@ -145,9 +145,15 @@ export const TimeSlots = styled.div`
   padding: 5px;
   font-size: 15px;
   border-radius: 3px;
-  border: 1px solid red;
+  border: 1px solid ;
   margin: 5px;
   cursor: pointer;
+
+  border-color: ${props => props.selected ? "red" : "black"};
+
+
+
+
 `;
 
 

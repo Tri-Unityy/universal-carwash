@@ -135,7 +135,7 @@ const BookingPage = () => {
       <Container $mode="main">
         <Container $mode="left">
           <LeftContainer>
-            <h1>Book an Car Appointment</h1>
+            <h1>Book an Appointment</h1>
             <FormContainer>
               <FormWrapper>
                 <Form.Group className=" form-group" controlId="formName">
@@ -184,7 +184,7 @@ const BookingPage = () => {
               </FormWrapper>
               <FormWrapper>
                 <Form.Group className=" form-group" controlId="carnumber">
-                  <Form.Label className=" form-label">Car Number</Form.Label>
+                  <Form.Label className=" form-label">Vehicle Number</Form.Label>
                   <Form.Control
                     required
                     type="text"
@@ -195,7 +195,7 @@ const BookingPage = () => {
                 </Form.Group>
 
                 <Form.Group className=" form-group" controlId="carmodel">
-                  <Form.Label className=" form-label">Car Model</Form.Label>
+                  <Form.Label className=" form-label">Vehicle Model</Form.Label>
                   <Form.Control
                     required
                     name="carmodel"

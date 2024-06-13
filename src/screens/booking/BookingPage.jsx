@@ -13,6 +13,8 @@ import {
 
 import "./../../assets/style/css/booking-form.css";
 
+import emailjs from "@emailjs/browser"
+
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import bookingPageImage from "./../../assets/images/booking.jpg";
@@ -107,6 +109,8 @@ const BookingPage = () => {
     };
     console.log(bookingData);
 
+
+
     try {
       // Add the booking data to Firestore
       const docRef = await addDoc(
@@ -114,6 +118,20 @@ const BookingPage = () => {
         bookingData
       );
       console.log("Booking added with ID: ", docRef.id);
+
+      const reply_message = `Hi this is ${bookingData.name},\n\nI wish to schedule a carwash on the following date ${bookingData.date} within ${bookingData.timeslot}. Here is my phone number ${bookingData.phone} contact me upon your acceptance. These below are the other details\n\n Vehicle Number - ${bookingData.carnumber} \n\nVehicle Model - ${bookingData.carmodel} \n\nAddress - ${bookingData.address} \n\n Email - ${bookingData.email} \n\nPickup on location - ${bookingData.pickup} \n\nPickup Address - ${bookingData.pickupAddress}   \n\nBest Regards,\n\n${bookingData.name}`;
+
+      emailjs
+        .send(
+          "service_q7xb4hl",
+          "template_hse05fd",
+          {
+            from_name: bookingData.name,
+            user_name: bookingData.name,
+            message: reply_message,
+          },
+          "RwKR7-Bzx0eRH_gEw"
+        )
       
       Swal.fire({
         icon: 'success',
@@ -122,6 +140,8 @@ const BookingPage = () => {
         confirmButtonText: 'OK'
       }).then((result) => {
         if (result.isConfirmed) {
+          
+          console.log(bookingData.name);
           window.location.reload(); // Reload the page
         }
       });

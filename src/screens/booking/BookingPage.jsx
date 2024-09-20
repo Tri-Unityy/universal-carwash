@@ -210,7 +210,7 @@ const BookingPage = () => {
                     type="text"
                     className="form-control-booking"
                     name="carnumber"
-                    placeholder="Enter Car Number"
+                    placeholder="Enter Vehicle Number"
                   />
                 </Form.Group>
 
@@ -221,7 +221,7 @@ const BookingPage = () => {
                     name="carmodel"
                     className="form-control-booking"
                     type="text"
-                    placeholder="Enter Car Model"
+                    placeholder="Enter Vehicle Model"
                   />
                 </Form.Group>
               </FormWrapper>

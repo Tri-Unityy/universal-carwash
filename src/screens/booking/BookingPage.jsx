@@ -124,7 +124,7 @@ const BookingPage = () => {
       emailjs
         .send(
           "service_q7xb4hl",
-          "template_hse05fd",
+          "template_15t48uy",
           {
             from_name: bookingData.name,
             user_name: bookingData.name,

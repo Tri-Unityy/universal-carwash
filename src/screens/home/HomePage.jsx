@@ -8,13 +8,13 @@ import Services from "../../components/Services";
 import Packages from "../../components/Packages";
 import Gallery from "../../components/Gallery";
 import ContactUs from "../../components/ContactUs";
-import Apply from "../../components/Apply";
 import {
   ServiceContext,
   TranslatorContext,
 } from "../context/TranslatorContext";
 import Cards from "../../components/Cards";
 import Notice from "../../components/Notice";
+import BookNow from "../../components/BookNow";
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,10 +36,8 @@ const HomePage = () => {
             <AboutUs />
             <Services />
             <Cards />
-            {/* <Packages /> */}
-
             <Gallery />
-            <Apply />
+            <BookNow/>
             <ContactUs />
           </Container>
         </ServiceContext.Provider>

@@ -1,0 +1,24 @@
+.booknow-button{
+    color: #E80C0E;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    font-weight: bolder;
+    width: 300px;
+    height: fit-content;
+    font-size:larger;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+  }
+  
+  .booknow-button:hover{
+    color: #fff;
+    /* color: #E10C0E; */
+    /* background-color: #FF7F7F; */
+    background-color: #000;
+  }

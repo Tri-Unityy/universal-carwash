@@ -106,6 +106,7 @@ const BookingPage = () => {
           : "",
       date: selectedDate,
       timeslot: selectedTimeSlot,
+      status: "Pending",
     };
     console.log(bookingData);
 
